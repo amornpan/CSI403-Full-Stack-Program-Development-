@@ -1,0 +1,187 @@
+% SPU Chonburi Beamer Theme
+% Custom theme for CSI403 Full Stack Development
+% Aspect Ratio: 16:9
+
+\ProvidesPackage{beamerthemeSPU}[2025/01/01 SPU Chonburi Beamer Theme]
+
+% ============================================
+% COLOR DEFINITIONS (SPU Brand Colors)
+% ============================================
+\definecolor{spumaroon}{RGB}{128,0,0}        % SPU Primary Maroon
+\definecolor{spugold}{RGB}{212,175,55}       % SPU Gold Accent
+\definecolor{spudarkmaroon}{RGB}{100,0,0}    % Darker maroon for headers
+\definecolor{spulightmaroon}{RGB}{180,80,80} % Light maroon for accents
+\definecolor{spugray}{RGB}{88,89,91}         % Text gray
+\definecolor{spulightgray}{RGB}{241,242,242} % Background light gray
+\definecolor{spuwhite}{RGB}{255,255,255}     % White
+\definecolor{spublack}{RGB}{0,0,0}           % Black
+
+% Code colors
+\definecolor{codegreen}{RGB}{40,180,99}
+\definecolor{codeblue}{RGB}{52,152,219}
+\definecolor{codepurple}{RGB}{155,89,182}
+\definecolor{codeorange}{RGB}{230,126,34}
+\definecolor{codegray}{RGB}{149,165,166}
+\definecolor{codebackground}{RGB}{248,249,250}
+
+% ============================================
+% THEME SETTINGS
+% ============================================
+\usetheme{Madrid}
+\usecolortheme[named=spumaroon]{structure}
+
+% Inner theme
+\useinnertheme{rectangles}
+
+% Outer theme  
+\useoutertheme{infolines}
+
+% ============================================
+% FONTS
+% ============================================
+\usefonttheme{professionalfonts}
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{subtitle}{size=\normalsize}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\small}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{institute}{size=\small}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{block title}{size=\normalsize,series=\bfseries}
+
+% ============================================
+% BEAMER COLORS
+% ============================================
+% Title page
+\setbeamercolor{title}{fg=spuwhite,bg=spumaroon}
+\setbeamercolor{subtitle}{fg=spugold}
+\setbeamercolor{author}{fg=spugray}
+\setbeamercolor{institute}{fg=spugray}
+\setbeamercolor{date}{fg=spugray}
+
+% Frame elements
+\setbeamercolor{frametitle}{fg=spuwhite,bg=spumaroon}
+\setbeamercolor{framesubtitle}{fg=spugold}
+
+% Structure
+\setbeamercolor{structure}{fg=spumaroon}
+\setbeamercolor{normal text}{fg=spublack}
+\setbeamercolor{alerted text}{fg=spumaroon}
+\setbeamercolor{example text}{fg=codegreen}
+
+% Blocks
+\setbeamercolor{block title}{fg=spuwhite,bg=spumaroon}
+\setbeamercolor{block body}{fg=spublack,bg=spulightgray}
+\setbeamercolor{block title alerted}{fg=spuwhite,bg=spumaroon}
+\setbeamercolor{block body alerted}{fg=spublack,bg=spulightgray}
+\setbeamercolor{block title example}{fg=spuwhite,bg=codegreen}
+\setbeamercolor{block body example}{fg=spublack,bg=spulightgray}
+
+% Navigation
+\setbeamercolor{navigation symbols}{fg=spumaroon}
+\setbeamercolor{navigation symbols dimmed}{fg=spulightmaroon}
+
+% Footer
+\setbeamercolor{footline}{fg=spuwhite,bg=spumaroon}
+\setbeamercolor{page number in head/foot}{fg=spuwhite,bg=spumaroon}
+
+% Items
+\setbeamercolor{item}{fg=spumaroon}
+\setbeamercolor{subitem}{fg=spudarkmaroon}
+\setbeamercolor{subsubitem}{fg=spugray}
+\setbeamercolor{itemize item}{fg=spumaroon}
+\setbeamercolor{itemize subitem}{fg=spudarkmaroon}
+\setbeamercolor{enumerate item}{fg=spumaroon}
+\setbeamercolor{enumerate subitem}{fg=spudarkmaroon}
+
+% Table of contents
+\setbeamercolor{section in toc}{fg=spumaroon}
+\setbeamercolor{subsection in toc}{fg=spudarkmaroon}
+
+% ============================================
+% BEAMER TEMPLATES
+% ============================================
+% Item bullets
+\setbeamertemplate{itemize item}{\color{spumaroon}$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{spudarkmaroon}$\blacktriangleright$}
+\setbeamertemplate{itemize subsubitem}{\color{spugray}$\bullet$}
+
+% Navigation symbols (hide)
+\setbeamertemplate{navigation symbols}{}
+
+% Frame title
+\setbeamertemplate{frametitle}{
+    \vspace{0.3cm}
+    \insertframetitle
+    \ifx\insertframesubtitle\empty\else
+        \par\small\textcolor{spugold}{\insertframesubtitle}
+    \fi
+}
+
+% Footline
+\setbeamertemplate{footline}{
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1ex,center]{author in head/foot}%
+            \usebeamerfont{author in head/foot}\insertshortauthor
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
+            \usebeamerfont{title in head/foot}\insertshorttitle
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1ex,right]{date in head/foot}%
+            \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+            \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+        \end{beamercolorbox}}%
+    \vskip0pt%
+}
+
+% ============================================
+% CUSTOM COMMANDS
+% ============================================
+% Highlight box
+\newcommand{\highlightbox}[1]{%
+    \begin{tcolorbox}[colback=spulightgray,colframe=spumaroon,boxrule=1pt]
+    #1
+    \end{tcolorbox}
+}
+
+% Code highlight
+\newcommand{\code}[1]{\texttt{\color{codeblue}#1}}
+
+% Important note
+\newcommand{\important}[1]{%
+    \begin{alertblock}{Important}
+    #1
+    \end{alertblock}
+}
+
+% Tip box
+\newcommand{\tip}[1]{%
+    \begin{exampleblock}{Tip}
+    #1
+    \end{exampleblock}
+}
+
+% Section slide
+\newcommand{\sectionslide}[1]{%
+    {
+    \setbeamercolor{background canvas}{bg=spumaroon}
+    \begin{frame}[plain]
+        \vfill
+        \centering
+        \textcolor{spuwhite}{\Huge\bfseries #1}
+        \vfill
+    \end{frame}
+    }
+}
+
+% Two columns with code
+\newenvironment{twocolcode}{%
+    \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+}{%
+    \end{column}
+    \end{columns}
+}
+
+\endinput

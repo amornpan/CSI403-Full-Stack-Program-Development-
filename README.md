@@ -21,12 +21,13 @@
 CSI403-FullStack-Teaching/
 ├── 00-course-info/          # Syllabus, calendar, grading
 ├── 01-starter-code/         # Loan Management System starter
-│   └── loan-management-system/
+│   ├── loan-management-system/
+│   └── weekly-examples/
 ├── 02-templates/            # Document templates for students
 ├── 03-sample-data/          # Loan dataset samples
 ├── 04-lab-exercises/        # Weekly lab exercises
 ├── 05-quizzes/              # Quiz materials
-└── presentations/           # LaTeX Beamer slides (16:9)
+└── presentations/           # LaTeX Beamer slides
     ├── common/              # Theme and preamble
     ├── lectures/            # Weekly lecture slides
     └── labs/                # Lab session slides
@@ -62,7 +63,7 @@ Students will build a complete loan management system featuring:
 | 15 | Apr 22-24 | Final Presentation #2 | Groups 4-6, Project (40%) |
 
 ## Building Presentations
-Presentations use LaTeX Beamer with SPU custom theme (16:9 aspect ratio).
+Presentations use LaTeX Beamer with SPU custom theme.
 
 ### Requirements
 - LaTeX distribution (TeX Live, MiKTeX)

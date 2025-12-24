@@ -1,0 +1,60 @@
+# CSI403 Full Stack Development
+# Docker Compose for Loan Management System
+
+version: '3.8'
+
+services:
+  # FastAPI Application
+  web:
+    build: .
+    container_name: loan-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=mssql+pyodbc://sa:YourStrong@Password123@db:1433/LoanDB?driver=ODBC+Driver+17+for+SQL+Server
+      - USE_SQLITE=false
+      - SECRET_KEY=your-secret-key-change-in-production
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    networks:
+      - loan-network
+
+  # Microsoft SQL Server
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: loan-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong@Password123
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "YourStrong@Password123" -Q "SELECT 1"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - loan-network
+
+  # Optional: Database Admin UI
+  adminer:
+    image: adminer
+    container_name: loan-adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - loan-network
+
+volumes:
+  mssql-data:
+
+networks:
+  loan-network:
+    driver: bridge

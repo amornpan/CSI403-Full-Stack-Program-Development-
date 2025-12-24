@@ -1,0 +1,76 @@
+// CSI403 Full Stack Development
+// Jenkins Pipeline for Loan Management System
+
+pipeline {
+    agent any
+    
+    environment {
+        DOCKER_IMAGE = 'loan-management-system'
+        DOCKER_TAG = "${BUILD_NUMBER}"
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out source code...'
+                checkout scm
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Building Docker image...'
+                sh '''
+                    docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .
+                    docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest
+                '''
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh '''
+                    docker run --rm ${DOCKER_IMAGE}:${DOCKER_TAG} \
+                        python -m pytest tests/ -v --tb=short
+                '''
+            }
+        }
+        
+        stage('Code Quality') {
+            steps {
+                echo 'Checking code quality...'
+                sh '''
+                    docker run --rm ${DOCKER_IMAGE}:${DOCKER_TAG} \
+                        python -m pylint app/ --exit-zero
+                '''
+            }
+        }
+        
+        stage('Deploy') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo 'Deploying application...'
+                sh '''
+                    docker-compose down || true
+                    docker-compose up -d
+                '''
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo 'Cleaning up...'
+            sh 'docker system prune -f || true'
+        }
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}

@@ -18,127 +18,152 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    CSI403 COURSE STRUCTURE                         │
+│                    CSI403 COURSE STRUCTURE                          │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  PHASE 1: LEARNING (Week 1-9)          PHASE 2: PROJECT (Week 10-15)│
+│  PHASE 1: LEARNING (Week 2-9)          PHASE 2: PROJECT (Week 10-15)│
 │  ┌─────────────────────────┐           ┌─────────────────────────┐  │
 │  │  📖 Lecture + Lab       │           │  💻 Project Development │  │
-│  │  • Content Delivery     │    ──▶    │  • Sprint-based Work    │  │
-│  │  • Hands-on Practice    │           │  • Advisor Consultation │  │
-│  │  • Skills Building      │           │  • Real-world Product   │  │
+│  │  • สร้าง TaskFlow       │    ──▶    │  • Sprint-based Work    │  │
+│  │  • ทุก Lab เก็บคะแนน    │           │  • Advisor Consultation │  │
+│  │  • Hands-on Practice    │           │  • Real-world Product   │  │
 │  └─────────────────────────┘           └─────────────────────────┘  │
 │                                                                     │
-│  Assessment: 30%                        Assessment: 70%             │
-│  (G1, Lab1, G2, Lab2)                   (Checkpoint, Test, Final)   │
+│  Assessment: 64%                        Assessment: 36%             │
+│  (8 Labs × 8%)                          (G1, G2, Checkpoint, Final) │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
+## 🎯 Case Study: TaskFlow - Task Management System
+
+นักศึกษาจะสร้างระบบ **TaskFlow** ตลอด 8 สัปดาห์ โดยเพิ่ม Features ทีละสัปดาห์
+
+```
+Week 2: 📁 โครงสร้างโปรเจค + Git
+Week 3: 🚀 Task API (CRUD)
+Week 4: 🗄️ Database + Users + Categories
+Week 5: 🎨 หน้าเว็บ Static (HTML/CSS/JS)
+Week 6: 🔗 Jinja2 + เชื่อมทุกอย่าง
+Week 7: 🐳 Docker + Compose
+Week 8: 🧪 Testing + Jenkins CI
+Week 9: 🚀 Jenkins CD + Auto Deploy
+
+ผลลัพธ์: ระบบ TaskFlow สมบูรณ์! 🎉
+```
+
+### TaskFlow Features
+- ✅ User Registration & Authentication (Session-based)
+- ✅ Task CRUD (Create, Read, Update, Delete)
+- ✅ Category Management
+- ✅ Task Status (Pending → In Progress → Done)
+- ✅ Task Priority (Low, Medium, High)
+- ✅ Due Date Tracking
+- ✅ Search & Filter
+- ✅ Dashboard with Statistics
+- ✅ Dockerized Deployment
+- ✅ Jenkins CI/CD Pipeline
+
 ## 🛠️ Technology Stack
 | Layer | Technologies |
 |-------|-------------|
-| **Frontend** | HTML5, CSS3, Bootstrap 5, Jinja2 Templates |
+| **Frontend** | HTML5, CSS3, JavaScript, Bootstrap 5, Jinja2 Templates |
 | **Backend** | FastAPI, Python 3.11+, Pydantic |
-| **Database** | Microsoft SQL Server, SQLAlchemy ORM |
-| **Authentication** | Session-based, bcrypt, Role-based Access |
+| **Database** | Microsoft SQL Server (Docker), SQLAlchemy ORM |
+| **Authentication** | Session-based, bcrypt |
 | **DevOps** | Docker, Docker Compose, Jenkins CI/CD |
-| **Tools** | Git, GitHub, Notion, VS Code, pytest |
+| **Testing** | pytest, pytest-cov |
+| **Tools** | Git, GitHub, VS Code |
 
 ## 📁 Project Structure
 ```
 CSI403-FullStack-Teaching/
-├── 00-course-info/           # Syllabus, มคอ.3, grading
-├── 01-starter-code/          # Loan Management System
-│   └── loan-management-system/
+├── 00-course-info/           # Syllabus, grading criteria
+├── 01-starter-code/          # TaskFlow starter template
+│   └── taskflow/
 │       ├── app/
 │       │   ├── main.py       # FastAPI application
 │       │   ├── models.py     # SQLAlchemy models
 │       │   ├── schemas.py    # Pydantic schemas
 │       │   ├── database.py   # DB connection
-│       │   └── templates/    # Jinja2 templates
+│       │   ├── routes/       # API routes
+│       │   ├── templates/    # Jinja2 templates
+│       │   └── static/       # CSS, JS, images
+│       ├── tests/            # pytest test files
 │       ├── Dockerfile
 │       ├── docker-compose.yml
 │       ├── Jenkinsfile
 │       └── requirements.txt
-├── 02-templates/             # Document templates (SRS, Test)
-├── 03-sample-data/           # Loan dataset & SQL scripts
-├── 04-lab-exercises/         # Weekly lab instructions
-├── 05-quizzes/               # Quiz materials (optional)
-└── presentations/            # [PRIVATE] LaTeX slides
+├── 02-templates/             # Document templates
+├── 03-sample-data/           # Sample SQL scripts
+├── 04-lab-exercises/         # Weekly lab instructions (8 Labs)
+├── 05-quizzes/               # (Optional) Quiz materials
+└── presentations/            # LaTeX slides
 ```
 
 ## 📅 Teaching Plan
 
-### Phase 1: Learning Phase (Week 1-9)
+### Phase 1: Learning Phase (Week 2-9) - สร้าง TaskFlow
 
 | Week | Lecture Topic | Lab / Activity | Deliverable |
 |:----:|---------------|----------------|-------------|
-| **1** | **Course Introduction** | Environment Setup | **จัดกลุ่ม** |
-| | • Full Stack Overview | • Install Python, VS Code | (5-6 คน/กลุ่ม) |
-| | • DevOps & CI/CD Concepts | • Git & GitHub Setup | |
-| | • Technology Stack | • Python Basics Review | |
-| **2** | **Project Planning** | Notion & Agile | - |
-| | • Agile/Scrum Methodology | • Setup Notion Workspace | |
-| | • SRS Document | • Create Kanban Board | |
-| | • User Stories | • Write User Stories | |
-| **3** | **Frontend: HTML/CSS** | Static UI Design | **G1: Project Proposal** |
-| | • HTML5 Semantic Elements | • Build UI Mockup | (10%) |
-| | • CSS3 & Flexbox | • Responsive Design | |
-| | • Bootstrap 5 Components | • Form Design | |
-| **4** | **Frontend: Jinja2** | Template Development | - |
-| | • Template Syntax | • Create base.html | |
-| | • Template Inheritance | • Build Page Templates | |
-| | • Filters & Macros | • Dynamic Content | |
-| **5** | **Backend: FastAPI** | API Development | **Lab1: API Design** |
-| | • Routes & HTTP Methods | • CRUD Routes | (5%) |
-| | • Path & Query Parameters | • Swagger Documentation | |
-| | • Pydantic Validation | • Request Validation | |
-| **6** | **Backend: Database** | ORM Implementation | - |
-| | • SQLAlchemy ORM | • Create Models | |
-| | • Models & Relationships | • Implement CRUD | |
-| | • Database Design | • Connect to MSSQL | |
-| **7** | **Full Stack Integration** | System Integration | **G2: System Design** |
-| | • Frontend + Backend | • Connect Templates to API | (10%) |
-| | • Session Authentication | • Login/Register Flow | |
-| | • Form Handling | • Role-based Access | |
-| **8** | **Docker Basics** | Containerization | - |
-| | • Containers vs VMs | • Build Docker Image | |
+| **1** | **ปฐมนิเทศ** | - | - |
+| **2** | **Git + Python + Setup** | Project Setup | **Lab 1 (8%)** |
+| | • Git workflow (Branch, PR) | • สร้าง GitHub repo | |
+| | • Python review | • โครงสร้างโปรเจค TaskFlow | |
+| | • Project structure | • requirements.txt | |
+| **3** | **FastAPI Fundamentals** | API Development | **Lab 2 (8%)** |
+| | • REST API concepts | • Task API (CRUD) | |
+| | • FastAPI basics | • Pydantic validation | |
+| | • Pydantic schemas | • Swagger documentation | |
+| **4** | **FastAPI + Database** | Database Integration | **Lab 3 (8%)** |
+| | • MSSQL Docker | • SQLAlchemy models | |
+| | • SQLAlchemy ORM | • User + Category + Task | |
+| | • Relationships | • CRUD with database | |
+| **5** | **Frontend Basics** | UI Development | **Lab 4 (8%)** |
+| | • HTML/CSS review | • Static pages | |
+| | • Bootstrap 5 | • Dashboard, Tasks, Categories | |
+| | • JavaScript basics | • Forms + Modals | |
+| **6** | **Jinja2 + Integration** | Full Stack | **Lab 5 (8%)** |
+| | • Jinja2 templates | • เชื่อม Frontend + Backend | |
+| | • Template inheritance | • Login/Logout | |
+| | • Form handling | • CRUD ผ่านหน้าเว็บ | |
+| **7** | **Docker + Compose** | Containerization | **Lab 6 (8%)** |
+| | • Docker basics | • Dockerfile | |
 | | • Dockerfile | • docker-compose.yml | |
-| | • Docker Compose | • Multi-container Setup | |
-| **9** | **CI/CD Pipeline** | Pipeline Setup | **Lab2: Docker + Pipeline** |
-| | • Jenkins Introduction | • Setup Jenkins | (5%) |
-| | • Pipeline Stages | • Create Jenkinsfile | |
-| | • Automated Testing | • Configure Pipeline | |
+| | • Docker Compose | • App + DB + Jenkins | |
+| **8** | **Testing + Jenkins CI** | CI Pipeline | **Lab 7 (8%)** |
+| | • pytest basics | • Test cases (≥8 tests) | |
+| | • Jenkins setup | • Jenkinsfile (Test stage) | |
+| | • CI concepts | • Auto test on push | |
+| **9** | **Jenkins CD** | CD Pipeline | **Lab 8 (8%)** |
+| | • CD concepts | • Build + Deploy stages | |
+| | • Deployment | • Auto deploy to local | |
+| | • Health checks | • Complete pipeline | |
 
 ### Phase 2: Project Phase (Week 10-15)
 
 | Week | Sprint / Activity | Milestone | Deliverable |
 |:----:|-------------------|-----------|-------------|
-| **10** | **Sprint 1: Core Setup** | Foundation Ready | Progress Check |
-| | • Project Kickoff | • Database Schema | |
-| | • อาจารย์ให้คำปรึกษา | • User Authentication | |
-| | | • Basic Project Structure | |
-| **11** | **Sprint 2: Main Features** | Core Functions | Progress Check |
-| | • CRUD Implementation | • Core CRUD Operations | |
-| | • อาจารย์ให้คำปรึกษา | • Business Logic | |
-| | | • Validation Rules | |
-| **12** | **Sprint 3: Integration** | System Working | **Checkpoint Review** |
-| | • Frontend + Backend | • Complete UI | (10%) |
-| | • อาจารย์ให้คำปรึกษา | • API Integration | |
-| | | • User Flows | |
-| **13** | **Sprint 4: Testing** | Quality Assured | **Test Document** |
-| | • Test Cases | • Test Matrix | (10%) |
-| | • Bug Fixes | • Test Documentation | |
-| | | • Bug Reports | |
-| **14** | **Sprint 5: Deployment** | Deployment Ready | Final Preparation |
-| | • Docker Deployment | • Docker Compose Working | |
-| | • Demo Preparation | • CI/CD Pipeline | |
-| | | • Presentation Ready | |
-| **15** | **Final Presentation** | Complete System | **Final Project** |
-| | • Project Demo | • Live Demo | (50%) |
-| | • Q&A Session | • Technical Presentation | |
-| | | • Code Review | |
+| **10** | **จัดทีม + G1: Proposal** | Project Kickoff | **G1 (5%)** |
+| | • จัดกลุ่ม 4-5 คน | • SRS document | |
+| | • เลือกโปรเจค | • User Stories | |
+| **11** | **G2: System Design** | Design Complete | **G2 (5%)** |
+| | • Architecture design | • ERD diagram | |
+| | • Database design | • API design | |
+| **12** | **Checkpoint Demo** | Prototype Ready | **Checkpoint (8%)** |
+| | • Working prototype | • 50%+ features | |
+| | • Demo to class | • Deployed | |
+| **13** | **Development Sprint** | Core Features | Progress Check |
+| | • Feature development | • CRUD complete | |
+| | • อาจารย์ให้คำปรึกษา | • Testing | |
+| **14** | **Development Sprint** | Testing & Polish | Progress Check |
+| | • Bug fixes | • All features done | |
+| | • Documentation | • Docker working | |
+| **15** | **Final Presentation** | Complete System | **Final (12%)** |
+| | • Project demo | • Live demo | |
+| | • **Oral Defense (4%)** | • Code review | |
+| | • **Peer Eval (2%)** | • Q&A session | |
 
 ## 📊 Assessment (100%)
 
@@ -146,43 +171,25 @@ CSI403-FullStack-Teaching/
 
 | Component | Weight | Week | Description |
 |-----------|:------:|:----:|-------------|
-| **G1: Project Proposal** | 10% | 3 | SRS, User Stories, Project Plan |
-| **Lab1: API Design** | 5% | 5 | FastAPI CRUD, Swagger Docs |
-| **G2: System Design** | 10% | 7 | Architecture, Database Design, UI Mockup |
-| **Lab2: Docker + Pipeline** | 5% | 9 | Dockerfile, docker-compose, Jenkinsfile |
-| **Checkpoint Review** | 10% | 12 | Working Prototype Demo |
-| **Test Document** | 10% | 13 | Test Cases, Test Matrix, Bug Reports |
-| **Final Project** | **50%** | 15 | Complete System |
-| └─ System Functionality | (25%) | | All features working |
-| └─ Code Quality | (10%) | | Clean, documented code |
-| └─ Documentation | (5%) | | User guide, README |
-| └─ Presentation | (10%) | | Demo + Q&A |
+| **Phase 1: Learning** | **64%** | 2-9 | |
+| Lab 1: Git + Python + Setup | 8% | 2 | Project structure, Git workflow |
+| Lab 2: FastAPI CRUD | 8% | 3 | REST API, Pydantic |
+| Lab 3: FastAPI + Database | 8% | 4 | SQLAlchemy, MSSQL |
+| Lab 4: Frontend Basics | 8% | 5 | HTML/CSS/JS, Bootstrap |
+| Lab 5: Jinja2 + Integration | 8% | 6 | Templates, Full stack |
+| Lab 6: Docker + Compose | 8% | 7 | Containerization |
+| Lab 7: Testing + Jenkins CI | 8% | 8 | pytest, CI pipeline |
+| Lab 8: Jenkins CD | 8% | 9 | CD pipeline, Deployment |
+| **Phase 2: Project** | **36%** | 10-15 | |
+| G1: Project Proposal | 5% | 10 | SRS, User Stories |
+| G2: System Design | 5% | 11 | Architecture, ERD, API |
+| Checkpoint Demo | 8% | 12 | Working prototype |
+| Final Project | 12% | 15 | Complete system |
+| Oral Defense | 4% | 15 | Individual Q&A |
+| Peer Evaluation | 2% | 15 | Team member rating |
 | **Total** | **100%** | | |
 
-## 🚀 Case Study: Loan Management System
-
-### Features
-- ✅ User Registration & Authentication
-- ✅ Role-based Access Control (Admin/Borrower)
-- ✅ Loan Application & Approval Workflow
-- ✅ Payment Tracking & History
-- ✅ Status Management
-- ✅ Dashboard & Reports
-- ✅ Dockerized Deployment
-- ✅ CI/CD Pipeline
-
-### Database Schema
-```
-users (id, username, email, password_hash, role, is_active)
-    │
-    └──< borrowers (id, user_id, name, income, grade, ...)
-            │
-            └──< loans (id, borrower_id, amount, rate, status, ...)
-                    │
-                    └──< payments (id, loan_id, amount, date, ...)
-```
-
-## 🔧 Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.11+
@@ -197,7 +204,7 @@ git clone https://github.com/amornpan/CSI403-Full-Stack-Program-Development-.git
 cd CSI403-Full-Stack-Program-Development-
 
 # Navigate to starter code
-cd 01-starter-code/loan-management-system
+cd 01-starter-code/taskflow
 
 # Create virtual environment
 python -m venv venv
@@ -210,29 +217,31 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-### Docker Setup
+### Docker Setup (Full Environment)
 ```bash
 # Build and run with Docker Compose
 docker-compose up -d
 
-# Access application
-# Web: http://localhost:8000
-# API Docs: http://localhost:8000/docs
+# Access:
+# App: http://localhost:8000
+# Swagger: http://localhost:8000/docs
+# Jenkins: http://localhost:8080
 ```
 
 ## 📚 Lab Exercises
 
 | Lab | Topic | Week | Weight |
 |-----|-------|:----:|:------:|
-| Lab 1 | Python Basics & Environment Setup | 1 | - |
-| Lab 2 | Project Planning & Notion | 2 | - |
-| Lab 3 | HTML, CSS & Bootstrap | 3 | - |
-| Lab 4 | Jinja2 Templates | 4 | - |
-| **Lab 5** | **FastAPI CRUD (Lab1 Assessment)** | 5 | **5%** |
-| Lab 6 | SQLAlchemy ORM | 6 | - |
-| Lab 7 | Full Stack Integration | 7 | - |
-| Lab 8 | Docker Basics | 8 | - |
-| **Lab 9** | **Docker + Jenkins (Lab2 Assessment)** | 9 | **5%** |
+| **Lab 1** | Git + Python + Setup | 2 | **8%** |
+| **Lab 2** | FastAPI CRUD | 3 | **8%** |
+| **Lab 3** | FastAPI + Database | 4 | **8%** |
+| **Lab 4** | Frontend (HTML/CSS/JS) | 5 | **8%** |
+| **Lab 5** | Jinja2 + Integration | 6 | **8%** |
+| **Lab 6** | Docker + Compose | 7 | **8%** |
+| **Lab 7** | Testing + Jenkins CI | 8 | **8%** |
+| **Lab 8** | Jenkins CD | 9 | **8%** |
+
+**หมายเหตุ:** ทุก Lab เก็บคะแนน รวม 64% ของคะแนนทั้งหมด
 
 ## 📧 Contact
 - **Instructor:** อ.เมธัส คำจาด

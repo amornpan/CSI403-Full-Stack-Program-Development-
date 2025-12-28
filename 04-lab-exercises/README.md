@@ -4,156 +4,211 @@
 
 รายวิชานี้ใช้การประเมินจาก **ผลงานและโปรเจค** (ไม่มีการสอบ)
 
+**ทุก Lab เก็บคะแนน!** รวม 64% ของคะแนนทั้งหมด
+
 ## 🎯 Course Structure
 
 ### Two-Phase Learning Model
 
 | Phase | Weeks | Focus | Assessment |
 |-------|-------|-------|------------|
-| **Phase 1: Learning** | 1-9 | เนื้อหา + Lab | 30% |
-| **Phase 2: Project** | 10-15 | ทำโปรเจคจริง | 70% |
+| **Phase 1: Learning** | 2-9 | สร้าง TaskFlow | **64%** (8 Labs × 8%) |
+| **Phase 2: Project** | 10-15 | Group Project | **36%** |
 
 ---
 
-## 📅 Lab Schedule (Phase 1: Week 1-9)
+## 📅 Lab Schedule (Phase 1: Week 2-9)
 
-| Week | Lab File | Topic | Type | Weight |
-|:----:|----------|-------|:----:|:------:|
-| 1 | `lab01-python-basics.md` | Python & Environment Setup | Practice | - |
-| 2 | `lab02-project-planning.md` | Agile, Notion, User Stories | Practice | - |
-| 3 | `lab03-html-css-bootstrap.md` | HTML, CSS, Bootstrap 5 | Practice | - |
-| 4 | `lab04-jinja2-templates.md` | Jinja2 Template Engine | Practice | - |
-| 5 | **`lab05-fastapi-crud.md`** | **FastAPI CRUD** | **Assessment** | **5%** |
-| 6 | `lab06-sqlalchemy.md` | SQLAlchemy ORM | Practice | - |
-| 7 | `lab07-integration.md` | Full Stack Integration | Practice | - |
-| 8 | (ใช้เนื้อหาใน Lab 09) | Docker Basics | Practice | - |
-| 9 | **`lab09-docker-jenkins.md`** | **Docker + Jenkins** | **Assessment** | **5%** |
+| Week | Lab File | Topic | Weight |
+|:----:|----------|-------|:------:|
+| 2 | `lab01-git-python-setup.md` | Git + Python + Project Setup | **8%** |
+| 3 | `lab02-fastapi-crud.md` | FastAPI Fundamentals | **8%** |
+| 4 | `lab03-fastapi-database.md` | FastAPI + Database | **8%** |
+| 5 | `lab04-frontend-basics.md` | Frontend (HTML/CSS/JS/Bootstrap) | **8%** |
+| 6 | `lab05-jinja2-integration.md` | Jinja2 + Full Integration | **8%** |
+| 7 | `lab06-docker-compose.md` | Docker + Docker Compose | **8%** |
+| 8 | `lab07-testing-jenkins-ci.md` | Testing + Jenkins CI | **8%** |
+| 9 | `lab08-jenkins-cd.md` | Jenkins CD + Deployment | **8%** |
+| | | **Total** | **64%** |
+
+---
+
+## 🎯 Case Study: TaskFlow
+
+นักศึกษาจะสร้างระบบ **TaskFlow - Task Management System** ตลอด 8 สัปดาห์
+
+```
+Week 2: 📁 โครงสร้างโปรเจค + Git repo
+        └── ได้: taskflow/ folder structure
+
+Week 3: 🚀 Task API (CRUD)
+        └── ได้: 5 API endpoints (In-Memory)
+
+Week 4: 🗄️ Database + Models
+        └── ได้: MSSQL + User + Category + Task
+
+Week 5: 🎨 หน้าเว็บ Static
+        └── ได้: HTML/CSS/JS + Bootstrap pages
+
+Week 6: 🔗 Jinja2 + เชื่อมทุกอย่าง
+        └── ได้: Full Stack application
+
+Week 7: 🐳 Docker + Compose
+        └── ได้: docker-compose up ใช้งานได้
+
+Week 8: 🧪 Testing + CI
+        └── ได้: pytest + Jenkins auto test
+
+Week 9: 🚀 CD + Deploy
+        └── ได้: Complete CI/CD Pipeline
+
+ผลลัพธ์: ระบบ TaskFlow สมบูรณ์! 🎉
+```
 
 ---
 
 ## 📊 Assessment Summary (100%)
 
-### Phase 1: Learning (30%)
-| Assessment | Week | Weight |
-|------------|:----:|:------:|
-| G1: Project Proposal | 3 | 10% |
-| Lab1: API Design | 5 | 5% |
-| G2: System Design | 7 | 10% |
-| Lab2: Docker + Pipeline | 9 | 5% |
+### Phase 1: Learning (64%)
 
-### Phase 2: Project (70%)
+| Lab | Topic | Week | Weight |
+|-----|-------|:----:|:------:|
+| Lab 1 | Git + Python + Setup | 2 | 8% |
+| Lab 2 | FastAPI CRUD | 3 | 8% |
+| Lab 3 | FastAPI + Database | 4 | 8% |
+| Lab 4 | Frontend Basics | 5 | 8% |
+| Lab 5 | Jinja2 + Integration | 6 | 8% |
+| Lab 6 | Docker + Compose | 7 | 8% |
+| Lab 7 | Testing + Jenkins CI | 8 | 8% |
+| Lab 8 | Jenkins CD | 9 | 8% |
+| **Total** | | | **64%** |
+
+### Phase 2: Project (36%)
+
 | Assessment | Week | Weight |
 |------------|:----:|:------:|
-| Checkpoint Review | 12 | 10% |
-| Test Document | 13 | 10% |
-| **Final Project** | 15 | **50%** |
+| G1: Project Proposal | 10 | 5% |
+| G2: System Design | 11 | 5% |
+| Checkpoint Demo | 12 | 8% |
+| Final Project | 15 | 12% |
+| Oral Defense | 15 | 4% |
+| Peer Evaluation | 15 | 2% |
+| **Total** | | **36%** |
 
 ---
 
-## 📁 Active Lab Files
-
-### ✅ ไฟล์ที่ใช้ (9 ไฟล์)
+## 📁 Lab Files Structure
 
 ```
 04-lab-exercises/
-├── README.md                    # ไฟล์นี้
-├── lab01-python-basics.md       # Week 1
-├── lab02-project-planning.md    # Week 2 ⭐ NEW
-├── lab03-html-css-bootstrap.md  # Week 3
-├── lab04-jinja2-templates.md    # Week 4
-├── lab05-fastapi-crud.md        # Week 5 ⭐ ASSESSMENT LAB 1
-├── lab06-sqlalchemy.md          # Week 6
-├── lab07-integration.md         # Week 7 ⭐ NEW
-└── lab09-docker-jenkins.md      # Week 9 ⭐ ASSESSMENT LAB 2
-```
-
-### ❌ ไฟล์เก่าที่ไม่ใช้แล้ว (ให้ลบ)
-
-```
-# ลบไฟล์เหล่านี้:
-lab02-python-advanced.md         # รวมเข้า lab01 แล้ว
-lab07-validation-business-logic.md  # เปลี่ยนเป็น integration
-lab08-authentication.md          # รวมเข้า lab07 แล้ว
-lab09-docker-basics.md           # รวมเข้า lab09-docker-jenkins แล้ว
-lab10-docker-compose-jenkins.md  # รวมเข้า lab09-docker-jenkins แล้ว
-lab11-pytest-testing.md          # ย้ายไป Phase 2
+├── README.md                      # ไฟล์นี้
+├── lab01-git-python-setup.md      # Week 2 - 8%
+├── lab02-fastapi-crud.md          # Week 3 - 8%
+├── lab03-fastapi-database.md      # Week 4 - 8%
+├── lab04-frontend-basics.md       # Week 5 - 8%
+├── lab05-jinja2-integration.md    # Week 6 - 8%
+├── lab06-docker-compose.md        # Week 7 - 8%
+├── lab07-testing-jenkins-ci.md    # Week 8 - 8%
+└── lab08-jenkins-cd.md            # Week 9 - 8%
 ```
 
 ---
 
 ## 🎯 Learning Outcomes
 
-เมื่อเรียนจบ Phase 1 นักศึกษาจะสามารถ:
+เมื่อเรียนจบ Phase 1 (Week 2-9) นักศึกษาจะสามารถ:
 
-1. ✅ ตั้งค่า Development Environment
-2. ✅ วางแผนโปรเจคด้วย Agile/Scrum
-3. ✅ สร้าง Frontend ด้วย HTML/CSS/Bootstrap
-4. ✅ ใช้ Jinja2 Template Engine
-5. ✅ พัฒนา REST API ด้วย FastAPI
-6. ✅ ทำงานกับ Database ผ่าน SQLAlchemy
-7. ✅ เชื่อมต่อ Frontend + Backend
-8. ✅ สร้าง Docker Container
-9. ✅ ตั้งค่า CI/CD Pipeline
+1. ✅ ใช้ Git และ GitHub ได้อย่างคล่องแคล่ว
+2. ✅ พัฒนา REST API ด้วย FastAPI
+3. ✅ ทำงานกับ Database ผ่าน SQLAlchemy ORM
+4. ✅ สร้าง Frontend ด้วย HTML/CSS/JS และ Bootstrap
+5. ✅ ใช้ Jinja2 Template Engine
+6. ✅ Containerize แอปพลิเคชันด้วย Docker
+7. ✅ เขียน Unit Tests ด้วย pytest
+8. ✅ ตั้งค่า CI/CD Pipeline ด้วย Jenkins
 
 ---
 
 ## 📤 Submission Guidelines
 
-### Practice Labs
-- ไม่ต้องส่ง แต่ควรทำเพื่อฝึกทักษะ
-- ใช้เป็นพื้นฐานสำหรับ Assessment Labs และ Project
+### ส่งงานอย่างไร
 
-### Assessment Labs (Lab1, Lab2)
-- ส่งผ่าน GitHub Repository ของกลุ่ม
-- ส่งก่อนเที่ยงคืนของวันที่กำหนด
+1. **ทุก Lab ส่งผ่าน GitHub Repository**
+2. สร้าง Branch สำหรับแต่ละ Lab
+3. ทำ Pull Request เมื่อเสร็จ
+4. Merge to `main` branch
+
+### Repository Structure
 
 ```
-group-repo/
-├── lab1-api-design/         # Week 5
-│   ├── app/
-│   ├── requirements.txt
-│   └── README.md
-└── lab2-docker-pipeline/    # Week 9
-    ├── Dockerfile
-    ├── docker-compose.yml
-    ├── Jenkinsfile
-    └── README.md
+taskflow/
+├── app/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── config.py
+│   ├── database.py
+│   ├── models/
+│   ├── schemas/
+│   ├── routes/
+│   ├── templates/
+│   └── static/
+├── tests/
+├── .gitignore
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+├── Jenkinsfile
+└── README.md
 ```
 
-### Group Assignments (G1, G2)
-- G1: Project Proposal → Notion Workspace
-- G2: System Design → Documentation + Diagrams
+### Deadline
+
+- **ส่งก่อนเที่ยงคืนวันอาทิตย์** ของสัปดาห์นั้น
+- **Late Submission:** หัก 10% ต่อวัน (สูงสุด 3 วัน)
+- หลังจาก 3 วัน = 0 คะแนน
 
 ---
 
-## 🗓️ Phase 2: Project (Week 10-15)
+## ✅ Grading Rubric (แต่ละ Lab)
 
-สัปดาห์ที่ 10-15 ไม่มี Lab ใหม่ - นักศึกษาทำโปรเจคกลุ่มโดยมีอาจารย์เป็นที่ปรึกษา
-
-| Week | Sprint | Milestone |
-|:----:|--------|-----------|
-| 10 | Sprint 1 | Core Setup (DB + Auth) |
-| 11 | Sprint 2 | Main Features (CRUD) |
-| 12 | Sprint 3 | Integration |
-| 13 | Sprint 4 | Testing |
-| 14 | Sprint 5 | Deployment |
-| 15 | Final | Presentation |
+| เกณฑ์ | คะแนน |
+|-------|:-----:|
+| Functionality ทำงานได้ถูกต้อง | 4% |
+| Code Quality สะอาด อ่านง่าย | 2% |
+| Documentation (README, Comments) | 1% |
+| Git Usage (Commits, Branches) | 1% |
+| **รวม** | **8%** |
 
 ---
 
 ## ❓ FAQ
 
-**Q: Assessment Lab ส่งเป็นกลุ่มหรือรายบุคคล?**
+**Q: ส่งงานเป็นกลุ่มหรือรายบุคคล?**
 
-A: ส่งเป็นกลุ่ม (กลุ่มเดียวกับที่ทำ Project)
+A: **รายบุคคล** - ทุกคนต้องมี Repository ของตัวเอง
 
-**Q: สามารถส่งงานช้าได้ไหม?**
+**Q: สามารถใช้ AI ช่วยเขียน Code ได้ไหม?**
 
-A: หักคะแนน 10% ต่อวันที่ช้า (สูงสุด 3 วัน หลังจากนั้นไม่รับ)
+A: ได้ แต่ต้องเข้าใจ Code ที่เขียน (อาจถูกถามใน Oral Defense)
 
-**Q: ถ้าไม่ส่ง Practice Lab จะมีผลอะไรไหม?**
+**Q: ถ้าไม่ส่ง Lab บาง Lab จะเป็นอย่างไร?**
 
-A: ไม่มีผลต่อคะแนนโดยตรง แต่จะทำ Assessment Lab และ Project ได้ยากขึ้น
+A: ได้ 0 คะแนนสำหรับ Lab นั้น (8% หายไป)
+
+---
+
+## 🗓️ Phase 2: Project (Week 10-15)
+
+สัปดาห์ที่ 10-15 ไม่มี Lab ใหม่ - นักศึกษาทำ Group Project
+
+| Week | กิจกรรม | Deliverable |
+|:----:|---------|-------------|
+| 10 | จัดทีม + G1 Proposal | G1 (5%) |
+| 11 | G2 System Design | G2 (5%) |
+| 12 | Checkpoint Demo | Checkpoint (8%) |
+| 13 | Development Sprint | - |
+| 14 | Development Sprint | - |
+| 15 | Final Presentation | Final (12%) + Oral (4%) + Peer (2%) |
 
 ---
 

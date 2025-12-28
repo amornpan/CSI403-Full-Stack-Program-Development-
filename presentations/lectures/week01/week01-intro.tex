@@ -1,14 +1,14 @@
 % ============================================
 % Week 1: Course Introduction & Full Stack Overview
 % CSI403 Full Stack Development
-% Date: January 7-9, 2026
+% Updated: Two-Phase Model (No Exams)
 % ============================================
 
 \input{../common/preamble}
 
 \title[Week 1: Introduction]{Week 1: Course Introduction \& Full Stack Overview}
 \subtitle{CSI403 Full Stack Development}
-\date{January 7-9, 2026}
+\date{January 2026}
 
 \begin{document}
 
@@ -32,8 +32,6 @@
 \section{Welcome to CSI403}
 
 \begin{frame}{Welcome to Full Stack Development!}
-    \weekheader{1}{Jan 7-9}
-    
     \begin{columns}[T]
         \begin{column}{0.6\textwidth}
             \begin{block}{Course Information}
@@ -42,7 +40,6 @@
                     \item \textbf{Credits:} 3 (2-3-5)
                     \item \textbf{Semester:} 2/2568
                     \item \textbf{Duration:} 15 weeks
-                    \item \textbf{Schedule:} Wed \& Fri
                 \end{itemize}
             \end{block}
         \end{column}
@@ -56,110 +53,109 @@
             \end{block}
         \end{column}
     \end{columns}
+    
+    \vspace{0.5cm}
+    
+    \begin{alertblock}{สิ่งสำคัญ}
+        \textbf{ไม่มีการสอบ!} ประเมินจากผลงานและโปรเจคเท่านั้น
+    \end{alertblock}
 \end{frame}
 
-\begin{frame}{Course Schedule Overview}
+\begin{frame}{Course Structure: Two-Phase Model}
     \begin{center}
-        \begin{tikzpicture}[scale=0.9]
+        \begin{tikzpicture}[scale=0.85]
             % Timeline
             \draw[thick,spumaroon] (0,0) -- (14,0);
+            
+            % Phase 1 box
+            \fill[codeblue!30] (0,-0.8) rectangle (8.5,-2);
+            \node[font=\bfseries] at (4.25,-1.1) {Phase 1: LEARNING};
+            \node[font=\small] at (4.25,-1.6) {Week 1-9 | เรียนเนื้อหา + Lab};
+            
+            % Phase 2 box
+            \fill[codegreen!30] (9,-0.8) rectangle (14,-2);
+            \node[font=\bfseries] at (11.5,-1.1) {Phase 2: PROJECT};
+            \node[font=\small] at (11.5,-1.6) {Week 10-15 | ทำโปรเจคจริง};
             
             % Week markers
             \foreach \x in {0,1,...,14} {
                 \draw[spumaroon] (\x,0.1) -- (\x,-0.1);
+                \node[above, font=\tiny] at (\x,0.1) {\x};
             }
             
-            % Phase boxes
-            \fill[spumaroon!20] (0,-0.5) rectangle (2.8,-1.2);
-            \node at (1.4,-0.85) {\tiny\textbf{Foundation}};
+            % Assessment points
+            \fill[spumaroon] (2.8,0) circle (4pt);
+            \node[below, font=\tiny] at (2.8,-2.2) {G1 10\%};
             
-            \fill[codeblue!20] (3,-0.5) rectangle (5.8,-1.2);
-            \node at (4.4,-0.85) {\tiny\textbf{Design}};
+            \fill[spumaroon] (4.8,0) circle (4pt);
+            \node[below, font=\tiny] at (4.8,-2.2) {Lab1 5\%};
             
-            \fill[codegreen!20] (6,-0.5) rectangle (8.8,-1.2);
-            \node at (7.4,-0.85) {\tiny\textbf{Development}};
+            \fill[spumaroon] (6.8,0) circle (4pt);
+            \node[below, font=\tiny] at (6.8,-2.2) {G2 10\%};
             
-            \fill[codeorange!20] (9,-0.5) rectangle (10.8,-1.2);
-            \node at (9.9,-0.85) {\tiny\textbf{DevOps}};
+            \fill[spumaroon] (8.5,0) circle (4pt);
+            \node[below, font=\tiny] at (8.5,-2.2) {Lab2 5\%};
             
-            \fill[codepurple!20] (11,-0.5) rectangle (14,-1.2);
-            \node at (12.5,-0.85) {\tiny\textbf{Testing \& Final}};
+            \fill[codeorange] (11.8,0) circle (4pt);
+            \node[below, font=\tiny] at (11.8,-2.2) {Check 10\%};
             
-            % Labels
-            \node[above] at (0,0.2) {\tiny Wk1};
-            \node[above] at (7,0.2) {\tiny Wk8};
-            \node[above] at (14,0.2) {\tiny Wk15};
+            \fill[codeorange] (12.8,0) circle (4pt);
+            \node[below, font=\tiny] at (12.8,-2.2) {Test 10\%};
+            
+            \fill[spumaroon] (14,0) circle (6pt);
+            \node[below, font=\tiny] at (14,-2.2) {Final 50\%};
             
             % Current position
-            \fill[spumaroon] (0,0) circle (4pt);
-            \node[below] at (0,-1.5) {\small\textbf{You are here!}};
+            \fill[spugold] (0,0) circle (5pt);
+            \node[above, font=\small\bfseries, text=spugold] at (0,0.4) {You are here!};
         \end{tikzpicture}
     \end{center}
-    
-    \vspace{0.5cm}
-    
-    \begin{columns}[T]
-        \begin{column}{0.45\textwidth}
-            \textbf{Key Dates:}
-            \begin{itemize}
-                \item Start: Jan 7, 2026
-                \item End: Apr 24, 2026
-                \item Songkran Break: Apr 13-15
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.45\textwidth}
-            \textbf{Class Days:}
-            \begin{itemize}
-                \item Wednesday (Lecture)
-                \item Friday (Lab)
-            \end{itemize}
-        \end{column}
-    \end{columns}
 \end{frame}
 
-\begin{frame}{Grading Criteria}
+\begin{frame}{Assessment: 100\% Project-Based}
     \begin{center}
         \begin{tikzpicture}
             % Pie chart
             \pie[
                 text=legend,
-                radius=2.5,
-                color={spumaroon, codeblue, codegreen, codeorange, codepurple, codegray}
+                radius=2.2,
+                color={spumaroon, codeblue, codegreen, codeorange, codepurple}
             ]{
-                40/Project,
-                20/Exercises,
-                10/Quiz,
-                10/Presentation,
-                10/Workpiece,
-                10/Attendance
+                50/Final Project,
+                20/Checkpoint + Test Doc,
+                20/Group Activities (G1 G2),
+                10/Assessment Labs (Lab1 Lab2)
             }
         \end{tikzpicture}
     \end{center}
     
-    \begin{alertblock}{Important}
-        \textbf{Project (40\%)} is the core assessment - a complete Loan Management System!
-    \end{alertblock}
+    \begin{successbox}[No Exams!]
+        ไม่มีการสอบกลางภาคและปลายภาค - ประเมินจากผลงานจริง!
+    \end{successbox}
 \end{frame}
 
 \begin{frame}{Assessment Breakdown}
     \small
     \begin{tabularx}{\textwidth}{lXcl}
         \toprule
-        \textbf{Item} & \textbf{Description} & \textbf{Weight} & \textbf{Due} \\
+        \textbf{Item} & \textbf{Description} & \textbf{Weight} & \textbf{Week} \\
         \midrule
-        Project & Loan Management System & 40\% & Week 15 \\
+        \multicolumn{4}{l}{\textbf{Phase 1: Learning (30\%)}} \\
         \midrule
-        G2\_PM & SRS + Notion Board & 5\% & Week 3 \\
-        Lab1\_Design & UI Mockup + Wireframe & 5\% & Week 5 \\
-        G3\_Design & ERD + API + UI & 5\% & Week 7 \\
-        P1\_Diagram & Flowcharts + DFD & 5\% & Week 9 \\
-        P2\_TestDoc & Test Plan + Matrix & 5\% & Week 13 \\
+        G1: Project Proposal & SRS, User Stories, Notion Board & 10\% & 3 \\
+        Lab1: API Design & FastAPI CRUD + Swagger & 5\% & 5 \\
+        G2: System Design & Architecture + DB Design + UI & 10\% & 7 \\
+        Lab2: Docker+Pipeline & Dockerfile + Jenkinsfile & 5\% & 9 \\
         \midrule
-        Q1\_CI/CD & Docker, Jenkins Quiz & 5\% & Week 9 \\
-        Q2\_Testing & Testing Methods Quiz & 5\% & Week 11 \\
+        \multicolumn{4}{l}{\textbf{Phase 2: Project (70\%)}} \\
         \midrule
-        Workpiece & System Demo & 10\% & Week 14-15 \\
-        Attendance & Class + Lab & 10\% & Weekly \\
+        Checkpoint Review & Working Prototype Demo & 10\% & 12 \\
+        Test Document & Test Cases + Matrix & 10\% & 13 \\
+        \textbf{Final Project} & Complete System & \textbf{50\%} & 15 \\
+        \quad - Functionality & All features working & (25\%) & \\
+        \quad - Code Quality & Clean code & (10\%) & \\
+        \quad - Documentation & User guide & (5\%) & \\
+        \quad - Presentation & Demo + Q\&A & (10\%) & \\
         \bottomrule
     \end{tabularx}
 \end{frame}
@@ -169,25 +165,23 @@
 % ============================================
 \section{What is Full Stack Development?}
 
-\sectionslide{What is Full Stack?}
-
 \begin{frame}{The Full Stack Concept}
     \begin{center}
         \begin{tikzpicture}[
             box/.style={rectangle, rounded corners, minimum width=10cm, minimum height=1.2cm, draw, thick},
-            arrow/.style={->, thick, >=stealth}
+            arrow/.style={<->, thick, >=stealth}
         ]
             % Frontend
             \node[box, fill=codeblue!30] (frontend) at (0,4) {
                 \textbf{Frontend (Client-Side)}
             };
-            \node[right] at (5.5,4) {\small HTML, CSS, JavaScript, Jinja2};
+            \node[right] at (5.5,4) {\small HTML, CSS, Bootstrap, Jinja2};
             
             % Backend
             \node[box, fill=codegreen!30] (backend) at (0,2) {
                 \textbf{Backend (Server-Side)}
             };
-            \node[right] at (5.5,2) {\small FastAPI, Python, Business Logic};
+            \node[right] at (5.5,2) {\small FastAPI, Python, Pydantic};
             
             % Database
             \node[box, fill=codeorange!30] (database) at (0,0) {
@@ -198,12 +192,6 @@
             % Arrows
             \draw[arrow, spumaroon] (frontend) -- (backend);
             \draw[arrow, spumaroon] (backend) -- (database);
-            \draw[arrow, spumaroon] (backend) -- (frontend);
-            \draw[arrow, spumaroon] (database) -- (backend);
-            
-            % Labels
-            \node[left, text=spumaroon] at (-5.5,3) {\small HTTP Request};
-            \node[left, text=spumaroon] at (-5.5,1) {\small SQL Query};
         \end{tikzpicture}
     \end{center}
 \end{frame}
@@ -211,160 +199,33 @@
 \begin{frame}{Our Technology Stack}
     \begin{center}
         \begin{tikzpicture}[
-            layer/.style={rectangle, rounded corners, minimum width=3cm, minimum height=1cm, draw, thick, font=\small}
+            layer/.style={rectangle, rounded corners, minimum width=2.8cm, minimum height=0.9cm, draw, thick, font=\small}
         ]
             % Frontend Stack
             \node[layer, fill=codeblue!20] (jinja) at (0,3) {Jinja2};
             \node[layer, fill=codeblue!20] (html) at (0,2) {HTML5/CSS3};
             \node[layer, fill=codeblue!20] (bootstrap) at (0,1) {Bootstrap 5};
-            \node[below, font=\bfseries] at (0,0.3) {Frontend};
+            \node[below, font=\bfseries\small] at (0,0.3) {Frontend};
             
             % Backend Stack
-            \node[layer, fill=codegreen!20] (fastapi) at (4,3) {FastAPI};
-            \node[layer, fill=codegreen!20] (pydantic) at (4,2) {Pydantic};
-            \node[layer, fill=codegreen!20] (sqlalchemy) at (4,1) {SQLAlchemy};
-            \node[below, font=\bfseries] at (4,0.3) {Backend};
+            \node[layer, fill=codegreen!20] (fastapi) at (3.5,3) {FastAPI};
+            \node[layer, fill=codegreen!20] (pydantic) at (3.5,2) {Pydantic};
+            \node[layer, fill=codegreen!20] (sqlalchemy) at (3.5,1) {SQLAlchemy};
+            \node[below, font=\bfseries\small] at (3.5,0.3) {Backend};
             
             % Database Stack
-            \node[layer, fill=codeorange!20] (mssql) at (8,3) {MSSQL};
-            \node[layer, fill=codeorange!20] (docker) at (8,2) {Docker};
-            \node[layer, fill=codeorange!20] (jenkins) at (8,1) {Jenkins};
-            \node[below, font=\bfseries] at (8,0.3) {DevOps};
+            \node[layer, fill=codeorange!20] (mssql) at (7,3) {MSSQL};
+            \node[layer, fill=codeorange!20] (docker) at (7,2) {Docker};
+            \node[layer, fill=codeorange!20] (jenkins) at (7,1) {Jenkins};
+            \node[below, font=\bfseries\small] at (7,0.3) {DevOps};
             
             % Tools Stack
-            \node[layer, fill=codepurple!20] (github) at (12,3) {GitHub};
-            \node[layer, fill=codepurple!20] (notion) at (12,2) {Notion};
-            \node[layer, fill=codepurple!20] (vscode) at (12,1) {VS Code};
-            \node[below, font=\bfseries] at (12,0.3) {Tools};
+            \node[layer, fill=codepurple!20] (github) at (10.5,3) {GitHub};
+            \node[layer, fill=codepurple!20] (notion) at (10.5,2) {Notion};
+            \node[layer, fill=codepurple!20] (vscode) at (10.5,1) {VS Code};
+            \node[below, font=\bfseries\small] at (10.5,0.3) {Tools};
         \end{tikzpicture}
     \end{center}
-    
-    \begin{infobox}[Why This Stack?]
-        \begin{itemize}
-            \item \textbf{Industry Standard} - Used by real companies
-            \item \textbf{Beginner Friendly} - Easy to learn, powerful to use
-            \item \textbf{Complete Workflow} - From code to deployment
-        \end{itemize}
-    \end{infobox}
-\end{frame}
-
-\begin{frame}{Frontend: What Users See}
-    \begin{columns}[T]
-        \begin{column}{0.5\textwidth}
-            \begin{block}{Technologies}
-                \begin{itemize}
-                    \item \textbf{Jinja2} - Template Engine
-                    \item \textbf{HTML5} - Structure
-                    \item \textbf{CSS3} - Styling
-                    \item \textbf{Bootstrap 5} - UI Components
-                \end{itemize}
-            \end{block}
-            
-            \vspace{0.5cm}
-            
-            \begin{exampleblock}{Approach}
-                Server-Side Rendering (SSR)\\
-                \small Templates rendered on server, sent as HTML to browser
-            \end{exampleblock}
-        \end{column}
-        \begin{column}{0.45\textwidth}
-            \begin{codebox}[Jinja2 Example]
-                \begin{lstlisting}[style=html,basicstyle=\ttfamily\tiny]
-{% extends "base.html" %}
-{% block content %}
-<h1>Welcome, {{ user.name }}!</h1>
-<ul>
-{% for loan in loans %}
-    <li>{{ loan.amount | currency }}</li>
-{% endfor %}
-</ul>
-{% endblock %}
-                \end{lstlisting}
-            \end{codebox}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{Backend: The Brain}
-    \begin{columns}[T]
-        \begin{column}{0.5\textwidth}
-            \begin{block}{Technologies}
-                \begin{itemize}
-                    \item \textbf{FastAPI} - Web Framework
-                    \item \textbf{Python} - Programming Language
-                    \item \textbf{Pydantic} - Data Validation
-                    \item \textbf{SQLAlchemy} - ORM
-                \end{itemize}
-            \end{block}
-            
-            \vspace{0.5cm}
-            
-            \begin{alertblock}{Key Responsibilities}
-                \begin{itemize}
-                    \item Handle HTTP requests
-                    \item Business logic
-                    \item Database operations
-                    \item Authentication
-                \end{itemize}
-            \end{alertblock}
-        \end{column}
-        \begin{column}{0.45\textwidth}
-            \begin{codebox}[FastAPI Example]
-                \begin{lstlisting}[style=python,basicstyle=\ttfamily\tiny]
-from fastapi import FastAPI
-
-app = FastAPI()
-
-@app.get("/loans")
-def get_loans():
-    return {"loans": [...]}
-
-@app.post("/loans")
-def create_loan(loan: LoanCreate):
-    # Business logic here
-    return {"id": 1, ...}
-                \end{lstlisting}
-            \end{codebox}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{Database: Data Storage}
-    \begin{columns}[T]
-        \begin{column}{0.5\textwidth}
-            \begin{block}{Our Choice: MSSQL}
-                \begin{itemize}
-                    \item \textbf{Why MSSQL?}
-                    \begin{itemize}
-                        \item Industry standard
-                        \item Enterprise features
-                        \item Thai company preference
-                    \end{itemize}
-                    \item \textbf{Running in Docker}
-                    \begin{itemize}
-                        \item Easy setup
-                        \item Consistent environment
-                        \item No installation hassle
-                    \end{itemize}
-                \end{itemize}
-            \end{block}
-        \end{column}
-        \begin{column}{0.45\textwidth}
-            \begin{codebox}[SQL Example]
-                \begin{lstlisting}[style=sql,basicstyle=\ttfamily\tiny]
-CREATE TABLE loans (
-    id INT PRIMARY KEY,
-    borrower_id INT,
-    loan_amount DECIMAL(15,2),
-    interest_rate DECIMAL(5,2),
-    status VARCHAR(20),
-    FOREIGN KEY (borrower_id)
-        REFERENCES borrowers(id)
-);
-                \end{lstlisting}
-            \end{codebox}
-        \end{column}
-    \end{columns}
 \end{frame}
 
 % ============================================
@@ -372,72 +233,18 @@ CREATE TABLE loans (
 % ============================================
 \section{DevOps \& CI/CD Introduction}
 
-\sectionslide{DevOps \& CI/CD}
-
-\begin{frame}{What is DevOps?}
-    \begin{center}
-        \begin{tikzpicture}
-            % Infinity loop
-            \draw[ultra thick, spumaroon, ->] (0,0) arc (180:0:2 and 1);
-            \draw[ultra thick, codeblue, ->] (4,0) arc (0:-180:2 and 1);
-            
-            % Labels
-            \node[above, font=\bfseries] at (2,1.2) {DEVELOPMENT};
-            \node[below, font=\bfseries] at (2,-1.2) {OPERATIONS};
-            
-            % Steps - Dev side
-            \node at (-1,0.3) {\small Plan};
-            \node at (0.5,0.8) {\small Code};
-            \node at (2,1) {\small Build};
-            \node at (3.5,0.8) {\small Test};
-            
-            % Steps - Ops side
-            \node at (5,0.3) {\small Release};
-            \node at (3.5,-0.8) {\small Deploy};
-            \node at (2,-1) {\small Operate};
-            \node at (0.5,-0.8) {\small Monitor};
-            
-            % Center
-            \node[circle, draw, thick, fill=spugold!30, minimum size=1.5cm] at (2,0) {\textbf{DevOps}};
-        \end{tikzpicture}
-    \end{center}
-    
-    \vspace{0.5cm}
-    
-    \begin{columns}[T]
-        \begin{column}{0.45\textwidth}
-            \begin{block}{Goals}
-                \begin{itemize}
-                    \item Faster delivery
-                    \item Better quality
-                    \item Team collaboration
-                \end{itemize}
-            \end{block}
-        \end{column}
-        \begin{column}{0.45\textwidth}
-            \begin{block}{Our Tools}
-                \begin{itemize}
-                    \item Docker (Containers)
-                    \item Jenkins (Automation)
-                    \item GitHub (Version Control)
-                \end{itemize}
-            \end{block}
-        \end{column}
-    \end{columns}
-\end{frame}
-
 \begin{frame}{CI/CD Pipeline}
     \begin{center}
         \begin{tikzpicture}[
-            stage/.style={rectangle, rounded corners, minimum width=2cm, minimum height=1.5cm, draw, thick, align=center},
+            stage/.style={rectangle, rounded corners, minimum width=1.8cm, minimum height=1.3cm, draw, thick, align=center, font=\small},
             arrow/.style={->, thick, >=stealth}
         ]
             % Stages
             \node[stage, fill=codeblue!20] (code) at (0,0) {\faCode\\Code};
-            \node[stage, fill=codegreen!20] (build) at (3,0) {\faCogs\\Build};
-            \node[stage, fill=codeorange!20] (test) at (6,0) {\faVial\\Test};
-            \node[stage, fill=codepurple!20] (deploy) at (9,0) {\faRocket\\Deploy};
-            \node[stage, fill=spumaroon!20] (prod) at (12,0) {\faGlobe\\Production};
+            \node[stage, fill=codegreen!20] (build) at (2.5,0) {\faCogs\\Build};
+            \node[stage, fill=codeorange!20] (test) at (5,0) {\faVial\\Test};
+            \node[stage, fill=codepurple!20] (deploy) at (7.5,0) {\faRocket\\Deploy};
+            \node[stage, fill=spumaroon!20] (prod) at (10,0) {\faGlobe\\Production};
             
             % Arrows
             \draw[arrow] (code) -- (build);
@@ -446,70 +253,34 @@ CREATE TABLE loans (
             \draw[arrow] (deploy) -- (prod);
             
             % Labels below
-            \node[below, font=\tiny] at (0,-1) {Git Push};
-            \node[below, font=\tiny] at (3,-1) {Docker Build};
-            \node[below, font=\tiny] at (6,-1) {pytest};
-            \node[below, font=\tiny] at (9,-1) {Jenkins};
-            \node[below, font=\tiny] at (12,-1) {Live!};
-            
-            % CI/CD labels
-            \draw[decorate, decoration={brace, amplitude=10pt, raise=5pt}] 
-                (0,1) -- (6,1) node[midway, above=15pt] {\textbf{CI} - Continuous Integration};
-            \draw[decorate, decoration={brace, amplitude=10pt, raise=5pt}] 
-                (6,1) -- (12,1) node[midway, above=15pt] {\textbf{CD} - Continuous Deployment};
+            \node[below, font=\tiny] at (0,-0.9) {Git Push};
+            \node[below, font=\tiny] at (2.5,-0.9) {Docker};
+            \node[below, font=\tiny] at (5,-0.9) {pytest};
+            \node[below, font=\tiny] at (7.5,-0.9) {Jenkins};
+            \node[below, font=\tiny] at (10,-0.9) {Live!};
         \end{tikzpicture}
     \end{center}
     
-    \vspace{0.5cm}
+    \vspace{0.3cm}
     
-    \begin{successbox}[Benefits]
-        \begin{itemize}
-            \item \textbf{Automated} - No manual deployment
-            \item \textbf{Consistent} - Same process every time
-            \item \textbf{Fast Feedback} - Know if code breaks immediately
-        \end{itemize}
-    \end{successbox}
-\end{frame}
-
-\begin{frame}{Docker: Containerization}
     \begin{columns}[T]
-        \begin{column}{0.55\textwidth}
-            \begin{block}{What is Docker?}
-                Package your application with all dependencies into a standardized unit called a \textbf{container}.
-            \end{block}
-            
-            \vspace{0.3cm}
-            
-            \begin{alertblock}{Why Docker?}
+        \begin{column}{0.45\textwidth}
+            \begin{block}{CI - Continuous Integration}
                 \begin{itemize}
-                    \item "Works on my machine" → Works everywhere!
-                    \item Easy to share environment
-                    \item Isolate applications
-                    \item Quick setup
+                    \item Auto build on push
+                    \item Auto run tests
+                    \item Fast feedback
                 \end{itemize}
-            \end{alertblock}
+            \end{block}
         \end{column}
-        \begin{column}{0.4\textwidth}
-            \begin{center}
-                \begin{tikzpicture}[scale=0.8]
-                    % Container boxes
-                    \node[rectangle, draw, thick, fill=codeblue!20, minimum width=2.5cm, minimum height=1cm] (app1) at (0,3) {FastAPI App};
-                    \node[rectangle, draw, thick, fill=codeorange!20, minimum width=2.5cm, minimum height=1cm] (app2) at (0,1.8) {MSSQL DB};
-                    
-                    % Docker layer
-                    \node[rectangle, draw, thick, fill=spumaroon!20, minimum width=4cm, minimum height=0.8cm] (docker) at (0,0.5) {Docker Engine};
-                    
-                    % OS layer
-                    \node[rectangle, draw, thick, fill=codegray!20, minimum width=4cm, minimum height=0.6cm] (os) at (0,-0.3) {Host OS};
-                    
-                    % Hardware
-                    \node[rectangle, draw, thick, fill=spugray!30, minimum width=4cm, minimum height=0.6cm] (hw) at (0,-1) {Hardware};
-                    
-                    % Container border
-                    \draw[dashed, thick, spumaroon] (-1.5,1.2) rectangle (1.5,3.5);
-                    \node[above right, font=\tiny] at (-1.5,3.5) {Containers};
-                \end{tikzpicture}
-            \end{center}
+        \begin{column}{0.45\textwidth}
+            \begin{block}{CD - Continuous Deployment}
+                \begin{itemize}
+                    \item Auto deploy to staging
+                    \item Manual approve to prod
+                    \item Consistent process
+                \end{itemize}
+            \end{block}
         \end{column}
     \end{columns}
 \end{frame}
@@ -519,13 +290,11 @@ CREATE TABLE loans (
 % ============================================
 \section{Case Study: Loan Management System}
 
-\sectionslide{Case Study Preview}
-
-\begin{frame}{Lending Club Loan System}
+\begin{frame}{Loan Management System}
     \begin{columns}[T]
         \begin{column}{0.55\textwidth}
             \begin{block}{What We'll Build}
-                A complete loan management system for a peer-to-peer lending platform.
+                ระบบจัดการสินเชื่อสำหรับ Peer-to-Peer Lending Platform
             \end{block}
             
             \vspace{0.3cm}
@@ -535,221 +304,62 @@ CREATE TABLE loans (
                 \item \faUserPlus\ User Registration \& Login
                 \item \faMoneyBillWave\ Loan Application
                 \item \faChartLine\ Loan Status Tracking
-                \item \faUserShield\ Role-based Access (Admin/Borrower)
+                \item \faUserShield\ Role-based Access
                 \item \faHistory\ Payment History
+                \item \faDocker\ Docker Deployment
             \end{itemize}
         \end{column}
         \begin{column}{0.4\textwidth}
             \begin{center}
-                \begin{tikzpicture}[scale=0.7]
+                \begin{tikzpicture}[scale=0.65]
                     % Loan status flow
-                    \node[rectangle, rounded corners, draw, thick, fill=codegreen!30, minimum width=2cm] (current) at (0,4) {Current};
-                    \node[rectangle, rounded corners, draw, thick, fill=codeblue!30, minimum width=2cm] (paid) at (-2,2) {Fully Paid};
-                    \node[rectangle, rounded corners, draw, thick, fill=codeorange!30, minimum width=2cm] (late) at (2,2) {Late};
-                    \node[rectangle, rounded corners, draw, thick, fill=spumaroon!30, minimum width=2cm] (default) at (2,0) {Default};
+                    \node[rectangle, rounded corners, draw, thick, fill=codeblue!30, minimum width=2cm, font=\small] (pending) at (0,4) {Pending};
+                    \node[rectangle, rounded corners, draw, thick, fill=codegreen!30, minimum width=2cm, font=\small] (current) at (0,2.5) {Current};
+                    \node[rectangle, rounded corners, draw, thick, fill=spugold!30, minimum width=2cm, font=\small] (paid) at (-2,1) {Paid};
+                    \node[rectangle, rounded corners, draw, thick, fill=codeorange!30, minimum width=2cm, font=\small] (late) at (2,1) {Late};
+                    \node[rectangle, rounded corners, draw, thick, fill=spumaroon!30, minimum width=2cm, font=\small] (default) at (2,-0.5) {Default};
                     
                     % Arrows
+                    \draw[->, thick] (pending) -- (current);
                     \draw[->, thick] (current) -- (paid);
                     \draw[->, thick] (current) -- (late);
                     \draw[->, thick] (late) -- (default);
-                    \draw[->, thick, dashed] (late) -- (current);
                 \end{tikzpicture}
             \end{center}
-            \small\centering Loan Status Flow
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{Database Design Preview}
-    \begin{center}
-        \begin{tikzpicture}[
-            table/.style={rectangle, draw, thick, minimum width=3cm, minimum height=2cm, align=left, font=\tiny},
-            pk/.style={font=\tiny\bfseries, text=spumaroon},
-            fk/.style={font=\tiny, text=codeblue}
-        ]
-            % Users table
-            \node[table, fill=spulightgray] (users) at (0,0) {
-                \textbf{users}\\[3pt]
-                \pk{id} (PK)\\
-                username\\
-                email\\
-                password\_hash\\
-                role\\
-                is\_active
-            };
-            
-            % Borrowers table
-            \node[table, fill=spulightgray] (borrowers) at (4,0) {
-                \textbf{borrowers}\\[3pt]
-                \pk{id} (PK)\\
-                \fk{user\_id} (FK)\\
-                emp\_title\\
-                annual\_inc\\
-                grade
-            };
-            
-            % Loans table
-            \node[table, fill=spulightgray] (loans) at (8,0) {
-                \textbf{loans}\\[3pt]
-                \pk{id} (PK)\\
-                \fk{borrower\_id} (FK)\\
-                loan\_amnt\\
-                int\_rate\\
-                status
-            };
-            
-            % Payments table
-            \node[table, fill=spulightgray] (payments) at (12,0) {
-                \textbf{payments}\\[3pt]
-                \pk{id} (PK)\\
-                \fk{loan\_id} (FK)\\
-                payment\_date\\
-                amount\\
-                remaining
-            };
-            
-            % Relationships
-            \draw[->, thick, codeblue] (users) -- (borrowers) node[midway, above, font=\tiny] {1:1};
-            \draw[->, thick, codeblue] (borrowers) -- (loans) node[midway, above, font=\tiny] {1:N};
-            \draw[->, thick, codeblue] (loans) -- (payments) node[midway, above, font=\tiny] {1:N};
-        \end{tikzpicture}
-    \end{center}
-\end{frame}
-
 % ============================================
-% SECTION 5: GETTING STARTED
-% ============================================
-\section{Getting Started}
-
-\begin{frame}{Tools to Install}
-    \begin{columns}[T]
-        \begin{column}{0.48\textwidth}
-            \begin{block}{Required Software}
-                \begin{enumerate}
-                    \item \textbf{Python 3.11+}
-                    \begin{itemize}
-                        \item \tiny \url{python.org}
-                    \end{itemize}
-                    \item \textbf{VS Code}
-                    \begin{itemize}
-                        \item \tiny \url{code.visualstudio.com}
-                    \end{itemize}
-                    \item \textbf{Git}
-                    \begin{itemize}
-                        \item \tiny \url{git-scm.com}
-                    \end{itemize}
-                    \item \textbf{Docker Desktop}
-                    \begin{itemize}
-                        \item \tiny \url{docker.com}
-                    \end{itemize}
-                \end{enumerate}
-            \end{block}
-        \end{column}
-        \begin{column}{0.48\textwidth}
-            \begin{block}{VS Code Extensions}
-                \begin{itemize}
-                    \item Python
-                    \item Pylance
-                    \item Docker
-                    \item GitLens
-                    \item Better Jinja
-                    \item Thunder Client (API testing)
-                \end{itemize}
-            \end{block}
-            
-            \vspace{0.3cm}
-            
-            \begin{exampleblock}{Accounts Needed}
-                \begin{itemize}
-                    \item GitHub account
-                    \item Notion account
-                \end{itemize}
-            \end{exampleblock}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{Verify Your Installation}
-    \begin{codebox}[Open Terminal / Command Prompt]
-        \begin{lstlisting}[style=bash,basicstyle=\ttfamily\small]
-# Check Python version
-python --version
-# Expected: Python 3.11.x or higher
-
-# Check pip
-pip --version
-
-# Check Git
-git --version
-
-# Check Docker
-docker --version
-docker-compose --version
-        \end{lstlisting}
-    \end{codebox}
-    
-    \begin{warningbox}[Troubleshooting]
-        If any command fails:
-        \begin{itemize}
-            \item Restart your terminal
-            \item Check if added to PATH
-            \item Reinstall the software
-        \end{itemize}
-    \end{warningbox}
-\end{frame}
-
-\begin{frame}{Your First Python Program}
-    \begin{codebox}[hello.py]
-        \begin{lstlisting}[style=python]
-# CSI403 - Week 1
-# My first Python program
-
-print("Hello, Full Stack World!")
-
-# Variables
-name = "CSI403"
-credits = 3
-
-print(f"Welcome to {name}!")
-print(f"This course is worth {credits} credits.")
-        \end{lstlisting}
-    \end{codebox}
-    
-    \begin{successbox}[Run It!]
-        \cmd{python hello.py}
-    \end{successbox}
-\end{frame}
-
-% ============================================
-% SECTION 6: GROUP FORMATION
+% SECTION 5: GROUP FORMATION
 % ============================================
 \section{Group Formation}
 
-\begin{frame}{Form Your Project Team}
+\begin{frame}{Form Your Project Team - Today!}
     \begin{columns}[T]
         \begin{column}{0.5\textwidth}
             \begin{block}{Team Requirements}
                 \begin{itemize}
-                    \item \textbf{Size:} 4-5 students
+                    \item \textbf{Size:} 5-6 students
                     \item \textbf{Leader:} 1 person
                     \item \textbf{Roles:}
                     \begin{itemize}
                         \item Frontend Developer
                         \item Backend Developer
                         \item Database Admin
-                        \item DevOps/Tester
-                        \item Documentation
+                        \item DevOps Engineer
+                        \item QA / Tester
                     \end{itemize}
                 \end{itemize}
             \end{block}
-        \end{column}
+        </column>
         \begin{column}{0.45\textwidth}
             \begin{alertblock}{Today's Task}
                 \begin{enumerate}
                     \item Find your teammates
                     \item Choose a team leader
                     \item Create team name
-                    \item Create GitHub Organization
+                    \item Create GitHub Repo
                     \item Submit team info
                 \end{enumerate}
             \end{alertblock}
@@ -759,37 +369,12 @@ print(f"This course is worth {credits} credits.")
     \vspace{0.5cm}
     
     \begin{center}
-        \fbox{\large Deadline: End of Lab Session Today}
+        \fbox{\large\textbf{กลุ่มนี้จะทำงานด้วยกันตลอด 15 สัปดาห์!}}
     \end{center}
 \end{frame}
 
-\begin{frame}{GitHub Repository Setup}
-    \begin{enumerate}
-        \item Go to \urlbox{github.com}
-        \item Create Organization: \code{csi403-team-[name]}
-        \item Create Repository: \code{loan-management-system}
-        \item Add all team members as collaborators
-        \item Initialize with README.md
-    \end{enumerate}
-    
-    \vspace{0.5cm}
-    
-    \begin{codebox}[Clone Your Repository]
-        \begin{lstlisting}[style=bash]
-# Clone the repository
-git clone https://github.com/csi403-team-xxx/loan-management-system.git
-
-# Navigate into directory
-cd loan-management-system
-
-# Check status
-git status
-        \end{lstlisting}
-    \end{codebox}
-\end{frame}
-
 % ============================================
-% SUMMARY & NEXT WEEK
+% SECTION 6: SUMMARY
 % ============================================
 \section{Summary \& What's Next}
 
@@ -798,9 +383,9 @@ git status
         \begin{column}{0.48\textwidth}
             \begin{block}{What We Learned}
                 \begin{itemize}
-                    \item[$\checkmark$] Course overview \& grading
-                    \item[$\checkmark$] Full Stack concept
-                    \item[$\checkmark$] Our technology stack
+                    \item[$\checkmark$] Course structure (2 phases)
+                    \item[$\checkmark$] Assessment (no exams!)
+                    \item[$\checkmark$] Technology stack
                     \item[$\checkmark$] DevOps \& CI/CD basics
                     \item[$\checkmark$] Case study preview
                 \end{itemize}
@@ -809,9 +394,9 @@ git status
         \begin{column}{0.48\textwidth}
             \begin{alertblock}{Action Items}
                 \begin{itemize}
-                    \item[$\square$] Install required tools
+                    \item[$\square$] Install tools (Python, VS Code, Git, Docker)
                     \item[$\square$] Create GitHub account
-                    \item[$\square$] Form project team
+                    \item[$\square$] \textbf{Form project team (TODAY!)}
                     \item[$\square$] Create team GitHub repo
                     \item[$\square$] Submit team info
                 \end{itemize}
@@ -820,26 +405,32 @@ git status
     \end{columns}
 \end{frame}
 
-\begin{frame}{Next Week Preview}
-    \begin{block}{Week 2: Project Planning \& SRS}
+\begin{frame}{Next Week: Project Planning}
+    \begin{block}{Week 2: Agile \& Project Planning}
         \begin{itemize}
-            \item Software Requirements Specification
-            \item User Stories \& Use Cases
+            \item Agile/Scrum Methodology
+            \item User Stories \& Acceptance Criteria
             \item Notion for Project Management
-            \item More Python: functions, loops, lists
+            \item Sprint Planning
         \end{itemize}
     \end{block}
     
     \vspace{0.5cm}
     
-    \begin{infobox}[Preparation]
+    \begin{infobox}[Preparation for Week 2]
         \begin{itemize}
             \item Complete tool installation
-            \item Review Python basics
-            \item Create Notion account
+            \item Create Notion account (free)
             \item Think about loan system features
+            \item Review Python basics (Lab 01)
         \end{itemize}
     \end{infobox}
+    
+    \vspace{0.3cm}
+    
+    \begin{center}
+        \textbf{Week 3: G1 Project Proposal (10\%)}
+    \end{center}
 \end{frame}
 
 % ============================================
@@ -857,12 +448,11 @@ git status
         \vspace{1cm}
         
         \faEnvelope\ methas@spuchonburi.ac.th\\[5pt]
-        \faGithub\ github.com/csi403-fullstack\\[5pt]
-        \faBook\ Course Materials: Notion
+        \faGithub\ github.com/amornpan/CSI403-Full-Stack-Program-Development-
         
         \vspace{1cm}
         
-        \includegraphics[height=1cm]{spu_logo.png}
+        {\small See you next week!}
     \end{center}
 \end{frame}
 

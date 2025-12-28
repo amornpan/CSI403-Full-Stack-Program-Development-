@@ -1,521 +1,482 @@
 % ============================================
-% Week 2: Project Planning & SRS
+% Week 2: Project Planning & Agile/Scrum
 % CSI403 Full Stack Development
-% Date: January 14-16, 2026
+% Updated: Two-Phase Model
 % ============================================
 
-\input{../../common/preamble}
+\input{../common/preamble}
 
-\title[Week 2: Planning]{Week 2: Project Planning \& Software Requirements}
+\title[Week 2: Project Planning]{Week 2: Project Planning \& Agile/Scrum}
 \subtitle{CSI403 Full Stack Development}
-\date{January 14-16, 2026}
+\date{January 2026}
 
 \begin{document}
 
-% Title
+% ============================================
+% TITLE SLIDE
+% ============================================
 \begin{frame}[plain]
     \titlepage
 \end{frame}
 
-% Outline
 \begin{frame}{Today's Agenda}
     \tableofcontents
 \end{frame}
 
 % ============================================
-\section{Project Management Fundamentals}
+% SECTION 1: AGILE/SCRUM
 % ============================================
+\section{Agile \& Scrum Methodology}
 
-\begin{frame}{Why Project Management?}
-    \weekheader{2}{Jan 14-16}
-    
+\begin{frame}{What is Agile?}
     \begin{columns}[T]
         \begin{column}{0.5\textwidth}
-            \begin{block}{Without Planning}
+            \begin{block}{Traditional (Waterfall)}
                 \begin{itemize}
-                    \item Missed deadlines
-                    \item Budget overruns
-                    \item Scope creep
-                    \item Team confusion
-                    \item Failed projects
+                    \item Plan everything upfront
+                    \item Build all at once
+                    \item Test at the end
+                    \item Deliver once
+                    \item {\color{spumaroon}\textbf{Slow to change}}
                 \end{itemize}
             \end{block}
         \end{column}
         \begin{column}{0.5\textwidth}
-            \begin{block}{With Planning}
-                \begin{itemize}
-                    \item Clear milestones
-                    \item Resource allocation
-                    \item Risk management
-                    \item Team alignment
-                    \item Successful delivery
-                \end{itemize}
-            \end{block}
-        \end{column}
-    \end{columns}
-    
-    \vspace{0.5cm}
-    \begin{center}
-        \textbf{``Failing to plan is planning to fail''}
-    \end{center}
-\end{frame}
-
-\begin{frame}{Software Development Life Cycle (SDLC)}
-    \begin{center}
-        \begin{tikzpicture}[scale=0.8]
-            \foreach \i/\phase/\color in {
-                0/Planning/spumaroon,
-                1/Analysis/codeblue,
-                2/Design/codegreen,
-                3/Development/codeorange,
-                4/Testing/codepurple,
-                5/Deployment/spugold
-            } {
-                \node[circle, draw, thick, fill=\color!30, minimum size=1.8cm, font=\small] 
-                    (\phase) at (\i*60:3.5) {\phase};
-            }
-            \draw[->, thick] (Planning) -- (Analysis);
-            \draw[->, thick] (Analysis) -- (Design);
-            \draw[->, thick] (Design) -- (Development);
-            \draw[->, thick] (Development) -- (Testing);
-            \draw[->, thick] (Testing) -- (Deployment);
-            \draw[->, thick, dashed] (Deployment) -- (Planning);
-            
-            \node[fill=spumaroon, text=white, rounded corners, inner sep=5pt] at (Planning) {\tiny We are here!};
-        \end{tikzpicture}
-    \end{center}
-\end{frame}
-
-\begin{frame}{Agile vs Waterfall}
-    \begin{columns}[T]
-        \begin{column}{0.48\textwidth}
-            \begin{block}{Waterfall}
-                \begin{itemize}
-                    \item Sequential phases
-                    \item Heavy documentation
-                    \item Fixed requirements
-                    \item Late testing
-                    \item \textcolor{spumaroon}{Traditional approach}
-                \end{itemize}
-            \end{block}
-        \end{column}
-        \begin{column}{0.48\textwidth}
             \begin{block}{Agile}
                 \begin{itemize}
-                    \item Iterative cycles
-                    \item Working software
-                    \item Flexible requirements
-                    \item Continuous testing
-                    \item \textcolor{codegreen}{Modern approach}
+                    \item Plan incrementally
+                    \item Build in iterations
+                    \item Test continuously
+                    \item Deliver frequently
+                    \item {\color{codegreen}\textbf{Embrace change}}
                 \end{itemize}
             \end{block}
         \end{column}
     \end{columns}
     
     \vspace{0.5cm}
-    \begin{alertblock}{Our Approach}
-        We'll use a \textbf{hybrid approach}: Agile sprints with essential documentation.
+    
+    \begin{successbox}[Agile Manifesto]
+        \textbf{Individuals and interactions} over processes and tools\\
+        \textbf{Working software} over comprehensive documentation\\
+        \textbf{Customer collaboration} over contract negotiation\\
+        \textbf{Responding to change} over following a plan
+    \end{successbox}
+\end{frame}
+
+\begin{frame}{Scrum Framework}
+    \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+            % Sprint cycle
+            \draw[ultra thick, spumaroon, ->] (0,0) arc (180:0:3 and 1.5);
+            \draw[ultra thick, codeblue, ->] (6,0) arc (0:-180:3 and 1.5);
+            
+            % Labels
+            \node[above, font=\bfseries] at (3,1.7) {SPRINT (1-4 weeks)};
+            
+            % Steps
+            \node at (-0.5,0.5) {\small Plan};
+            \node at (1.5,1.3) {\small Build};
+            \node at (3,1.5) {\small Daily Standup};
+            \node at (4.5,1.3) {\small Test};
+            \node at (6.5,0.5) {\small Review};
+            \node at (4.5,-1.3) {\small Retrospective};
+            \node at (1.5,-1.3) {\small Backlog};
+            
+            % Center
+            \node[circle, draw, thick, fill=spugold!30, minimum size=2cm] at (3,0) {
+                \begin{tabular}{c}
+                    \textbf{Working}\\
+                    \textbf{Software}
+                \end{tabular}
+            };
+        \end{tikzpicture}
+    \end{center}
+    
+    \vspace{0.3cm}
+    
+    \begin{columns}[T]
+        \begin{column}{0.3\textwidth}
+            \begin{block}{Roles}
+                \begin{itemize}
+                    \item Product Owner
+                    \item Scrum Master
+                    \item Dev Team
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \begin{block}{Artifacts}
+                \begin{itemize}
+                    \item Product Backlog
+                    \item Sprint Backlog
+                    \item Increment
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \begin{block}{Events}
+                \begin{itemize}
+                    \item Sprint Planning
+                    \item Daily Standup
+                    \item Sprint Review
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Our Sprint Plan (Phase 2: Week 10-15)}
+    \begin{center}
+        \small
+        \begin{tabular}{|c|l|l|c|}
+            \hline
+            \textbf{Week} & \textbf{Sprint} & \textbf{Milestone} & \textbf{Deliverable} \\
+            \hline
+            10 & Sprint 1: Core Setup & DB + Auth & Progress Check \\
+            11 & Sprint 2: Main Features & CRUD Operations & Progress Check \\
+            12 & Sprint 3: Integration & Frontend + Backend & \textbf{Checkpoint 10\%} \\
+            13 & Sprint 4: Testing & Test Cases & \textbf{Test Doc 10\%} \\
+            14 & Sprint 5: Deployment & Docker + CI/CD & Final Prep \\
+            15 & Final & Complete System & \textbf{Project 50\%} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    \vspace{0.5cm}
+    
+    \begin{alertblock}{Important}
+        Phase 1 (Week 1-9) เป็นการเรียนเนื้อหาและเตรียมตัว\\
+        Phase 2 (Week 10-15) เป็นการทำโปรเจคจริงแบบ Sprint
     \end{alertblock}
 \end{frame}
 
 % ============================================
-\section{Software Requirements Specification (SRS)}
+% SECTION 2: USER STORIES
 % ============================================
+\section{User Stories \& Requirements}
 
-\begin{frame}{What is SRS?}
-    \begin{block}{Software Requirements Specification}
-        A comprehensive document that describes \textbf{what} the software will do, not \textbf{how} it will do it.
-    \end{block}
-    
-    \vspace{0.5cm}
-    
-    \textbf{Key Components:}
-    \begin{enumerate}
-        \item \textbf{Introduction} - Purpose, scope, definitions
-        \item \textbf{Overall Description} - Product perspective, user classes
-        \item \textbf{Functional Requirements} - What the system does
-        \item \textbf{Non-Functional Requirements} - Performance, security
-        \item \textbf{Use Cases} - User interactions
-        \item \textbf{User Stories} - Feature descriptions
-    \end{enumerate}
-\end{frame}
-
-\begin{frame}{Functional vs Non-Functional Requirements}
-    \begin{columns}[T]
-        \begin{column}{0.48\textwidth}
-            \begin{block}{Functional (What it does)}
-                \begin{itemize}
-                    \item User can register account
-                    \item User can apply for loan
-                    \item Admin can approve loans
-                    \item System calculates interest
-                    \item User can make payments
-                \end{itemize}
-            \end{block}
-        \end{column}
-        \begin{column}{0.48\textwidth}
-            \begin{block}{Non-Functional (How well)}
-                \begin{itemize}
-                    \item Response time < 2 seconds
-                    \item 99.9\% uptime
-                    \item Support 1000 concurrent users
-                    \item Data encrypted at rest
-                    \item Mobile responsive UI
-                \end{itemize}
-            \end{block}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{User Stories Format}
+\begin{frame}{User Story Format}
     \begin{block}{Template}
-        \centering
         \Large
-        As a \textcolor{codeblue}{\textbf{[role]}},\\
-        I want \textcolor{codegreen}{\textbf{[feature]}},\\
-        So that \textcolor{codeorange}{\textbf{[benefit]}}.
+        \textbf{As a} [role],\\
+        \textbf{I want to} [action],\\
+        \textbf{So that} [benefit].
     \end{block}
     
     \vspace{0.5cm}
     
-    \begin{exampleblock}{Examples for Loan System}
+    \begin{exampleblock}{Example: Loan Application}
+        \textbf{As a} borrower,\\
+        \textbf{I want to} apply for a new loan,\\
+        \textbf{So that} I can get financing for my needs.
+    \end{exampleblock}
+    
+    \vspace{0.3cm}
+    
+    \begin{infobox}[Tips]
         \begin{itemize}
-            \item As a \textbf{borrower}, I want to \textbf{apply for a loan online}, so that \textbf{I don't need to visit a branch}.
-            \item As an \textbf{admin}, I want to \textbf{view all pending applications}, so that \textbf{I can process them efficiently}.
-            \item As a \textbf{borrower}, I want to \textbf{see my payment history}, so that \textbf{I can track my loan progress}.
+            \item Focus on \textbf{user value}, not technical details
+            \item Keep stories \textbf{small} and \textbf{testable}
+            \item Include \textbf{acceptance criteria}
         \end{itemize}
+    \end{infobox}
+\end{frame}
+
+\begin{frame}{Acceptance Criteria (Given-When-Then)}
+    \begin{block}{User Story: User Login}
+        \textbf{As a} registered user,\\
+        \textbf{I want to} log in to my account,\\
+        \textbf{So that} I can access my loan information.
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{exampleblock}{Acceptance Criteria}
+        \small
+        \textbf{Given} I am on the login page\\
+        \textbf{When} I enter valid username and password\\
+        \textbf{Then} I should be redirected to dashboard
+        
+        \vspace{0.2cm}
+        
+        \textbf{Given} I am on the login page\\
+        \textbf{When} I enter invalid credentials\\
+        \textbf{Then} I should see an error message
+        
+        \vspace{0.2cm}
+        
+        \textbf{Given} I am logged in\\
+        \textbf{When} session expires after 24 hours\\
+        \textbf{Then} I should be logged out automatically
     \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Use Case Diagram}
-    \begin{center}
-        \begin{tikzpicture}[scale=0.75]
-            % System boundary
-            \draw[thick, rounded corners] (-1,-4) rectangle (7,4);
-            \node[above] at (3,4) {\textbf{Loan Management System}};
-            
-            % Actors
-            \node[circle, draw, thick, minimum size=0.8cm] (borrower) at (-3,2) {};
-            \node[below] at (-3,1.2) {\small Borrower};
-            \draw (-3,1.8) -- (-3,0.5);
-            \draw (-3.3,1.3) -- (-3,1.5) -- (-2.7,1.3);
-            \draw (-3,0.5) -- (-3.3,0) (-3,0.5) -- (-2.7,0);
-            
-            \node[circle, draw, thick, minimum size=0.8cm] (admin) at (-3,-2) {};
-            \node[below] at (-3,-2.8) {\small Admin};
-            \draw (-3,-2.2) -- (-3,-3.5);
-            \draw (-3.3,-2.7) -- (-3,-2.5) -- (-2.7,-2.7);
-            \draw (-3,-3.5) -- (-3.3,-4) (-3,-3.5) -- (-2.7,-4);
-            
-            % Use cases
-            \node[ellipse, draw, thick, fill=codeblue!20, minimum width=2.5cm] (register) at (3,3) {\small Register};
-            \node[ellipse, draw, thick, fill=codeblue!20, minimum width=2.5cm] (login) at (3,1.5) {\small Login};
-            \node[ellipse, draw, thick, fill=codegreen!20, minimum width=2.5cm] (apply) at (3,0) {\small Apply Loan};
-            \node[ellipse, draw, thick, fill=codegreen!20, minimum width=2.5cm] (view) at (3,-1.5) {\small View Loans};
-            \node[ellipse, draw, thick, fill=codeorange!20, minimum width=2.5cm] (approve) at (3,-3) {\small Approve Loan};
-            
-            % Connections
-            \draw[->] (-2,2) -- (register);
-            \draw[->] (-2,2) -- (login);
-            \draw[->] (-2,1.5) -- (apply);
-            \draw[->] (-2,1) -- (view);
-            \draw[->] (-2,-2) -- (login);
-            \draw[->] (-2,-2.5) -- (view);
-            \draw[->] (-2,-3) -- (approve);
-        \end{tikzpicture}
-    \end{center}
+\begin{frame}{User Stories for Loan System}
+    \small
+    \begin{tabularx}{\textwidth}{|l|X|c|}
+        \hline
+        \textbf{ID} & \textbf{User Story} & \textbf{Points} \\
+        \hline
+        US-001 & As a user, I want to register an account & 3 \\
+        US-002 & As a user, I want to login to my account & 2 \\
+        US-003 & As a borrower, I want to see my loans & 3 \\
+        US-004 & As a borrower, I want to apply for a loan & 5 \\
+        US-005 & As a borrower, I want to make a payment & 5 \\
+        US-006 & As an admin, I want to approve/reject loans & 5 \\
+        US-007 & As a borrower, I want to view payment history & 3 \\
+        US-008 & As a user, I want to update my profile & 2 \\
+        US-009 & As an admin, I want to see dashboard stats & 5 \\
+        US-010 & As an admin, I want to generate reports & 5 \\
+        \hline
+    \end{tabularx}
+    
+    \vspace{0.3cm}
+    
+    \begin{infobox}[Story Points]
+        Fibonacci: 1, 2, 3, 5, 8, 13... (ยิ่งเยอะ ยิ่งซับซ้อน)
+    \end{infobox}
 \end{frame}
 
 % ============================================
-\section{Notion for Project Management}
+% SECTION 3: NOTION SETUP
 % ============================================
+\section{Notion for Project Management}
 
 \begin{frame}{Why Notion?}
     \begin{columns}[T]
         \begin{column}{0.5\textwidth}
             \begin{block}{Features}
                 \begin{itemize}
-                    \item Free for students
-                    \item Kanban boards
-                    \item Document collaboration
-                    \item Database views
-                    \item Timeline/Calendar
-                    \item Team workspace
+                    \item \faDatabase\ Database views
+                    \item \faColumns\ Kanban boards
+                    \item \faFile\ Documentation
+                    \item \faUsers\ Team collaboration
+                    \item \faMobile\ Mobile app
+                    \item \textbf{FREE for students!}
                 \end{itemize}
             \end{block}
         \end{column}
         \begin{column}{0.45\textwidth}
-            \begin{block}{What We'll Track}
+            \begin{exampleblock}{Our Use Cases}
+                \begin{itemize}
+                    \item Product Backlog
+                    \item Sprint Board
+                    \item Meeting Notes
+                    \item SRS Document
+                    \item API Documentation
+                \end{itemize}
+            \end{exampleblock}
+        \end{column}
+    \end{columns}
+    
+    \vspace{0.5cm}
+    
+    \begin{center}
+        \urlbox{notion.so} - Create free account today!
+    \end{center}
+\end{frame}
+
+\begin{frame}{Notion Workspace Structure}
+    \begin{center}
+        \begin{tikzpicture}[
+            node/.style={rectangle, draw, rounded corners, minimum width=2.5cm, minimum height=0.8cm, font=\small},
+            level 1/.style={sibling distance=3.5cm},
+            level 2/.style={sibling distance=2.5cm}
+        ]
+            \node[node, fill=spumaroon!20] {Loan System}
+                child {node[node, fill=codeblue!20] {Backlog}
+                    child {node[node, fill=spulightgray, font=\tiny] {User Stories}}
+                }
+                child {node[node, fill=codegreen!20] {Sprint Board}
+                    child {node[node, fill=spulightgray, font=\tiny] {Kanban}}
+                }
+                child {node[node, fill=codeorange!20] {Docs}
+                    child {node[node, fill=spulightgray, font=\tiny] {SRS}}
+                    child {node[node, fill=spulightgray, font=\tiny] {API Spec}}
+                }
+                child {node[node, fill=codepurple!20] {Team}
+                    child {node[node, fill=spulightgray, font=\tiny] {Members}}
+                };
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Kanban Board}
+    \begin{center}
+        \begin{tikzpicture}[scale=0.9]
+            % Columns
+            \foreach \x/\title/\color in {0/Backlog/codegray, 3/To Do/codeblue, 6/In Progress/codeorange, 9/Review/codepurple, 12/Done/codegreen} {
+                \draw[thick, \color] (\x,0) rectangle (\x+2.5,5);
+                \node[font=\bfseries\small, \color] at (\x+1.25,4.7) {\title};
+            }
+            
+            % Cards
+            \node[rectangle, draw, fill=white, minimum width=2cm, minimum height=0.6cm, font=\tiny] at (1.25,4) {US-007};
+            \node[rectangle, draw, fill=white, minimum width=2cm, minimum height=0.6cm, font=\tiny] at (1.25,3.2) {US-008};
+            
+            \node[rectangle, draw, fill=white, minimum width=2cm, minimum height=0.6cm, font=\tiny] at (4.25,4) {US-003};
+            \node[rectangle, draw, fill=white, minimum width=2cm, minimum height=0.6cm, font=\tiny] at (4.25,3.2) {US-004};
+            
+            \node[rectangle, draw, fill=white, minimum width=2cm, minimum height=0.6cm, font=\tiny] at (7.25,4) {US-001};
+            
+            \node[rectangle, draw, fill=white, minimum width=2cm, minimum height=0.6cm, font=\tiny] at (10.25,4) {US-002};
+            
+            % Empty Done column
+        \end{tikzpicture}
+    \end{center}
+    
+    \vspace{0.3cm}
+    
+    \begin{infobox}[Workflow]
+        Backlog → To Do → In Progress → Review → Done
+    \end{infobox}
+\end{frame}
+
+% ============================================
+% SECTION 4: G1 PREPARATION
+% ============================================
+\section{G1: Project Proposal (Week 3)}
+
+\begin{frame}{G1: Project Proposal (10\%)}
+    \begin{alertblock}{Due: Week 3}
+        \textbf{Deliverables:}
+        \begin{enumerate}
+            \item Notion Workspace with Product Backlog (15+ User Stories)
+            \item SRS Document (Project Overview, Requirements)
+            \item Sprint Planning (5 Sprints for Phase 2)
+        \end{enumerate}
+    \end{alertblock}
+    
+    \vspace{0.3cm}
+    
+    \begin{block}{Grading Rubric (10\%)}
+        \begin{tabular}{ll}
+            User Stories (15+) & 3\% \\
+            SRS Document & 3\% \\
+            Notion Organization & 2\% \\
+            Sprint Planning & 2\% \\
+        \end{tabular}
+    \end{block}
+\end{frame}
+
+\begin{frame}{SRS Document Outline}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{1. Introduction}
+                \begin{itemize}
+                    \item Project Overview
+                    \item Objectives
+                    \item Scope
+                    \item Technology Stack
+                \end{itemize}
+            \end{block}
+            
+            \begin{block}{2. Functional Requirements}
                 \begin{itemize}
                     \item User Stories
-                    \item Sprint Tasks
-                    \item Bug Reports
-                    \item Meeting Notes
-                    \item Documentation
+                    \item Use Cases
+                    \item Features List
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{3. Non-Functional Requirements}
+                \begin{itemize}
+                    \item Performance
+                    \item Security
+                    \item Usability
+                \end{itemize}
+            \end{block}
+            
+            \begin{block}{4. Project Plan}
+                \begin{itemize}
+                    \item Team Members
+                    \item Sprint Schedule
+                    \item Milestones
                 \end{itemize}
             \end{block}
         \end{column}
     \end{columns}
-    
-    \vspace{0.5cm}
-    \begin{infobox}[Getting Started]
-        \begin{enumerate}
-            \item Create account at \urlbox{notion.so}
-            \item Create team workspace
-            \item Use template provided by instructor
-        \end{enumerate}
-    \end{infobox}
-\end{frame}
-
-\begin{frame}{Kanban Board Structure}
-    \begin{center}
-        \begin{tikzpicture}[scale=0.8]
-            % Columns
-            \foreach \i/\title/\color in {0/Backlog/codegray, 3/To Do/codeblue, 6/In Progress/codeorange, 9/Testing/codepurple, 12/Done/codegreen} {
-                \draw[thick, fill=\color!20] (\i,0) rectangle (\i+2.5,5);
-                \node[font=\small\bfseries] at (\i+1.25,4.5) {\title};
-            }
-            
-            % Sample cards
-            \node[draw, fill=white, rounded corners, font=\tiny, text width=2cm, align=center] at (1.25,3.5) {User Registration\\US-001};
-            \node[draw, fill=white, rounded corners, font=\tiny, text width=2cm, align=center] at (1.25,2.5) {Login System\\US-002};
-            \node[draw, fill=white, rounded corners, font=\tiny, text width=2cm, align=center] at (4.25,3.5) {Loan Form\\US-003};
-            \node[draw, fill=white, rounded corners, font=\tiny, text width=2cm, align=center] at (7.25,3.5) {Dashboard\\US-004};
-            \node[draw, fill=white, rounded corners, font=\tiny, text width=2cm, align=center] at (10.25,3.5) {DB Setup\\US-005};
-            \node[draw, fill=white, rounded corners, font=\tiny, text width=2cm, align=center] at (13.25,3.5) {Project Init\\US-000};
-        \end{tikzpicture}
-    \end{center}
-    
-    \begin{block}{Card Information}
-        Each card should include: Title, Description, Assignee, Due Date, Priority, Labels
-    \end{block}
 \end{frame}
 
 % ============================================
-\section{Python Review: Functions \& Loops}
+% SECTION 5: SUMMARY
 % ============================================
-
-\begin{frame}{Python Functions}
-    \begin{codebox}[Function Definition]
-        \begin{lstlisting}[style=python]
-def calculate_interest(principal, rate, years):
-    """
-    Calculate simple interest.
-    
-    Args:
-        principal: Loan amount
-        rate: Annual interest rate (%)
-        years: Loan term in years
-    
-    Returns:
-        Total interest amount
-    """
-    interest = principal * (rate / 100) * years
-    return interest
-
-# Usage
-result = calculate_interest(100000, 7.5, 3)
-print(f"Interest: {result:,.2f} THB")
-        \end{lstlisting}
-    \end{codebox}
-\end{frame}
-
-\begin{frame}{Python Loops}
-    \begin{columns}[T]
-        \begin{column}{0.48\textwidth}
-            \begin{codebox}[For Loop]
-                \begin{lstlisting}[style=python,basicstyle=\ttfamily\tiny]
-# Iterate over list
-loans = [50000, 100000, 150000]
-
-for loan in loans:
-    print(f"Loan: {loan:,}")
-
-# With index
-for i, loan in enumerate(loans):
-    print(f"{i+1}. {loan:,}")
-
-# Range
-for i in range(1, 6):
-    print(f"Month {i}")
-                \end{lstlisting}
-            \end{codebox}
-        \end{column}
-        \begin{column}{0.48\textwidth}
-            \begin{codebox}[While Loop]
-                \begin{lstlisting}[style=python,basicstyle=\ttfamily\tiny]
-# Payment simulation
-balance = 100000
-month = 0
-payment = 10000
-
-while balance > 0:
-    month += 1
-    balance -= payment
-    if balance < 0:
-        balance = 0
-    print(f"Month {month}: {balance:,}")
-
-print(f"Paid off in {month} months!")
-                \end{lstlisting}
-            \end{codebox}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{Python Lists \& Dictionaries}
-    \begin{codebox}[Data Structures]
-        \begin{lstlisting}[style=python]
-# List - ordered collection
-loan_amounts = [50000, 100000, 150000, 200000]
-loan_amounts.append(250000)  # Add item
-total = sum(loan_amounts)    # Sum all
-
-# Dictionary - key-value pairs
-borrower = {
-    "name": "John Doe",
-    "income": 50000,
-    "loan_amount": 100000,
-    "status": "pending"
-}
-
-# Access values
-print(borrower["name"])
-print(borrower.get("email", "N/A"))  # Default value
-
-# List of dictionaries
-loans = [
-    {"id": 1, "amount": 50000, "status": "current"},
-    {"id": 2, "amount": 100000, "status": "paid"}
-]
-        \end{lstlisting}
-    \end{codebox}
-\end{frame}
-
-% ============================================
-\section{Assignment: G2 Project Planning}
-% ============================================
-
-\begin{frame}{G2 Assignment: Project Planning}
-    \begin{alertblock}{Due: Week 3 (Presentation)}
-        Create comprehensive project planning documents for your Loan Management System.
-    \end{alertblock}
-    
-    \textbf{Deliverables:}
-    \begin{enumerate}
-        \item \textbf{SRS Document} (5-10 pages)
-            \begin{itemize}
-                \item Introduction \& Scope
-                \item 5-10 User Stories
-                \item Use Case Diagram
-                \item Functional Requirements
-                \item Non-Functional Requirements
-            \end{itemize}
-        \item \textbf{Notion Board}
-            \begin{itemize}
-                \item Kanban board with all user stories
-                \item Sprint planning (Week 1-15)
-                \item Team member assignments
-            \end{itemize}
-        \item \textbf{Project Timeline}
-            \begin{itemize}
-                \item Gantt chart or timeline view
-                \item Key milestones marked
-            \end{itemize}
-    \end{enumerate}
-\end{frame}
-
-\begin{frame}{Grading Rubric (5\%)}
-    \begin{center}
-        \small
-        \begin{tabular}{|l|c|l|}
-            \hline
-            \textbf{Criteria} & \textbf{Points} & \textbf{Description} \\
-            \hline
-            SRS Completeness & 2.0 & All sections present and detailed \\
-            \hline
-            User Stories Quality & 1.0 & Clear, measurable, testable \\
-            \hline
-            Use Case Diagram & 0.5 & Correct UML notation \\
-            \hline
-            Notion Board Setup & 1.0 & Properly organized, tasks assigned \\
-            \hline
-            Presentation & 0.5 & Clear explanation, Q\&A \\
-            \hline
-            \textbf{Total} & \textbf{5.0} & \\
-            \hline
-        \end{tabular}
-    \end{center}
-    
-    \vspace{0.5cm}
-    \begin{infobox}[Submission]
-        \begin{itemize}
-            \item SRS: Upload to GitHub as \filepath{docs/SRS.md}
-            \item Notion: Share workspace link with instructor
-            \item Present: Week 3 class (10 min per team)
-        \end{itemize}
-    \end{infobox}
-\end{frame}
-
-% ============================================
-\section{Summary}
-% ============================================
+\section{Summary \& Lab}
 
 \begin{frame}{Week 2 Summary}
     \begin{columns}[T]
         \begin{column}{0.48\textwidth}
             \begin{block}{What We Learned}
                 \begin{itemize}
-                    \item[$\checkmark$] SDLC phases
-                    \item[$\checkmark$] SRS components
-                    \item[$\checkmark$] User Stories format
-                    \item[$\checkmark$] Use Case diagrams
-                    \item[$\checkmark$] Notion for PM
-                    \item[$\checkmark$] Python review
+                    \item[$\checkmark$] Agile vs Waterfall
+                    \item[$\checkmark$] Scrum Framework
+                    \item[$\checkmark$] User Stories
+                    \item[$\checkmark$] Acceptance Criteria
+                    \item[$\checkmark$] Notion Setup
                 \end{itemize}
             \end{block}
         \end{column}
         \begin{column}{0.48\textwidth}
-            \begin{alertblock}{Action Items}
+            \begin{alertblock}{Lab Today}
                 \begin{itemize}
                     \item[$\square$] Create Notion workspace
-                    \item[$\square$] Draft User Stories
-                    \item[$\square$] Write SRS document
-                    \item[$\square$] Setup Kanban board
-                    \item[$\square$] Prepare presentation
+                    \item[$\square$] Setup Product Backlog
+                    \item[$\square$] Write 5+ User Stories
+                    \item[$\square$] Create Kanban board
                 \end{itemize}
             \end{alertblock}
         \end{column}
     \end{columns}
+    
+    \vspace{0.5cm}
+    
+    \begin{center}
+        \fbox{\large\textbf{Next Week: G1 Project Proposal Due (10\%)}}
+    \end{center}
 \end{frame}
 
-\begin{frame}{Next Week Preview}
-    \begin{block}{Week 3: HTML/CSS \& Bootstrap}
+\begin{frame}{Next Week: HTML/CSS/Bootstrap}
+    \begin{block}{Week 3: Frontend Basics}
         \begin{itemize}
-            \item HTML5 Structure \& Semantics
-            \item CSS3 Styling \& Layouts
+            \item HTML5 Semantic Elements
+            \item CSS3 \& Flexbox
             \item Bootstrap 5 Components
-            \item Responsive Design
-            \item \textbf{G2 Presentations}
+            \item Build UI Mockup
         \end{itemize}
     \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{infobox}[Preparation]
+        \begin{itemize}
+            \item Complete User Stories (15+)
+            \item Finish SRS Document
+            \item Review HTML/CSS basics
+        \end{itemize}
+    \end{infobox}
 \end{frame}
 
-% Final Slide
+% ============================================
+% FINAL SLIDE
+% ============================================
 \begin{frame}[plain]
     \begin{center}
         \vspace{2cm}
         {\Huge\bfseries\color{spumaroon} Questions?}
+        
         \vspace{1cm}
         
-        {\Large Thank you!}
+        {\Large Let's setup Notion!}
+        
         \vspace{1cm}
         
-        \faEnvelope\ methas@spuchonburi.ac.th\\[5pt]
-        \faGithub\ github.com/csi403-fullstack
+        \faBook\ Lab 02: Project Planning \& Notion
+        
         \vspace{1cm}
         
-        \includegraphics[height=1cm]{spu_logo.png}
+        {\small See you next week!}
     \end{center}
 \end{frame}
 

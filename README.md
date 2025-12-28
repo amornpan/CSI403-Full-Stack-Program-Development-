@@ -6,25 +6,49 @@
 | Item | Detail |
 |------|--------|
 | **Course Code** | CSI403 |
+| **Course Name** | การพัฒนาโปรแกรมแบบ Full Stack (Software Full Stack Development) |
 | **Credits** | 3 (2-3-5) |
 | **Semester** | 2/2568 (Jan - Apr 2026) |
-| **Instructor** | Aj. Methas Khamjad |
-| **University** | Sripatum University Chonburi |
+| **Instructor** | อ.เมธัส คำจาด |
+| **University** | มหาวิทยาลัยศรีปทุม วิทยาเขตชลบุรี |
+
+## 🎯 Course Structure
+
+### Two-Phase Learning Model
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                    CSI403 COURSE STRUCTURE                         │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  PHASE 1: LEARNING (Week 1-9)          PHASE 2: PROJECT (Week 10-15)│
+│  ┌─────────────────────────┐           ┌─────────────────────────┐  │
+│  │  📖 Lecture + Lab       │           │  💻 Project Development │  │
+│  │  • Content Delivery     │    ──▶    │  • Sprint-based Work    │  │
+│  │  • Hands-on Practice    │           │  • Advisor Consultation │  │
+│  │  • Skills Building      │           │  • Real-world Product   │  │
+│  └─────────────────────────┘           └─────────────────────────┘  │
+│                                                                     │
+│  Assessment: 30%                        Assessment: 70%             │
+│  (G1, Lab1, G2, Lab2)                   (Checkpoint, Test, Final)   │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+```
 
 ## 🛠️ Technology Stack
 | Layer | Technologies |
 |-------|-------------|
-| **Frontend** | Jinja2, HTML5, CSS3, Bootstrap 5 |
+| **Frontend** | HTML5, CSS3, Bootstrap 5, Jinja2 Templates |
 | **Backend** | FastAPI, Python 3.11+, Pydantic |
-| **Database** | MSSQL Server (Docker), SQLAlchemy ORM |
+| **Database** | Microsoft SQL Server, SQLAlchemy ORM |
 | **Authentication** | Session-based, bcrypt, Role-based Access |
-| **DevOps** | Docker, Docker Compose, Jenkins |
-| **Tools** | GitHub, Notion, VS Code, pytest |
+| **DevOps** | Docker, Docker Compose, Jenkins CI/CD |
+| **Tools** | Git, GitHub, Notion, VS Code, pytest |
 
 ## 📁 Project Structure
 ```
 CSI403-FullStack-Teaching/
-├── 00-course-info/           # Syllabus, calendar, grading
+├── 00-course-info/           # Syllabus, มคอ.3, grading
 ├── 01-starter-code/          # Loan Management System
 │   └── loan-management-system/
 │       ├── app/
@@ -40,61 +64,100 @@ CSI403-FullStack-Teaching/
 ├── 02-templates/             # Document templates (SRS, Test)
 ├── 03-sample-data/           # Loan dataset & SQL scripts
 ├── 04-lab-exercises/         # Weekly lab instructions
-├── 05-quizzes/               # Quiz materials
+├── 05-quizzes/               # Quiz materials (optional)
 └── presentations/            # [PRIVATE] LaTeX slides
 ```
 
-## 📅 Weekly Schedule (15 Weeks)
+## 📅 Teaching Plan
 
-### Phase 1: Foundation & Planning (Weeks 1-3)
-| Week | Date | Lecture Topic | Lab Topic | Assessment |
-|------|------|---------------|-----------|------------|
-| 1 | Jan 7-9 | Course Intro, Full Stack Overview | Python Basics, Environment Setup | Team Formation |
-| 2 | Jan 14-16 | Project Planning, SRS, SDLC | Python Functions, Loops, Lists | - |
-| 3 | Jan 21-23 | HTML5, CSS3, Bootstrap 5 | Build Static Loan Form | **G2 Present (5%)** |
+### Phase 1: Learning Phase (Week 1-9)
 
-### Phase 2: Architecture & Design (Weeks 4-6)
-| Week | Date | Lecture Topic | Lab Topic | Assessment |
-|------|------|---------------|-----------|------------|
-| 4 | Jan 28-30 | Jinja2 Template Engine | Template Inheritance, Blocks | - |
-| 5 | Feb 4-6 | FastAPI Introduction | Routes, Parameters, CRUD | **Lab1 Design (5%)** |
-| 6 | Feb 11-13 | SQLAlchemy ORM, Database Design | Create Models, Relationships | - |
+| Week | Lecture Topic | Lab / Activity | Deliverable |
+|:----:|---------------|----------------|-------------|
+| **1** | **Course Introduction** | Environment Setup | **จัดกลุ่ม** |
+| | • Full Stack Overview | • Install Python, VS Code | (5-6 คน/กลุ่ม) |
+| | • DevOps & CI/CD Concepts | • Git & GitHub Setup | |
+| | • Technology Stack | • Python Basics Review | |
+| **2** | **Project Planning** | Notion & Agile | - |
+| | • Agile/Scrum Methodology | • Setup Notion Workspace | |
+| | • SRS Document | • Create Kanban Board | |
+| | • User Stories | • Write User Stories | |
+| **3** | **Frontend: HTML/CSS** | Static UI Design | **G1: Project Proposal** |
+| | • HTML5 Semantic Elements | • Build UI Mockup | (10%) |
+| | • CSS3 & Flexbox | • Responsive Design | |
+| | • Bootstrap 5 Components | • Form Design | |
+| **4** | **Frontend: Jinja2** | Template Development | - |
+| | • Template Syntax | • Create base.html | |
+| | • Template Inheritance | • Build Page Templates | |
+| | • Filters & Macros | • Dynamic Content | |
+| **5** | **Backend: FastAPI** | API Development | **Lab1: API Design** |
+| | • Routes & HTTP Methods | • CRUD Routes | (5%) |
+| | • Path & Query Parameters | • Swagger Documentation | |
+| | • Pydantic Validation | • Request Validation | |
+| **6** | **Backend: Database** | ORM Implementation | - |
+| | • SQLAlchemy ORM | • Create Models | |
+| | • Models & Relationships | • Implement CRUD | |
+| | • Database Design | • Connect to MSSQL | |
+| **7** | **Full Stack Integration** | System Integration | **G2: System Design** |
+| | • Frontend + Backend | • Connect Templates to API | (10%) |
+| | • Session Authentication | • Login/Register Flow | |
+| | • Form Handling | • Role-based Access | |
+| **8** | **Docker Basics** | Containerization | - |
+| | • Containers vs VMs | • Build Docker Image | |
+| | • Dockerfile | • docker-compose.yml | |
+| | • Docker Compose | • Multi-container Setup | |
+| **9** | **CI/CD Pipeline** | Pipeline Setup | **Lab2: Docker + Pipeline** |
+| | • Jenkins Introduction | • Setup Jenkins | (5%) |
+| | • Pipeline Stages | • Create Jenkinsfile | |
+| | • Automated Testing | • Configure Pipeline | |
 
-### Phase 3: Development & Authentication (Weeks 7-9)
-| Week | Date | Lecture Topic | Lab Topic | Assessment |
-|------|------|---------------|-----------|------------|
-| 7 | Feb 18-20 | Pydantic Validation, Business Logic | Validation Rules, Error Handling | **G3 Present (5%)** |
-| 8 | Feb 25-27 | Session-based Authentication | Login, Register, Protected Routes | - |
-| 9 | Mar 4-6 | Full Stack Integration | Connect All Layers, CRUD Flow | **P1 (5%), Q1 (5%)** |
+### Phase 2: Project Phase (Week 10-15)
 
-### Phase 4: Build & Containerization (Weeks 10-11)
-| Week | Date | Lecture Topic | Lab Topic | Assessment |
-|------|------|---------------|-----------|------------|
-| 10 | Mar 11-13 | Docker Fundamentals | Dockerfile, Build Images | - |
-| 11 | Mar 18-20 | Docker Compose, Jenkins CI/CD | Multi-container, Pipeline | **Q2 Quiz (5%)** |
+| Week | Sprint / Activity | Milestone | Deliverable |
+|:----:|-------------------|-----------|-------------|
+| **10** | **Sprint 1: Core Setup** | Foundation Ready | Progress Check |
+| | • Project Kickoff | • Database Schema | |
+| | • อาจารย์ให้คำปรึกษา | • User Authentication | |
+| | | • Basic Project Structure | |
+| **11** | **Sprint 2: Main Features** | Core Functions | Progress Check |
+| | • CRUD Implementation | • Core CRUD Operations | |
+| | • อาจารย์ให้คำปรึกษา | • Business Logic | |
+| | | • Validation Rules | |
+| **12** | **Sprint 3: Integration** | System Working | **Checkpoint Review** |
+| | • Frontend + Backend | • Complete UI | (10%) |
+| | • อาจารย์ให้คำปรึกษา | • API Integration | |
+| | | • User Flows | |
+| **13** | **Sprint 4: Testing** | Quality Assured | **Test Document** |
+| | • Test Cases | • Test Matrix | (10%) |
+| | • Bug Fixes | • Test Documentation | |
+| | | • Bug Reports | |
+| **14** | **Sprint 5: Deployment** | Deployment Ready | Final Preparation |
+| | • Docker Deployment | • Docker Compose Working | |
+| | • Demo Preparation | • CI/CD Pipeline | |
+| | | • Presentation Ready | |
+| **15** | **Final Presentation** | Complete System | **Final Project** |
+| | • Project Demo | • Live Demo | (50%) |
+| | • Q&A Session | • Technical Presentation | |
+| | | • Code Review | |
 
-### Phase 5: Testing & Documentation (Weeks 12-13)
-| Week | Date | Lecture Topic | Lab Topic | Assessment |
-|------|------|---------------|-----------|------------|
-| 12 | Mar 25-27 | Testing Methods (Black/White/Gray) | pytest, Unit Tests | - |
-| 13 | Apr 1-3 | Test Documentation, Bug Reporting | Test Matrix, Coverage | **P2 (5%)** |
+## 📊 Assessment (100%)
 
-### Phase 6: Presentation & Final (Weeks 14-15)
-| Week | Date | Lecture Topic | Lab Topic | Assessment |
-|------|------|---------------|-----------|------------|
-| 14 | Apr 8-10 | Deployment, Demo Preparation | Final Integration | **Groups 1-3 Present** |
-| - | Apr 13-15 | 🎉 **Songkran Holiday** | No Class | - |
-| 15 | Apr 22-24 | Course Summary, Q&A | Final Submission | **Groups 4-6, Project (40%)** |
+### ไม่มีการสอบ - ประเมินจากผลงานและโปรเจค
 
-## 📊 Assessment Breakdown
-| Component | Weight | Description |
-|-----------|--------|-------------|
-| **Project** | 40% | Loan Management System |
-| **Exercises** | 20% | G2, Lab1, G3, P1, P2 (5% each) |
-| **Quizzes** | 10% | Q1 CI/CD, Q2 Testing (5% each) |
-| **Workpiece** | 10% | System Demo |
-| **Attendance** | 10% | Class + Lab participation |
-| **Presentation** | 10% | G2, G3 (5% each) |
+| Component | Weight | Week | Description |
+|-----------|:------:|:----:|-------------|
+| **G1: Project Proposal** | 10% | 3 | SRS, User Stories, Project Plan |
+| **Lab1: API Design** | 5% | 5 | FastAPI CRUD, Swagger Docs |
+| **G2: System Design** | 10% | 7 | Architecture, Database Design, UI Mockup |
+| **Lab2: Docker + Pipeline** | 5% | 9 | Dockerfile, docker-compose, Jenkinsfile |
+| **Checkpoint Review** | 10% | 12 | Working Prototype Demo |
+| **Test Document** | 10% | 13 | Test Cases, Test Matrix, Bug Reports |
+| **Final Project** | **50%** | 15 | Complete System |
+| └─ System Functionality | (25%) | | All features working |
+| └─ Code Quality | (10%) | | Clean, documented code |
+| └─ Documentation | (5%) | | User guide, README |
+| └─ Presentation | (10%) | | Demo + Q&A |
+| **Total** | **100%** | | |
 
 ## 🚀 Case Study: Loan Management System
 
@@ -103,7 +166,7 @@ CSI403-FullStack-Teaching/
 - ✅ Role-based Access Control (Admin/Borrower)
 - ✅ Loan Application & Approval Workflow
 - ✅ Payment Tracking & History
-- ✅ Status Management (Current → Paid/Default)
+- ✅ Status Management
 - ✅ Dashboard & Reports
 - ✅ Dockerized Deployment
 - ✅ CI/CD Pipeline
@@ -138,7 +201,7 @@ cd 01-starter-code/loan-management-system
 
 # Create virtual environment
 python -m venv venv
-source venv/bin/activate  # or `venv\Scripts\activate` on Windows
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
@@ -155,13 +218,26 @@ docker-compose up -d
 # Access application
 # Web: http://localhost:8000
 # API Docs: http://localhost:8000/docs
-# Database Admin: http://localhost:8080
 ```
 
+## 📚 Lab Exercises
+
+| Lab | Topic | Week | Weight |
+|-----|-------|:----:|:------:|
+| Lab 1 | Python Basics & Environment Setup | 1 | - |
+| Lab 2 | Project Planning & Notion | 2 | - |
+| Lab 3 | HTML, CSS & Bootstrap | 3 | - |
+| Lab 4 | Jinja2 Templates | 4 | - |
+| **Lab 5** | **FastAPI CRUD (Lab1 Assessment)** | 5 | **5%** |
+| Lab 6 | SQLAlchemy ORM | 6 | - |
+| Lab 7 | Full Stack Integration | 7 | - |
+| Lab 8 | Docker Basics | 8 | - |
+| **Lab 9** | **Docker + Jenkins (Lab2 Assessment)** | 9 | **5%** |
+
 ## 📧 Contact
-- **Instructor:** Aj. Methas Khamjad
+- **Instructor:** อ.เมธัส คำจาด
 - **Email:** methas@spuchonburi.ac.th
 - **GitHub:** [CSI403-Full-Stack-Program-Development-](https://github.com/amornpan/CSI403-Full-Stack-Program-Development-)
 
 ---
-**© 2026 Sripatum University Chonburi - School of Information Technology**
+**© 2026 มหาวิทยาลัยศรีปทุม วิทยาเขตชลบุรี - คณะเทคโนโลยีสารสนเทศ**

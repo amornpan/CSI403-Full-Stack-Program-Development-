@@ -1,13 +1,80 @@
 % ============================================
 % Week 1: Course Introduction & Full Stack Overview
-% CSI403 Full Stack Development
+% CSI403 Full Stack Development (FIXED VERSION 2)
 % Updated: Two-Phase Model (No Exams)
 % ============================================
 
-\input{../common/preamble}
+\documentclass[aspectratio=169,11pt]{beamer}
 
+% ============================================
+% PACKAGES
+% ============================================
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,fit,calc}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% ============================================
+% COLORS
+% ============================================
+\definecolor{spumaroon}{RGB}{128,0,0}
+\definecolor{spugold}{RGB}{212,175,55}
+\definecolor{spudarkmaroon}{RGB}{100,0,0}
+\definecolor{spulightmaroon}{RGB}{180,80,80}
+\definecolor{spugray}{RGB}{88,89,91}
+\definecolor{spulightgray}{RGB}{241,242,242}
+
+\definecolor{codegreen}{RGB}{40,180,99}
+\definecolor{codeblue}{RGB}{52,152,219}
+\definecolor{codepurple}{RGB}{155,89,182}
+\definecolor{codeorange}{RGB}{230,126,34}
+
+% ============================================
+% THEME
+% ============================================
+\usetheme{Madrid}
+\usecolortheme[named=spumaroon]{structure}
+\useinnertheme{rectangles}
+\setbeamertemplate{navigation symbols}{}
+
+% Colors
+\setbeamercolor{title}{fg=white,bg=spumaroon}
+\setbeamercolor{frametitle}{fg=white,bg=spumaroon}
+\setbeamercolor{block title}{fg=white,bg=spumaroon}
+\setbeamercolor{block body}{fg=black,bg=spulightgray}
+\setbeamercolor{block title alerted}{fg=white,bg=spumaroon}
+\setbeamercolor{block body alerted}{fg=black,bg=spulightgray}
+\setbeamercolor{block title example}{fg=white,bg=codegreen}
+\setbeamercolor{block body example}{fg=black,bg=spulightgray}
+
+% ============================================
+% SIMPLE ICON COMMANDS
+% ============================================
+\newcommand{\faUserTie}{\textbf{[U]}}
+\newcommand{\faCode}{\textbf{[C]}}
+\newcommand{\faCogs}{\textbf{[B]}}
+\newcommand{\faVial}{\textbf{[T]}}
+\newcommand{\faRocket}{\textbf{[R]}}
+\newcommand{\faGlobe}{\textbf{[G]}}
+\newcommand{\faUserPlus}{\textbf{[+]}}
+\newcommand{\faMoneyBillWave}{\textbf{[\$]}}
+\newcommand{\faChartLine}{\textbf{[L]}}
+\newcommand{\faUserShield}{\textbf{[S]}}
+\newcommand{\faHistory}{\textbf{[H]}}
+\newcommand{\faDocker}{\textbf{[D]}}
+\newcommand{\faEnvelope}{\textbf{[E]}}
+\newcommand{\faGithub}{\textbf{[Git]}}
+
+% ============================================
+% DOCUMENT INFO
+% ============================================
 \title[Week 1: Introduction]{Week 1: Course Introduction \& Full Stack Overview}
 \subtitle{CSI403 Full Stack Development}
+\author{Aj.Kong (Amornpan Phornchaicharoen)}
+\institute{Sripatum University}
 \date{January 2026}
 
 \begin{document}
@@ -38,7 +105,7 @@
                 \begin{itemize}
                     \item \textbf{Course Code:} CSI403
                     \item \textbf{Credits:} 3 (2-3-5)
-                    \item \textbf{Semester:} 2/2568
+                    \item \textbf{Semester:} 1/2569
                     \item \textbf{Duration:} 15 weeks
                 \end{itemize}
             \end{block}
@@ -47,17 +114,17 @@
             \begin{block}{Instructor}
                 \centering
                 \faUserTie\\[5pt]
-                \textbf{Aj. Methas Khamjad}\\
+                \textbf{Aj.Kong}\\\textbf{(Amornpan Phornchaicharoen)}\\
                 School of IT\\
-                SPU Chonburi
+                SPU
             \end{block}
         \end{column}
     \end{columns}
     
     \vspace{0.5cm}
     
-    \begin{alertblock}{สิ่งสำคัญ}
-        \textbf{ไม่มีการสอบ!} ประเมินจากผลงานและโปรเจคเท่านั้น
+    \begin{alertblock}{Important Note}
+        \textbf{No Exams!} Assessment is 100\% project-based.
     \end{alertblock}
 \end{frame}
 
@@ -70,12 +137,12 @@
             % Phase 1 box
             \fill[codeblue!30] (0,-0.8) rectangle (8.5,-2);
             \node[font=\bfseries] at (4.25,-1.1) {Phase 1: LEARNING};
-            \node[font=\small] at (4.25,-1.6) {Week 1-9 | เรียนเนื้อหา + Lab};
+            \node[font=\small] at (4.25,-1.6) {Week 1-9 | Content + Lab};
             
             % Phase 2 box
             \fill[codegreen!30] (9,-0.8) rectangle (14,-2);
             \node[font=\bfseries] at (11.5,-1.1) {Phase 2: PROJECT};
-            \node[font=\small] at (11.5,-1.6) {Week 10-15 | ทำโปรเจคจริง};
+            \node[font=\small] at (11.5,-1.6) {Week 10-15 | Real Project};
             
             % Week markers
             \foreach \x in {0,1,...,14} {
@@ -113,51 +180,55 @@
 \end{frame}
 
 \begin{frame}{Assessment: 100\% Project-Based}
-    \begin{center}
-        \begin{tikzpicture}
-            % Pie chart
-            \pie[
-                text=legend,
-                radius=2.2,
-                color={spumaroon, codeblue, codegreen, codeorange, codepurple}
-            ]{
-                50/Final Project,
-                20/Checkpoint + Test Doc,
-                20/Group Activities (G1 G2),
-                10/Assessment Labs (Lab1 Lab2)
-            }
-        \end{tikzpicture}
-    \end{center}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Phase 1: Learning (30\%)}
+                \begin{itemize}
+                    \item G1: Project Proposal - 10\%
+                    \item Lab1: API Design - 5\%
+                    \item G2: System Design - 10\%
+                    \item Lab2: Docker+Pipeline - 5\%
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Phase 2: Project (70\%)}
+                \begin{itemize}
+                    \item Checkpoint Review - 10\%
+                    \item Test Document - 10\%
+                    \item \textbf{Final Project - 50\%}
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
     
-    \begin{successbox}[No Exams!]
-        ไม่มีการสอบกลางภาคและปลายภาค - ประเมินจากผลงานจริง!
-    \end{successbox}
+    \vspace{0.5cm}
+    
+    \begin{exampleblock}{No Exams!}
+        No midterm or final exams - assessment is based on real work!
+    \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Assessment Breakdown}
     \small
-    \begin{tabularx}{\textwidth}{lXcl}
+    \begin{tabular}{llcl}
         \toprule
         \textbf{Item} & \textbf{Description} & \textbf{Weight} & \textbf{Week} \\
         \midrule
         \multicolumn{4}{l}{\textbf{Phase 1: Learning (30\%)}} \\
         \midrule
-        G1: Project Proposal & SRS, User Stories, Notion Board & 10\% & 3 \\
-        Lab1: API Design & FastAPI CRUD + Swagger & 5\% & 5 \\
-        G2: System Design & Architecture + DB Design + UI & 10\% & 7 \\
-        Lab2: Docker+Pipeline & Dockerfile + Jenkinsfile & 5\% & 9 \\
+        G1: Project Proposal & SRS, User Stories & 10\% & 3 \\
+        Lab1: API Design & FastAPI CRUD & 5\% & 5 \\
+        G2: System Design & Architecture, DB & 10\% & 7 \\
+        Lab2: Docker+Pipeline & Dockerfile & 5\% & 9 \\
         \midrule
         \multicolumn{4}{l}{\textbf{Phase 2: Project (70\%)}} \\
         \midrule
-        Checkpoint Review & Working Prototype Demo & 10\% & 12 \\
-        Test Document & Test Cases + Matrix & 10\% & 13 \\
+        Checkpoint Review & Prototype Demo & 10\% & 12 \\
+        Test Document & Test Cases & 10\% & 13 \\
         \textbf{Final Project} & Complete System & \textbf{50\%} & 15 \\
-        \quad - Functionality & All features working & (25\%) & \\
-        \quad - Code Quality & Clean code & (10\%) & \\
-        \quad - Documentation & User guide & (5\%) & \\
-        \quad - Presentation & Demo + Q\&A & (10\%) & \\
         \bottomrule
-    \end{tabularx}
+    \end{tabular}
 \end{frame}
 
 % ============================================
@@ -168,8 +239,7 @@
 \begin{frame}{The Full Stack Concept}
     \begin{center}
         \begin{tikzpicture}[
-            box/.style={rectangle, rounded corners, minimum width=10cm, minimum height=1.2cm, draw, thick},
-            arrow/.style={<->, thick, >=stealth}
+            box/.style={rectangle, rounded corners, minimum width=10cm, minimum height=1.2cm, draw, thick}
         ]
             % Frontend
             \node[box, fill=codeblue!30] (frontend) at (0,4) {
@@ -190,8 +260,8 @@
             \node[right] at (5.5,0) {\small MSSQL, SQLAlchemy ORM};
             
             % Arrows
-            \draw[arrow, spumaroon] (frontend) -- (backend);
-            \draw[arrow, spumaroon] (backend) -- (database);
+            \draw[<->, thick, spumaroon] (frontend) -- (backend);
+            \draw[<->, thick, spumaroon] (backend) -- (database);
         \end{tikzpicture}
     \end{center}
 \end{frame}
@@ -199,7 +269,7 @@
 \begin{frame}{Our Technology Stack}
     \begin{center}
         \begin{tikzpicture}[
-            layer/.style={rectangle, rounded corners, minimum width=2.8cm, minimum height=0.9cm, draw, thick, font=\small}
+            layer/.style={rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, draw, thick, font=\small}
         ]
             % Frontend Stack
             \node[layer, fill=codeblue!20] (jinja) at (0,3) {Jinja2};
@@ -236,28 +306,27 @@
 \begin{frame}{CI/CD Pipeline}
     \begin{center}
         \begin{tikzpicture}[
-            stage/.style={rectangle, rounded corners, minimum width=1.8cm, minimum height=1.3cm, draw, thick, align=center, font=\small},
-            arrow/.style={->, thick, >=stealth}
+            stage/.style={rectangle, rounded corners, minimum width=1.6cm, minimum height=1.2cm, draw, thick, align=center, font=\small}
         ]
             % Stages
             \node[stage, fill=codeblue!20] (code) at (0,0) {\faCode\\Code};
             \node[stage, fill=codegreen!20] (build) at (2.5,0) {\faCogs\\Build};
             \node[stage, fill=codeorange!20] (test) at (5,0) {\faVial\\Test};
             \node[stage, fill=codepurple!20] (deploy) at (7.5,0) {\faRocket\\Deploy};
-            \node[stage, fill=spumaroon!20] (prod) at (10,0) {\faGlobe\\Production};
+            \node[stage, fill=spumaroon!20] (prod) at (10,0) {\faGlobe\\Prod};
             
             % Arrows
-            \draw[arrow] (code) -- (build);
-            \draw[arrow] (build) -- (test);
-            \draw[arrow] (test) -- (deploy);
-            \draw[arrow] (deploy) -- (prod);
+            \draw[->, thick] (code) -- (build);
+            \draw[->, thick] (build) -- (test);
+            \draw[->, thick] (test) -- (deploy);
+            \draw[->, thick] (deploy) -- (prod);
             
             % Labels below
-            \node[below, font=\tiny] at (0,-0.9) {Git Push};
-            \node[below, font=\tiny] at (2.5,-0.9) {Docker};
-            \node[below, font=\tiny] at (5,-0.9) {pytest};
-            \node[below, font=\tiny] at (7.5,-0.9) {Jenkins};
-            \node[below, font=\tiny] at (10,-0.9) {Live!};
+            \node[below, font=\tiny] at (0,-0.8) {Git Push};
+            \node[below, font=\tiny] at (2.5,-0.8) {Docker};
+            \node[below, font=\tiny] at (5,-0.8) {pytest};
+            \node[below, font=\tiny] at (7.5,-0.8) {Jenkins};
+            \node[below, font=\tiny] at (10,-0.8) {Live!};
         \end{tikzpicture}
     \end{center}
     
@@ -294,7 +363,7 @@
     \begin{columns}[T]
         \begin{column}{0.55\textwidth}
             \begin{block}{What We'll Build}
-                ระบบจัดการสินเชื่อสำหรับ Peer-to-Peer Lending Platform
+                Loan Management System for Peer-to-Peer Lending Platform
             \end{block}
             
             \vspace{0.3cm}
@@ -311,7 +380,7 @@
         \end{column}
         \begin{column}{0.4\textwidth}
             \begin{center}
-                \begin{tikzpicture}[scale=0.65]
+                \begin{tikzpicture}[scale=0.6]
                     % Loan status flow
                     \node[rectangle, rounded corners, draw, thick, fill=codeblue!30, minimum width=2cm, font=\small] (pending) at (0,4) {Pending};
                     \node[rectangle, rounded corners, draw, thick, fill=codegreen!30, minimum width=2cm, font=\small] (current) at (0,2.5) {Current};
@@ -352,7 +421,7 @@
                     \end{itemize}
                 \end{itemize}
             \end{block}
-        </column>
+        \end{column}
         \begin{column}{0.45\textwidth}
             \begin{alertblock}{Today's Task}
                 \begin{enumerate}
@@ -369,7 +438,7 @@
     \vspace{0.5cm}
     
     \begin{center}
-        \fbox{\large\textbf{กลุ่มนี้จะทำงานด้วยกันตลอด 15 สัปดาห์!}}
+        \fbox{\large\textbf{This team will work together for all 15 weeks!}}
     \end{center}
 \end{frame}
 
@@ -394,9 +463,9 @@
         \begin{column}{0.48\textwidth}
             \begin{alertblock}{Action Items}
                 \begin{itemize}
-                    \item[$\square$] Install tools (Python, VS Code, Git, Docker)
+                    \item[$\square$] Install tools
                     \item[$\square$] Create GitHub account
-                    \item[$\square$] \textbf{Form project team (TODAY!)}
+                    \item[$\square$] \textbf{Form project team}
                     \item[$\square$] Create team GitHub repo
                     \item[$\square$] Submit team info
                 \end{itemize}
@@ -417,14 +486,14 @@
     
     \vspace{0.5cm}
     
-    \begin{infobox}[Preparation for Week 2]
+    \begin{exampleblock}{Preparation for Week 2}
         \begin{itemize}
             \item Complete tool installation
             \item Create Notion account (free)
             \item Think about loan system features
             \item Review Python basics (Lab 01)
         \end{itemize}
-    \end{infobox}
+    \end{exampleblock}
     
     \vspace{0.3cm}
     
@@ -447,8 +516,8 @@
         
         \vspace{1cm}
         
-        \faEnvelope\ methas@spuchonburi.ac.th\\[5pt]
-        \faGithub\ github.com/amornpan/CSI403-Full-Stack-Program-Development-
+        \faEnvelope\ amornpan@gmail.com\\[5pt]
+        \faGithub\ https://github.com/amornpan/CSI403-Full-Stack-Program-Development-.git
         
         \vspace{1cm}
         

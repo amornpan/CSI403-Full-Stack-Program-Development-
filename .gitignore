@@ -9,6 +9,7 @@
 presentations/**
 !presentations/**/
 !presentations/**/*.pdf
+!presentations/**/*.mp4
 
 # ============================================
 # LaTeX build files

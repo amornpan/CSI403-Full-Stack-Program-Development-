@@ -3,9 +3,9 @@
 <div align="center">
 
 ![Course Banner](https://img.shields.io/badge/CSI403-Full%20Stack%20Development-maroon?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.11+-blue?style=flat-square&amp;logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.109-green?style=flat-square&amp;logo=fastapi)
-![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=flat-square&amp;logo=docker)
+![Python](https://img.shields.io/badge/Python-3.11+-blue?style=flat-square&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.109-green?style=flat-square&logo=fastapi)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=flat-square&logo=docker)
 
 **"Learn by Doing, Score by Completing"**
 
@@ -21,6 +21,7 @@
 - [Class Structure](#-class-structure)
 - [Assessment](#-assessment)
 - [Setup Guides](#-setup-guides)
+- [Lecture Slides](#-lecture-slides)
 - [Lab Workshops](#-lab-workshops)
 - [Extended Learning](#-extended-learning)
 - [Course Schedule](#-course-schedule)
@@ -47,9 +48,9 @@
 
 Task Management System ที่มีฟีเจอร์:
 
-- ✅ User Registration &amp; Login
+- ✅ User Registration & Login
 - ✅ Create, Read, Update, Delete Tasks
-- ✅ Categories &amp; Priorities
+- ✅ Categories & Priorities
 - ✅ Dashboard with Statistics
 - ✅ Docker Deployment
 - ✅ CI/CD Pipeline with Jenkins
@@ -90,7 +91,7 @@ Task Management System ที่มีฟีเจอร์:
 ├──────────────┼──────────────────────────────────────────────┤
 │  ⏰ 30 min   │  💻 Checkpoint 4 (2%)                        │
 ├──────────────┼──────────────────────────────────────────────┤
-│  ⏰ 15 min   │  ✅ Wrap-up &amp; Scoring                        │
+│  ⏰ 15 min   │  ✅ Wrap-up & Scoring                        │
 └─────────────────────────────────────────────────────────────┘
                       Total: 8% per Lab
 ```
@@ -103,14 +104,14 @@ Task Management System ที่มีฟีเจอร์:
 
 | Week | Lab | Score |
 |:----:|-----|:-----:|
-| 1 | 🚀 Setup &amp; First API | 8% |
+| 1 | 🚀 Setup & First API | 8% |
 | 2 | 📝 CRUD Operations | 8% |
 | 3 | 🗄️ Database Integration | 8% |
 | 4 | 🎨 Frontend Basics | 8% |
 | 5 | 🔗 Full Integration | 8% |
 | 6 | 🐳 Docker Deployment | 8% |
-| 7 | 🧪 Testing &amp; CI | 8% |
-| 8 | 🚀 CD &amp; Go Live | 8% |
+| 7 | 🧪 Testing & CI | 8% |
+| 8 | 🚀 CD & Go Live | 8% |
 
 ### Phase 2: Group Project (36%)
 
@@ -148,8 +149,8 @@ Task Management System ที่มีฟีเจอร์:
 
 | # | Guide | เวลา |
 |:-:|-------|:----:|
-| 1 | [Git &amp; GitHub](./docs/setup/01-git-github.md) | 30 min |
-| 2 | [Miniconda &amp; Python](./docs/setup/02-miniconda-python.md) | 20 min |
+| 1 | [Git & GitHub](./docs/setup/01-git-github.md) | 30 min |
+| 2 | [Miniconda & Python](./docs/setup/02-miniconda-python.md) | 20 min |
 | 3 | [Docker](./docs/setup/03-docker.md) | 30 min |
 | 4 | [VS Code](./docs/setup/04-vscode.md) | 15 min |
 
@@ -165,18 +166,34 @@ code --version         # 1.x.x
 
 ---
 
+## 📊 Lecture Slides
+
+| Week | Topic | Slides |
+|:----:|-------|:------:|
+| 1 | Course Introduction | [📊 PDF](./presentations/lectures/week01/week01-intro.pdf) |
+| 2 | Git + Python Basics | [📊 PDF](./presentations/lectures/week02/week02-git-python.pdf) |
+| 3 | FastAPI + CRUD | [📊 PDF](./presentations/lectures/week03/week03-fastapi-crud.pdf) |
+| 4 | Database + SQLAlchemy | [📊 PDF](./presentations/lectures/week04/week04-database.pdf) |
+| 5 | Frontend + Bootstrap | [📊 PDF](./presentations/lectures/week05/week05-frontend.pdf) |
+| 6 | Jinja2 Templates | [📊 PDF](./presentations/lectures/week06/week06-jinja2.pdf) |
+| 7 | Docker + Compose | [📊 PDF](./presentations/lectures/week07/week07-docker.pdf) |
+| 8 | Testing + CI | [📊 PDF](./presentations/lectures/week08/week08-testing-ci.pdf) |
+| 9 | Jenkins + CD | [📊 PDF](./presentations/lectures/week09/week09-jenkins-cd.pdf) |
+
+---
+
 ## 💻 Lab Workshops
 
 | Week | Workshop | Guide | Checklist |
 |:----:|----------|:-----:|:---------:|
-| 1 | Setup &amp; First API | [📖](./workshops/week01-setup/README.md) | [✅](./workshops/week01-setup/CHECKLIST.md) |
+| 1 | Setup & First API | [📖](./workshops/week01-setup/README.md) | [✅](./workshops/week01-setup/CHECKLIST.md) |
 | 2 | CRUD Operations | [📖](./workshops/week02-crud/README.md) | [✅](./workshops/week02-crud/CHECKLIST.md) |
 | 3 | Database Integration | [📖](./workshops/week03-database/README.md) | [✅](./workshops/week03-database/CHECKLIST.md) |
 | 4 | Frontend Basics | [📖](./workshops/week04-frontend/README.md) | [✅](./workshops/week04-frontend/CHECKLIST.md) |
 | 5 | Full Integration | [📖](./workshops/week05-integration/README.md) | [✅](./workshops/week05-integration/CHECKLIST.md) |
 | 6 | Docker Deployment | [📖](./workshops/week06-docker/README.md) | [✅](./workshops/week06-docker/CHECKLIST.md) |
-| 7 | Testing &amp; CI | [📖](./workshops/week07-testing/README.md) | [✅](./workshops/week07-testing/CHECKLIST.md) |
-| 8 | CD &amp; Go Live | [📖](./workshops/week08-cicd/README.md) | [✅](./workshops/week08-cicd/CHECKLIST.md) |
+| 7 | Testing & CI | [📖](./workshops/week07-testing/README.md) | [✅](./workshops/week07-testing/CHECKLIST.md) |
+| 8 | CD & Go Live | [📖](./workshops/week08-cicd/README.md) | [✅](./workshops/week08-cicd/CHECKLIST.md) |
 
 ---
 
@@ -189,7 +206,7 @@ code --version         # 1.x.x
 | 1 | Git Advanced | [📖](./docs/extended/week01-git-advanced.md) |
 | 2 | REST Best Practices | [📖](./docs/extended/week02-rest-best-practices.md) |
 | 3 | Database Design | [📖](./docs/extended/week03-database-design.md) |
-| 4 | CSS &amp; Responsive | [📖](./docs/extended/week04-css-responsive.md) |
+| 4 | CSS & Responsive | [📖](./docs/extended/week04-css-responsive.md) |
 | 5 | Security | [📖](./docs/extended/week05-security.md) |
 | 6 | Docker Production | [📖](./docs/extended/week06-docker-production.md) |
 | 7 | Testing Strategies | [📖](./docs/extended/week07-testing-strategies.md) |
@@ -203,14 +220,14 @@ code --version         # 1.x.x
 
 | Week | Lecture | Lab |
 |:----:|---------|-----|
-| 1 | Course Intro + Git + Python | 🚀 Setup &amp; First API |
+| 1 | Course Intro + Git + Python | 🚀 Setup & First API |
 | 2 | REST API + FastAPI | 📝 CRUD Operations |
 | 3 | Database + SQLAlchemy | 🗄️ Database Integration |
 | 4 | HTML + CSS + Bootstrap | 🎨 Frontend Basics |
 | 5 | Jinja2 + Session Auth | 🔗 Full Integration |
 | 6 | Docker + Compose | 🐳 Docker Deployment |
-| 7 | Testing + pytest | 🧪 Testing &amp; CI |
-| 8 | CI/CD + Jenkins | 🚀 CD &amp; Go Live |
+| 7 | Testing + pytest | 🧪 Testing & CI |
+| 8 | CI/CD + Jenkins | 🚀 CD & Go Live |
 
 ### Phase 2: Project (Week 9-15)
 
@@ -240,6 +257,12 @@ CSI403-FullStack-Teaching/
 │   │   ├── 03-docker.md
 │   │   └── 04-vscode.md
 │   └── extended/                # Extended Learning
+│
+├── presentations/               # 📊 Lecture Slides
+│   └── lectures/
+│       ├── week01/week01-intro.pdf
+│       ├── week02/week02-git-python.pdf
+│       └── ...
 │
 ├── workshops/                   # Lab Materials
 │   ├── week01-setup/

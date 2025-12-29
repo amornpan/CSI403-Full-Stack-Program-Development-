@@ -25,7 +25,6 @@
 - [Lab Workshops](#-lab-workshops)
 - [Extended Learning](#-extended-learning)
 - [Course Schedule](#-course-schedule)
-- [Course Syllabus (มคอ.3)](#-course-syllabus)
 
 ---
 
@@ -273,12 +272,6 @@ CSI403-FullStack-Teaching/
 │
 └── scoring/                     # TA Scoring Tools
 ```
-
----
-
-## 📄 Course Syllabus
-
-[📖 มคอ.3 รายละเอียดของรายวิชา](./docs/TQF3-CSI403.md)
 
 ---
 

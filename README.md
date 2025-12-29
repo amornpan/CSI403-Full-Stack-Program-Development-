@@ -1,252 +1,349 @@
-# CSI403 Full Stack Development - Teaching Materials
+# CSI403 Full Stack Development
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/amornpan/CSI403-Full-Stack-Program-Development-)
+## 🎯 Course Philosophy
 
-## 📚 Course Information
-| Item | Detail |
-|------|--------|
-| **Course Code** | CSI403 |
-| **Course Name** | การพัฒนาโปรแกรมแบบ Full Stack (Software Full Stack Development) |
-| **Credits** | 3 (2-3-5) |
-| **Semester** | 2/2568 (Jan - Apr 2026) |
-| **Instructor** | อ.เมธัส คำจาด |
-| **University** | มหาวิทยาลัยศรีปทุม วิทยาเขตชลบุรี |
+> **"Learn by Doing, Score by Completing"**
+> 
+> เรียนจบคาบ = งานเสร็จ = ได้คะแนน = ไม่มีการบ้าน!
 
-## 🎯 Course Structure
+คอร์สนี้ออกแบบมาให้:
+- ✅ **ทำตามได้ทันที** - มี step-by-step ให้ทำระหว่างเรียน
+- ✅ **เก็บคะแนนในคาบ** - ไม่มีการบ้านกลับบ้าน
+- ✅ **เหมาะกับทุกคน** - นักศึกษาหรือคนทั่วไปก็เรียนได้
+- ✅ **มี Extended Content** - อยากรู้เพิ่มก็ศึกษาต่อได้
 
-### Two-Phase Learning Model
+---
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                    CSI403 COURSE STRUCTURE                          │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│  PHASE 1: LEARNING (Week 2-9)          PHASE 2: PROJECT (Week 10-15)│
-│  ┌─────────────────────────┐           ┌─────────────────────────┐  │
-│  │  📖 Lecture + Lab       │           │  💻 Project Development │  │
-│  │  • สร้าง TaskFlow       │    ──▶    │  • Sprint-based Work    │  │
-│  │  • ทุก Lab เก็บคะแนน    │           │  • Advisor Consultation │  │
-│  │  • Hands-on Practice    │           │  • Real-world Product   │  │
-│  └─────────────────────────┘           └─────────────────────────┘  │
-│                                                                     │
-│  Assessment: 64%                        Assessment: 36%             │
-│  (8 Labs × 8%)                          (G1, G2, Checkpoint, Final) │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
-```
+## 📋 Course Information
 
-## 🎯 Case Study: TaskFlow - Task Management System
+| รายละเอียด | ข้อมูล |
+|------------|--------|
+| รหัสวิชา | CSI403 |
+| ชื่อวิชา | Full Stack Development |
+| หน่วยกิต | 3 (2-3-5) |
+| ภาคการศึกษา | 1/2569 |
+| รูปแบบ | Hands-on Workshop |
 
-นักศึกษาจะสร้างระบบ **TaskFlow** ตลอด 8 สัปดาห์ โดยเพิ่ม Features ทีละสัปดาห์
-
-```
-Week 2: 📁 โครงสร้างโปรเจค + Git
-Week 3: 🚀 Task API (CRUD)
-Week 4: 🗄️ Database + Users + Categories
-Week 5: 🎨 หน้าเว็บ Static (HTML/CSS/JS)
-Week 6: 🔗 Jinja2 + เชื่อมทุกอย่าง
-Week 7: 🐳 Docker + Compose
-Week 8: 🧪 Testing + Jenkins CI
-Week 9: 🚀 Jenkins CD + Auto Deploy
-
-ผลลัพธ์: ระบบ TaskFlow สมบูรณ์! 🎉
-```
-
-### TaskFlow Features
-- ✅ User Registration & Authentication (Session-based)
-- ✅ Task CRUD (Create, Read, Update, Delete)
-- ✅ Category Management
-- ✅ Task Status (Pending → In Progress → Done)
-- ✅ Task Priority (Low, Medium, High)
-- ✅ Due Date Tracking
-- ✅ Search & Filter
-- ✅ Dashboard with Statistics
-- ✅ Dockerized Deployment
-- ✅ Jenkins CI/CD Pipeline
-
-## 🛠️ Technology Stack
-| Layer | Technologies |
-|-------|-------------|
-| **Frontend** | HTML5, CSS3, JavaScript, Bootstrap 5, Jinja2 Templates |
-| **Backend** | FastAPI, Python 3.11+, Pydantic |
-| **Database** | Microsoft SQL Server (Docker), SQLAlchemy ORM |
-| **Authentication** | Session-based, bcrypt |
-| **DevOps** | Docker, Docker Compose, Jenkins CI/CD |
-| **Testing** | pytest, pytest-cov |
-| **Tools** | Git, GitHub, VS Code |
-
-## 📁 Project Structure
-```
-CSI403-FullStack-Teaching/
-├── 00-course-info/           # Syllabus, grading criteria
-├── 01-starter-code/          # TaskFlow starter template
-│   └── taskflow/
-│       ├── app/
-│       │   ├── main.py       # FastAPI application
-│       │   ├── models.py     # SQLAlchemy models
-│       │   ├── schemas.py    # Pydantic schemas
-│       │   ├── database.py   # DB connection
-│       │   ├── routes/       # API routes
-│       │   ├── templates/    # Jinja2 templates
-│       │   └── static/       # CSS, JS, images
-│       ├── tests/            # pytest test files
-│       ├── Dockerfile
-│       ├── docker-compose.yml
-│       ├── Jenkinsfile
-│       └── requirements.txt
-├── 02-templates/             # Document templates
-├── 03-sample-data/           # Sample SQL scripts
-├── 04-lab-exercises/         # Weekly lab instructions (8 Labs)
-├── 05-quizzes/               # (Optional) Quiz materials
-└── presentations/            # LaTeX slides
-```
-
-## 📅 Teaching Plan
-
-### Phase 1: Learning Phase (Week 2-9) - สร้าง TaskFlow
-
-| Week | Lecture Topic | Lab / Activity | Deliverable |
-|:----:|---------------|----------------|-------------|
-| **1** | **ปฐมนิเทศ** | - | - |
-| **2** | **Git + Python + Setup** | Project Setup | **Lab 1 (8%)** |
-| | • Git workflow (Branch, PR) | • สร้าง GitHub repo | |
-| | • Python review | • โครงสร้างโปรเจค TaskFlow | |
-| | • Project structure | • requirements.txt | |
-| **3** | **FastAPI Fundamentals** | API Development | **Lab 2 (8%)** |
-| | • REST API concepts | • Task API (CRUD) | |
-| | • FastAPI basics | • Pydantic validation | |
-| | • Pydantic schemas | • Swagger documentation | |
-| **4** | **FastAPI + Database** | Database Integration | **Lab 3 (8%)** |
-| | • MSSQL Docker | • SQLAlchemy models | |
-| | • SQLAlchemy ORM | • User + Category + Task | |
-| | • Relationships | • CRUD with database | |
-| **5** | **Frontend Basics** | UI Development | **Lab 4 (8%)** |
-| | • HTML/CSS review | • Static pages | |
-| | • Bootstrap 5 | • Dashboard, Tasks, Categories | |
-| | • JavaScript basics | • Forms + Modals | |
-| **6** | **Jinja2 + Integration** | Full Stack | **Lab 5 (8%)** |
-| | • Jinja2 templates | • เชื่อม Frontend + Backend | |
-| | • Template inheritance | • Login/Logout | |
-| | • Form handling | • CRUD ผ่านหน้าเว็บ | |
-| **7** | **Docker + Compose** | Containerization | **Lab 6 (8%)** |
-| | • Docker basics | • Dockerfile | |
-| | • Dockerfile | • docker-compose.yml | |
-| | • Docker Compose | • App + DB + Jenkins | |
-| **8** | **Testing + Jenkins CI** | CI Pipeline | **Lab 7 (8%)** |
-| | • pytest basics | • Test cases (≥8 tests) | |
-| | • Jenkins setup | • Jenkinsfile (Test stage) | |
-| | • CI concepts | • Auto test on push | |
-| **9** | **Jenkins CD** | CD Pipeline | **Lab 8 (8%)** |
-| | • CD concepts | • Build + Deploy stages | |
-| | • Deployment | • Auto deploy to local | |
-| | • Health checks | • Complete pipeline | |
-
-### Phase 2: Project Phase (Week 10-15)
-
-| Week | Sprint / Activity | Milestone | Deliverable |
-|:----:|-------------------|-----------|-------------|
-| **10** | **จัดทีม + G1: Proposal** | Project Kickoff | **G1 (5%)** |
-| | • จัดกลุ่ม 4-5 คน | • SRS document | |
-| | • เลือกโปรเจค | • User Stories | |
-| **11** | **G2: System Design** | Design Complete | **G2 (5%)** |
-| | • Architecture design | • ERD diagram | |
-| | • Database design | • API design | |
-| **12** | **Checkpoint Demo** | Prototype Ready | **Checkpoint (8%)** |
-| | • Working prototype | • 50%+ features | |
-| | • Demo to class | • Deployed | |
-| **13** | **Development Sprint** | Core Features | Progress Check |
-| | • Feature development | • CRUD complete | |
-| | • อาจารย์ให้คำปรึกษา | • Testing | |
-| **14** | **Development Sprint** | Testing & Polish | Progress Check |
-| | • Bug fixes | • All features done | |
-| | • Documentation | • Docker working | |
-| **15** | **Final Presentation** | Complete System | **Final (12%)** |
-| | • Project demo | • Live demo | |
-| | • **Oral Defense (4%)** | • Code review | |
-| | • **Peer Eval (2%)** | • Q&A session | |
+---
 
 ## 📊 Assessment (100%)
 
-### ไม่มีการสอบ - ประเมินจากผลงานและโปรเจค
+### ไม่มี Midterm / Final / การบ้าน!
 
-| Component | Weight | Week | Description |
-|-----------|:------:|:----:|-------------|
-| **Phase 1: Learning** | **64%** | 2-9 | |
-| Lab 1: Git + Python + Setup | 8% | 2 | Project structure, Git workflow |
-| Lab 2: FastAPI CRUD | 8% | 3 | REST API, Pydantic |
-| Lab 3: FastAPI + Database | 8% | 4 | SQLAlchemy, MSSQL |
-| Lab 4: Frontend Basics | 8% | 5 | HTML/CSS/JS, Bootstrap |
-| Lab 5: Jinja2 + Integration | 8% | 6 | Templates, Full stack |
-| Lab 6: Docker + Compose | 8% | 7 | Containerization |
-| Lab 7: Testing + Jenkins CI | 8% | 8 | pytest, CI pipeline |
-| Lab 8: Jenkins CD | 8% | 9 | CD pipeline, Deployment |
-| **Phase 2: Project** | **36%** | 10-15 | |
-| G1: Project Proposal | 5% | 10 | SRS, User Stories |
-| G2: System Design | 5% | 11 | Architecture, ERD, API |
-| Checkpoint Demo | 8% | 12 | Working prototype |
-| Final Project | 12% | 15 | Complete system |
-| Oral Defense | 4% | 15 | Individual Q&A |
-| Peer Evaluation | 2% | 15 | Team member rating |
-| **Total** | **100%** | | |
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.11+
-- Docker Desktop
-- VS Code
-- Git
-
-### Setup
-```bash
-# Clone repository
-git clone https://github.com/amornpan/CSI403-Full-Stack-Program-Development-.git
-cd CSI403-Full-Stack-Program-Development-
-
-# Navigate to starter code
-cd 01-starter-code/taskflow
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run development server
-uvicorn app.main:app --reload
-```
-
-### Docker Setup (Full Environment)
-```bash
-# Build and run with Docker Compose
-docker-compose up -d
-
-# Access:
-# App: http://localhost:8000
-# Swagger: http://localhost:8000/docs
-# Jenkins: http://localhost:8080
-```
-
-## 📚 Lab Exercises
-
-| Lab | Topic | Week | Weight |
-|-----|-------|:----:|:------:|
-| **Lab 1** | Git + Python + Setup | 2 | **8%** |
-| **Lab 2** | FastAPI CRUD | 3 | **8%** |
-| **Lab 3** | FastAPI + Database | 4 | **8%** |
-| **Lab 4** | Frontend (HTML/CSS/JS) | 5 | **8%** |
-| **Lab 5** | Jinja2 + Integration | 6 | **8%** |
-| **Lab 6** | Docker + Compose | 7 | **8%** |
-| **Lab 7** | Testing + Jenkins CI | 8 | **8%** |
-| **Lab 8** | Jenkins CD | 9 | **8%** |
-
-**หมายเหตุ:** ทุก Lab เก็บคะแนน รวม 64% ของคะแนนทั้งหมด
-
-## 📧 Contact
-- **Instructor:** อ.เมธัส คำจาด
-- **Email:** methas@spuchonburi.ac.th
-- **GitHub:** [CSI403-Full-Stack-Program-Development-](https://github.com/amornpan/CSI403-Full-Stack-Program-Development-)
+| ส่วน | คะแนน | รายละเอียด |
+|------|:-----:|------------|
+| **Weekly Workshops** | 64% | 8 สัปดาห์ × 8% (ทำในคาบ) |
+| **Group Project** | 36% | สร้างโปรเจคของตัวเอง |
 
 ---
-**© 2026 มหาวิทยาลัยศรีปทุม วิทยาเขตชลบุรี - คณะเทคโนโลยีสารสนเทศ**
+
+## 🗓️ Weekly Workshop Structure
+
+แต่ละสัปดาห์ใช้เวลา **3 ชั่วโมง** แบ่งเป็น:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  ⏰ 30 นาที    │  📖 Mini Lecture                           │
+│               │  - สอนแนวคิดสั้นๆ กระชับ                    │
+│               │  - ดู Demo ตัวอย่าง                         │
+├───────────────┼─────────────────────────────────────────────┤
+│  ⏰ 2 ชั่วโมง  │  💻 Hands-on Workshop                      │
+│               │  - ทำตาม Step-by-step Guide                │
+│               │  - ถามได้ตลอด มี TA ช่วย                    │
+│               │  - Checkpoint ทุก 30 นาที                   │
+├───────────────┼─────────────────────────────────────────────┤
+│  ⏰ 30 นาที    │  ✅ Wrap-up & Scoring                      │
+│               │  - ตรวจงาน เก็บคะแนน                        │
+│               │  - Q&A สรุปสิ่งที่เรียน                      │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📅 Course Schedule
+
+### Phase 1: Weekly Workshops (Week 1-9)
+
+| Week | Workshop | คะแนน | สิ่งที่ได้ |
+|:----:|----------|:-----:|-----------|
+| 1 | 🚀 Setup & First API | 8% | โปรเจค + API แรก |
+| 2 | 📝 CRUD Operations | 8% | Task API ครบ 5 endpoints |
+| 3 | 🗄️ Database Connection | 8% | เชื่อมต่อ MSSQL |
+| 4 | 🎨 Frontend Basics | 8% | หน้าเว็บ + Bootstrap |
+| 5 | 🔗 Full Integration | 8% | Frontend + Backend |
+| 6 | 🐳 Docker Deploy | 8% | Container + Compose |
+| 7 | 🧪 Testing & CI | 8% | Tests + Jenkins |
+| 8 | 🚀 CD & Go Live | 8% | Deploy อัตโนมัติ |
+
+### Phase 2: Group Project (Week 9-15)
+
+| Week | Activity | คะแนน |
+|:----:|----------|:-----:|
+| 9 | Team Formation + Idea | - |
+| 10 | G1: Proposal | 5% |
+| 11 | G2: Design + Sprint 1 | 5% |
+| 12 | Checkpoint Demo | 8% |
+| 13-14 | Development | - |
+| 15 | Final Presentation | 18% |
+
+---
+
+## 📚 Workshop Details
+
+### Week 1: 🚀 Setup & First API
+
+**เป้าหมาย:** ติดตั้งเครื่องมือ + สร้าง API แรก
+
+| Checkpoint | เวลา | Task | คะแนน |
+|:----------:|:----:|------|:-----:|
+| CP1 | 30m | ติดตั้ง Python, Git, VS Code, Docker | 2% |
+| CP2 | 30m | สร้าง GitHub repo + Clone | 2% |
+| CP3 | 30m | สร้างโปรเจค + Virtual Environment | 2% |
+| CP4 | 30m | สร้าง FastAPI Hello World | 2% |
+
+**ผลลัพธ์:** `http://localhost:8000` ทำงานได้!
+
+📖 [Extended: Git Advanced](./docs/extended/week01-git-advanced.md)
+
+---
+
+### Week 2: 📝 CRUD Operations
+
+**เป้าหมาย:** สร้าง Task API ครบ 5 operations
+
+| Checkpoint | เวลา | Task | คะแนน |
+|:----------:|:----:|------|:-----:|
+| CP1 | 30m | สร้าง Pydantic Schemas | 2% |
+| CP2 | 30m | POST /tasks (Create) | 2% |
+| CP3 | 30m | GET /tasks, GET /tasks/{id} | 2% |
+| CP4 | 30m | PUT + DELETE | 2% |
+
+**ผลลัพธ์:** Swagger UI ทดสอบได้ครบทุก endpoint!
+
+📖 [Extended: REST Best Practices](./docs/extended/week02-rest-best-practices.md)
+
+---
+
+### Week 3: 🗄️ Database Connection
+
+**เป้าหมาย:** เชื่อมต่อ MSSQL + สร้าง Models
+
+| Checkpoint | เวลา | Task | คะแนน |
+|:----------:|:----:|------|:-----:|
+| CP1 | 30m | Run MSSQL Container | 2% |
+| CP2 | 30m | SQLAlchemy Setup | 2% |
+| CP3 | 30m | Create Task Model | 2% |
+| CP4 | 30m | Update API to use DB | 2% |
+
+**ผลลัพธ์:** Data บันทึกลง Database จริง!
+
+📖 [Extended: Database Design](./docs/extended/week03-database-design.md)
+
+---
+
+### Week 4: 🎨 Frontend Basics
+
+**เป้าหมาย:** สร้างหน้าเว็บด้วย HTML + Bootstrap
+
+| Checkpoint | เวลา | Task | คะแนน |
+|:----------:|:----:|------|:-----:|
+| CP1 | 30m | HTML Structure + Bootstrap | 2% |
+| CP2 | 30m | Task List UI | 2% |
+| CP3 | 30m | Create Task Form | 2% |
+| CP4 | 30m | JavaScript + Fetch API | 2% |
+
+**ผลลัพธ์:** หน้าเว็บสวยงาม ใช้งานได้!
+
+📖 [Extended: CSS & Responsive](./docs/extended/week04-css-responsive.md)
+
+---
+
+### Week 5: 🔗 Full Integration
+
+**เป้าหมาย:** รวม Frontend + Backend + Auth
+
+| Checkpoint | เวลา | Task | คะแนน |
+|:----------:|:----:|------|:-----:|
+| CP1 | 30m | Jinja2 Templates Setup | 2% |
+| CP2 | 30m | Login/Register Pages | 2% |
+| CP3 | 30m | Session Authentication | 2% |
+| CP4 | 30m | Protected Routes | 2% |
+
+**ผลลัพธ์:** Web App ที่ Login ได้!
+
+📖 [Extended: Security Best Practices](./docs/extended/week05-security.md)
+
+---
+
+### Week 6: 🐳 Docker Deploy
+
+**เป้าหมาย:** Containerize แอปทั้งหมด
+
+| Checkpoint | เวลา | Task | คะแนน |
+|:----------:|:----:|------|:-----:|
+| CP1 | 30m | Dockerfile สำหรับ App | 2% |
+| CP2 | 30m | docker-compose.yml | 2% |
+| CP3 | 30m | Network + Volumes | 2% |
+| CP4 | 30m | docker-compose up ใช้งานได้ | 2% |
+
+**ผลลัพธ์:** `docker-compose up` แล้วทุกอย่างทำงาน!
+
+📖 [Extended: Docker Production](./docs/extended/week06-docker-production.md)
+
+---
+
+### Week 7: 🧪 Testing & CI
+
+**เป้าหมาย:** เขียน Tests + Setup Jenkins
+
+| Checkpoint | เวลา | Task | คะแนน |
+|:----------:|:----:|------|:-----:|
+| CP1 | 30m | pytest Setup + First Test | 2% |
+| CP2 | 30m | CRUD Tests (4 tests) | 2% |
+| CP3 | 30m | Jenkins Setup | 2% |
+| CP4 | 30m | Jenkinsfile CI Pipeline | 2% |
+
+**ผลลัพธ์:** Push code → Jenkins runs tests!
+
+📖 [Extended: Testing Strategies](./docs/extended/week07-testing-strategies.md)
+
+---
+
+### Week 8: 🚀 CD & Go Live
+
+**เป้าหมาย:** Auto Deploy เมื่อ Push
+
+| Checkpoint | เวลา | Task | คะแนน |
+|:----------:|:----:|------|:-----:|
+| CP1 | 30m | CD Stages in Jenkinsfile | 2% |
+| CP2 | 30m | Build + Deploy Stage | 2% |
+| CP3 | 30m | Health Check | 2% |
+| CP4 | 30m | Full Pipeline Working | 2% |
+
+**ผลลัพธ์:** Push → Test → Build → Deploy → Live! 🎉
+
+📖 [Extended: DevOps Best Practices](./docs/extended/week08-devops.md)
+
+---
+
+## 📂 Repository Structure
+
+```
+CSI403-FullStack-Teaching/
+├── README.md                     # This file
+│
+├── workshops/                    # 📋 Workshop Materials
+│   ├── week01-setup/
+│   │   ├── README.md            # Workshop guide
+│   │   ├── CHECKLIST.md         # Checkpoint checklist
+│   │   └── solution/            # Reference solution
+│   ├── week02-crud/
+│   ├── week03-database/
+│   ├── week04-frontend/
+│   ├── week05-integration/
+│   ├── week06-docker/
+│   ├── week07-testing/
+│   └── week08-cicd/
+│
+├── docs/                         # 📖 Documentation
+│   ├── setup/                   # Installation guides
+│   │   ├── windows.md
+│   │   ├── macos.md
+│   │   └── linux.md
+│   └── extended/                # Extended learning
+│       ├── week01-git-advanced.md
+│       ├── week02-rest-best-practices.md
+│       └── ...
+│
+├── starter-code/                 # 🚀 Starter Templates
+│   └── taskflow/                # TaskFlow starter
+│
+├── presentations/                # 🎬 Slides
+│   └── lectures/
+│
+└── scoring/                      # ✅ Scoring Tools
+    ├── checklist-template.md
+    └── auto-check/              # Auto-grading scripts
+```
+
+---
+
+## ✅ Scoring System
+
+### Checkpoint Scoring (แต่ละ Workshop)
+
+```
+┌────────────────────────────────────────────────────────┐
+│  Checkpoint 1  │  Checkpoint 2  │  Checkpoint 3  │  CP4 │
+│      2%        │      2%        │      2%        │  2%  │
+│   ┌─────┐      │   ┌─────┐      │   ┌─────┐      │ ┌───┐│
+│   │ ✓/✗ │      │   │ ✓/✗ │      │   │ ✓/✗ │      │ │✓/✗││
+│   └─────┘      │   └─────┘      │   └─────┘      │ └───┘│
+└────────────────────────────────────────────────────────┘
+                        Total: 8% per week
+```
+
+### Checkpoint Criteria
+
+| Status | Meaning | Score |
+|:------:|---------|:-----:|
+| ✅ Complete | ทำได้ครบตาม checklist | 100% |
+| 🔶 Partial | ทำได้บางส่วน | 50% |
+| ❌ Incomplete | ไม่ได้ทำ / ทำไม่ทัน | 0% |
+
+### ไม่ทันในคาบ?
+
+- สามารถส่งภายใน **24 ชั่วโมง** หลังคาบ (ไม่หักคะแนน)
+- หลัง 24 ชั่วโมง: -50%
+- หลัง 48 ชั่วโมง: ไม่รับ
+
+---
+
+## 🎓 Learning Outcomes
+
+เมื่อจบคอร์สนี้ คุณจะสามารถ:
+
+1. ✅ สร้าง REST API ด้วย FastAPI
+2. ✅ ออกแบบและใช้งาน Database
+3. ✅ สร้าง Web UI ด้วย HTML/CSS/JS
+4. ✅ รวม Frontend + Backend
+5. ✅ Deploy ด้วย Docker
+6. ✅ สร้าง CI/CD Pipeline
+7. ✅ ทำงานเป็นทีมใน Group Project
+
+---
+
+## 💻 Required Software
+
+ติดตั้งก่อน Week 1:
+
+| Software | Version | Download |
+|----------|---------|----------|
+| Python | 3.11+ | [python.org](https://python.org) |
+| Git | Latest | [git-scm.com](https://git-scm.com) |
+| VS Code | Latest | [code.visualstudio.com](https://code.visualstudio.com) |
+| Docker Desktop | Latest | [docker.com](https://docker.com) |
+
+📖 [Installation Guide](./docs/setup/)
+
+---
+
+## 🤝 Contributing
+
+พบข้อผิดพลาด หรืออยากเสนอแนะ?
+- เปิด Issue บน GitHub
+- หรือส่ง Pull Request
+
+---
+
+## 📞 Contact
+
+- **Office Hours:** TBA
+- **Discord:** TBA
+- **GitHub Issues:** สำหรับคำถามเกี่ยวกับ Workshops
+
+---
+
+**© 2026 CSI403 Full Stack Development**
+
+*"No Homework, Just Hands-on!"* 🚀

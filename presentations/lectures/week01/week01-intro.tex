@@ -1,527 +1,506 @@
-% ============================================
-% Week 1: Course Introduction & Full Stack Overview
-% CSI403 Full Stack Development (FIXED VERSION 2)
-% Updated: Two-Phase Model (No Exams)
-% ============================================
-
+% Week 1: Course Introduction
+% CSI403 Full Stack Development
 \documentclass[aspectratio=169,11pt]{beamer}
 
-% ============================================
-% PACKAGES
-% ============================================
-\usepackage{tikz}
-\usetikzlibrary{shapes,arrows,positioning,fit,calc}
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{multirow}
-\usepackage{graphicx}
-\usepackage{hyperref}
-
-% ============================================
-% COLORS
-% ============================================
-\definecolor{spumaroon}{RGB}{128,0,0}
-\definecolor{spugold}{RGB}{212,175,55}
-\definecolor{spudarkmaroon}{RGB}{100,0,0}
-\definecolor{spulightmaroon}{RGB}{180,80,80}
-\definecolor{spugray}{RGB}{88,89,91}
-\definecolor{spulightgray}{RGB}{241,242,242}
-
-\definecolor{codegreen}{RGB}{40,180,99}
-\definecolor{codeblue}{RGB}{52,152,219}
-\definecolor{codepurple}{RGB}{155,89,182}
-\definecolor{codeorange}{RGB}{230,126,34}
-
-% ============================================
-% THEME
-% ============================================
 \usetheme{Madrid}
-\usecolortheme[named=spumaroon]{structure}
-\useinnertheme{rectangles}
+\usecolortheme{default}
 \setbeamertemplate{navigation symbols}{}
 
-% Colors
-\setbeamercolor{title}{fg=white,bg=spumaroon}
-\setbeamercolor{frametitle}{fg=white,bg=spumaroon}
-\setbeamercolor{block title}{fg=white,bg=spumaroon}
-\setbeamercolor{block body}{fg=black,bg=spulightgray}
-\setbeamercolor{block title alerted}{fg=white,bg=spumaroon}
-\setbeamercolor{block body alerted}{fg=black,bg=spulightgray}
-\setbeamercolor{block title example}{fg=white,bg=codegreen}
-\setbeamercolor{block body example}{fg=black,bg=spulightgray}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{booktabs}
 
-% ============================================
-% SIMPLE ICON COMMANDS
-% ============================================
-\newcommand{\faUserTie}{\textbf{[U]}}
-\newcommand{\faCode}{\textbf{[C]}}
-\newcommand{\faCogs}{\textbf{[B]}}
-\newcommand{\faVial}{\textbf{[T]}}
-\newcommand{\faRocket}{\textbf{[R]}}
-\newcommand{\faGlobe}{\textbf{[G]}}
-\newcommand{\faUserPlus}{\textbf{[+]}}
-\newcommand{\faMoneyBillWave}{\textbf{[\$]}}
-\newcommand{\faChartLine}{\textbf{[L]}}
-\newcommand{\faUserShield}{\textbf{[S]}}
-\newcommand{\faHistory}{\textbf{[H]}}
-\newcommand{\faDocker}{\textbf{[D]}}
-\newcommand{\faEnvelope}{\textbf{[E]}}
-\newcommand{\faGithub}{\textbf{[Git]}}
+\definecolor{maincolor}{RGB}{128,0,0}
+\setbeamercolor{structure}{fg=maincolor}
 
-% ============================================
-% DOCUMENT INFO
-% ============================================
-\title[Week 1: Introduction]{Week 1: Course Introduction \& Full Stack Overview}
+\title{Week 1: Course Introduction}
 \subtitle{CSI403 Full Stack Development}
-\author{Aj.Kong (Amornpan Phornchaicharoen)}
-\institute{Sripatum University}
-\date{January 2026}
+\date{Semester 1/2569}
 
 \begin{document}
 
-% ============================================
-% TITLE SLIDE
-% ============================================
-\begin{frame}[plain]
+\begin{frame}
     \titlepage
 \end{frame}
 
-% ============================================
-% OUTLINE
-% ============================================
-\begin{frame}{Today's Agenda}
+\begin{frame}{Agenda}
     \tableofcontents
 \end{frame}
 
-% ============================================
-% SECTION 1: WELCOME
-% ============================================
-\section{Welcome to CSI403}
+%========================================
+\section{Course Overview}
+%========================================
 
-\begin{frame}{Welcome to Full Stack Development!}
-    \begin{columns}[T]
-        \begin{column}{0.6\textwidth}
-            \begin{block}{Course Information}
-                \begin{itemize}
-                    \item \textbf{Course Code:} CSI403
-                    \item \textbf{Credits:} 3 (2-3-5)
-                    \item \textbf{Semester:} 1/2569
-                    \item \textbf{Duration:} 15 weeks
-                \end{itemize}
-            \end{block}
-        \end{column}
-        \begin{column}{0.35\textwidth}
-            \begin{block}{Instructor}
-                \centering
-                \faUserTie\\[5pt]
-                \textbf{Aj.Kong}\\\textbf{(Amornpan Phornchaicharoen)}\\
-                School of IT\\
-                SPU
-            \end{block}
-        \end{column}
-    \end{columns}
-    
-    \vspace{0.5cm}
-    
-    \begin{alertblock}{Important Note}
-        \textbf{No Exams!} Assessment is 100\% project-based.
-    \end{alertblock}
+\begin{frame}{Course Information}
+    \begin{center}
+        \begin{tabular}{ll}
+            \toprule
+            \textbf{Item} & \textbf{Detail} \\
+            \midrule
+            Course Code & CSI403 \\
+            Course Name & Full Stack Development \\
+            Credits & 3 (2-3-5) \\
+            Semester & 1/2569 \\
+            Duration & 15 weeks \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
 \end{frame}
 
-\begin{frame}{Course Structure: Two-Phase Model}
+\begin{frame}{Important Notes}
     \begin{center}
-        \begin{tikzpicture}[scale=0.85]
+        \Large
+        \textbf{No Midterm Exam!}
+        
+        \vspace{0.5cm}
+        
+        \textbf{No Final Exam!}
+        
+        \vspace{1cm}
+        
+        \normalsize
+        Assessment is based on:
+        
+        \vspace{0.3cm}
+        
+        \textbf{8 Labs (64\%) + Group Project (36\%)}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Two-Phase Learning Model}
+    \begin{center}
+        \begin{tikzpicture}
             % Timeline
-            \draw[thick,spumaroon] (0,0) -- (14,0);
-            
-            % Phase 1 box
-            \fill[codeblue!30] (0,-0.8) rectangle (8.5,-2);
-            \node[font=\bfseries] at (4.25,-1.1) {Phase 1: LEARNING};
-            \node[font=\small] at (4.25,-1.6) {Week 1-9 | Content + Lab};
-            
-            % Phase 2 box
-            \fill[codegreen!30] (9,-0.8) rectangle (14,-2);
-            \node[font=\bfseries] at (11.5,-1.1) {Phase 2: PROJECT};
-            \node[font=\small] at (11.5,-1.6) {Week 10-15 | Real Project};
+            \draw[thick, ->] (0,0) -- (13,0);
             
             % Week markers
-            \foreach \x in {0,1,...,14} {
-                \draw[spumaroon] (\x,0.1) -- (\x,-0.1);
-                \node[above, font=\tiny] at (\x,0.1) {\x};
+            \foreach \x/\w in {0/1, 4.5/9, 12/15} {
+                \draw[thick] (\x,0.15) -- (\x,-0.15);
+                \node[below] at (\x,-0.2) {Week \w};
             }
             
-            % Assessment points
-            \fill[spumaroon] (2.8,0) circle (4pt);
-            \node[below, font=\tiny] at (2.8,-2.2) {G1 10\%};
+            % Phase 1 box
+            \draw[fill=blue!20, rounded corners] (0.2,0.5) rectangle (4.3,2);
+            \node[align=center] at (2.25,1.25) {\textbf{Phase 1}\\Learning\\(64\%)};
             
-            \fill[spumaroon] (4.8,0) circle (4pt);
-            \node[below, font=\tiny] at (4.8,-2.2) {Lab1 5\%};
-            
-            \fill[spumaroon] (6.8,0) circle (4pt);
-            \node[below, font=\tiny] at (6.8,-2.2) {G2 10\%};
-            
-            \fill[spumaroon] (8.5,0) circle (4pt);
-            \node[below, font=\tiny] at (8.5,-2.2) {Lab2 5\%};
-            
-            \fill[codeorange] (11.8,0) circle (4pt);
-            \node[below, font=\tiny] at (11.8,-2.2) {Check 10\%};
-            
-            \fill[codeorange] (12.8,0) circle (4pt);
-            \node[below, font=\tiny] at (12.8,-2.2) {Test 10\%};
-            
-            \fill[spumaroon] (14,0) circle (6pt);
-            \node[below, font=\tiny] at (14,-2.2) {Final 50\%};
-            
-            % Current position
-            \fill[spugold] (0,0) circle (5pt);
-            \node[above, font=\small\bfseries, text=spugold] at (0,0.4) {You are here!};
+            % Phase 2 box
+            \draw[fill=green!20, rounded corners] (4.7,0.5) rectangle (11.8,2);
+            \node[align=center] at (8.25,1.25) {\textbf{Phase 2}\\Group Project\\(36\%)};
         \end{tikzpicture}
     \end{center}
 \end{frame}
 
-\begin{frame}{Assessment: 100\% Project-Based}
-    \begin{columns}[T]
-        \begin{column}{0.48\textwidth}
-            \begin{block}{Phase 1: Learning (30\%)}
-                \begin{itemize}
-                    \item G1: Project Proposal - 10\%
-                    \item Lab1: API Design - 5\%
-                    \item G2: System Design - 10\%
-                    \item Lab2: Docker+Pipeline - 5\%
-                \end{itemize}
-            \end{block}
-        \end{column}
-        \begin{column}{0.48\textwidth}
-            \begin{block}{Phase 2: Project (70\%)}
-                \begin{itemize}
-                    \item Checkpoint Review - 10\%
-                    \item Test Document - 10\%
-                    \item \textbf{Final Project - 50\%}
-                \end{itemize}
-            \end{block}
-        \end{column}
-    \end{columns}
+\begin{frame}{Phase 1: Learning (Week 2-9)}
+    \textbf{Build TaskFlow System Together}
     
     \vspace{0.5cm}
     
-    \begin{exampleblock}{No Exams!}
-        No midterm or final exams - assessment is based on real work!
-    \end{exampleblock}
+    \begin{itemize}
+        \item Learn by building a real application
+        \item 8 weekly labs (8\% each)
+        \item Guided step-by-step instructions
+        \item Individual work
+    \end{itemize}
+    
+    \vspace{0.5cm}
+    
+    \textbf{Total: 64\% of course grade}
 \end{frame}
 
-\begin{frame}{Assessment Breakdown}
-    \small
-    \begin{tabular}{llcl}
-        \toprule
-        \textbf{Item} & \textbf{Description} & \textbf{Weight} & \textbf{Week} \\
-        \midrule
-        \multicolumn{4}{l}{\textbf{Phase 1: Learning (30\%)}} \\
-        \midrule
-        G1: Project Proposal & SRS, User Stories & 10\% & 3 \\
-        Lab1: API Design & FastAPI CRUD & 5\% & 5 \\
-        G2: System Design & Architecture, DB & 10\% & 7 \\
-        Lab2: Docker+Pipeline & Dockerfile & 5\% & 9 \\
-        \midrule
-        \multicolumn{4}{l}{\textbf{Phase 2: Project (70\%)}} \\
-        \midrule
-        Checkpoint Review & Prototype Demo & 10\% & 12 \\
-        Test Document & Test Cases & 10\% & 13 \\
-        \textbf{Final Project} & Complete System & \textbf{50\%} & 15 \\
-        \bottomrule
-    \end{tabular}
+\begin{frame}{Phase 2: Group Project (Week 10-15)}
+    \textbf{Apply What You Learned}
+    
+    \vspace{0.5cm}
+    
+    \begin{itemize}
+        \item Form teams of 3-4 students
+        \item Choose your own project idea
+        \item Use all technologies from Phase 1
+        \item Present and defend your work
+    \end{itemize}
+    
+    \vspace{0.5cm}
+    
+    \textbf{Total: 36\% of course grade}
 \end{frame}
 
-% ============================================
-% SECTION 2: WHAT IS FULL STACK?
-% ============================================
-\section{What is Full Stack Development?}
+%========================================
+\section{Assessment}
+%========================================
 
-\begin{frame}{The Full Stack Concept}
+\begin{frame}{Phase 1 Assessment (64\%)}
     \begin{center}
-        \begin{tikzpicture}[
-            box/.style={rectangle, rounded corners, minimum width=10cm, minimum height=1.2cm, draw, thick}
-        ]
-            % Frontend
-            \node[box, fill=codeblue!30] (frontend) at (0,4) {
-                \textbf{Frontend (Client-Side)}
-            };
-            \node[right] at (5.5,4) {\small HTML, CSS, Bootstrap, Jinja2};
-            
-            % Backend
-            \node[box, fill=codegreen!30] (backend) at (0,2) {
-                \textbf{Backend (Server-Side)}
-            };
-            \node[right] at (5.5,2) {\small FastAPI, Python, Pydantic};
-            
-            % Database
-            \node[box, fill=codeorange!30] (database) at (0,0) {
-                \textbf{Database}
-            };
-            \node[right] at (5.5,0) {\small MSSQL, SQLAlchemy ORM};
-            
-            % Arrows
-            \draw[<->, thick, spumaroon] (frontend) -- (backend);
-            \draw[<->, thick, spumaroon] (backend) -- (database);
-        \end{tikzpicture}
+        \begin{tabular}{clc}
+            \toprule
+            \textbf{Lab} & \textbf{Topic} & \textbf{Weight} \\
+            \midrule
+            Lab 1 & Git + Python + Setup & 8\% \\
+            Lab 2 & FastAPI CRUD & 8\% \\
+            Lab 3 & Database Integration & 8\% \\
+            Lab 4 & Frontend Basics & 8\% \\
+            Lab 5 & Jinja2 Templates & 8\% \\
+            Lab 6 & Docker + Compose & 8\% \\
+            Lab 7 & Testing + Jenkins CI & 8\% \\
+            Lab 8 & Jenkins CD & 8\% \\
+            \midrule
+            & \textbf{Total} & \textbf{64\%} \\
+            \bottomrule
+        \end{tabular}
     \end{center}
 \end{frame}
 
-\begin{frame}{Our Technology Stack}
+\begin{frame}{Phase 2 Assessment (36\%)}
     \begin{center}
-        \begin{tikzpicture}[
-            layer/.style={rectangle, rounded corners, minimum width=2.5cm, minimum height=0.8cm, draw, thick, font=\small}
-        ]
-            % Frontend Stack
-            \node[layer, fill=codeblue!20] (jinja) at (0,3) {Jinja2};
-            \node[layer, fill=codeblue!20] (html) at (0,2) {HTML5/CSS3};
-            \node[layer, fill=codeblue!20] (bootstrap) at (0,1) {Bootstrap 5};
-            \node[below, font=\bfseries\small] at (0,0.3) {Frontend};
-            
-            % Backend Stack
-            \node[layer, fill=codegreen!20] (fastapi) at (3.5,3) {FastAPI};
-            \node[layer, fill=codegreen!20] (pydantic) at (3.5,2) {Pydantic};
-            \node[layer, fill=codegreen!20] (sqlalchemy) at (3.5,1) {SQLAlchemy};
-            \node[below, font=\bfseries\small] at (3.5,0.3) {Backend};
-            
-            % Database Stack
-            \node[layer, fill=codeorange!20] (mssql) at (7,3) {MSSQL};
-            \node[layer, fill=codeorange!20] (docker) at (7,2) {Docker};
-            \node[layer, fill=codeorange!20] (jenkins) at (7,1) {Jenkins};
-            \node[below, font=\bfseries\small] at (7,0.3) {DevOps};
-            
-            % Tools Stack
-            \node[layer, fill=codepurple!20] (github) at (10.5,3) {GitHub};
-            \node[layer, fill=codepurple!20] (notion) at (10.5,2) {Notion};
-            \node[layer, fill=codepurple!20] (vscode) at (10.5,1) {VS Code};
-            \node[below, font=\bfseries\small] at (10.5,0.3) {Tools};
-        \end{tikzpicture}
+        \begin{tabular}{clc}
+            \toprule
+            \textbf{Week} & \textbf{Deliverable} & \textbf{Weight} \\
+            \midrule
+            10 & G1: Project Proposal & 5\% \\
+            11 & G2: System Design & 5\% \\
+            12 & Checkpoint Demo & 8\% \\
+            15 & Final Project & 12\% \\
+            15 & Oral Defense & 4\% \\
+            15 & Peer Evaluation & 2\% \\
+            \midrule
+            & \textbf{Total} & \textbf{36\%} \\
+            \bottomrule
+        \end{tabular}
     \end{center}
 \end{frame}
 
-% ============================================
-% SECTION 3: DEVOPS & CI/CD
-% ============================================
-\section{DevOps \& CI/CD Introduction}
-
-\begin{frame}{CI/CD Pipeline}
+\begin{frame}{Late Submission Policy}
     \begin{center}
-        \begin{tikzpicture}[
-            stage/.style={rectangle, rounded corners, minimum width=1.6cm, minimum height=1.2cm, draw, thick, align=center, font=\small}
-        ]
-            % Stages
-            \node[stage, fill=codeblue!20] (code) at (0,0) {\faCode\\Code};
-            \node[stage, fill=codegreen!20] (build) at (2.5,0) {\faCogs\\Build};
-            \node[stage, fill=codeorange!20] (test) at (5,0) {\faVial\\Test};
-            \node[stage, fill=codepurple!20] (deploy) at (7.5,0) {\faRocket\\Deploy};
-            \node[stage, fill=spumaroon!20] (prod) at (10,0) {\faGlobe\\Prod};
+        \begin{tikzpicture}
+            \draw[fill=green!20, rounded corners] (0,0) rectangle (3,1.5);
+            \node[align=center] at (1.5,0.75) {On Time\\100\%};
             
-            % Arrows
-            \draw[->, thick] (code) -- (build);
-            \draw[->, thick] (build) -- (test);
-            \draw[->, thick] (test) -- (deploy);
-            \draw[->, thick] (deploy) -- (prod);
+            \draw[fill=yellow!20, rounded corners] (3.5,0) rectangle (6.5,1.5);
+            \node[align=center] at (5,0.75) {1 Day Late\\-10\%};
             
-            % Labels below
-            \node[below, font=\tiny] at (0,-0.8) {Git Push};
-            \node[below, font=\tiny] at (2.5,-0.8) {Docker};
-            \node[below, font=\tiny] at (5,-0.8) {pytest};
-            \node[below, font=\tiny] at (7.5,-0.8) {Jenkins};
-            \node[below, font=\tiny] at (10,-0.8) {Live!};
+            \draw[fill=orange!20, rounded corners] (7,0) rectangle (10,1.5);
+            \node[align=center] at (8.5,0.75) {2 Days Late\\-20\%};
+            
+            \draw[fill=red!20, rounded corners] (10.5,0) rectangle (13.5,1.5);
+            \node[align=center] at (12,0.75) {3+ Days\\0\%};
         \end{tikzpicture}
     \end{center}
     
-    \vspace{0.3cm}
+    \vspace{0.5cm}
     
-    \begin{columns}[T]
-        \begin{column}{0.45\textwidth}
-            \begin{block}{CI - Continuous Integration}
-                \begin{itemize}
-                    \item Auto build on push
-                    \item Auto run tests
-                    \item Fast feedback
-                \end{itemize}
-            \end{block}
-        \end{column}
-        \begin{column}{0.45\textwidth}
-            \begin{block}{CD - Continuous Deployment}
-                \begin{itemize}
-                    \item Auto deploy to staging
-                    \item Manual approve to prod
-                    \item Consistent process
-                \end{itemize}
-            \end{block}
-        \end{column}
-    \end{columns}
+    \begin{itemize}
+        \item Deadline: Every Sunday 23:59
+        \item Maximum 3 days late submission
+        \item After 3 days = 0 points
+    \end{itemize}
 \end{frame}
 
-% ============================================
-% SECTION 4: CASE STUDY
-% ============================================
-\section{Case Study: Loan Management System}
+%========================================
+\section{TaskFlow System}
+%========================================
 
-\begin{frame}{Loan Management System}
+\begin{frame}{Case Study: TaskFlow}
+    \begin{center}
+        \Large
+        \textbf{Task Management System}
+        
+        \vspace{0.5cm}
+        
+        \normalsize
+        A web application for managing tasks and to-do items
+    \end{center}
+    
+    \vspace{0.5cm}
+    
+    Similar to: Todoist, Microsoft To-Do, Trello
+\end{frame}
+
+\begin{frame}{TaskFlow Features}
     \begin{columns}[T]
-        \begin{column}{0.55\textwidth}
-            \begin{block}{What We'll Build}
-                Loan Management System for Peer-to-Peer Lending Platform
-            \end{block}
-            
-            \vspace{0.3cm}
-            
-            \textbf{Core Features:}
+        \begin{column}{0.48\textwidth}
+            \textbf{User Management:}
             \begin{itemize}
-                \item \faUserPlus\ User Registration \& Login
-                \item \faMoneyBillWave\ Loan Application
-                \item \faChartLine\ Loan Status Tracking
-                \item \faUserShield\ Role-based Access
-                \item \faHistory\ Payment History
-                \item \faDocker\ Docker Deployment
+                \item User Registration
+                \item Login / Logout
+                \item Password Hashing
+                \item Session Management
             \end{itemize}
         \end{column}
-        \begin{column}{0.4\textwidth}
-            \begin{center}
-                \begin{tikzpicture}[scale=0.6]
-                    % Loan status flow
-                    \node[rectangle, rounded corners, draw, thick, fill=codeblue!30, minimum width=2cm, font=\small] (pending) at (0,4) {Pending};
-                    \node[rectangle, rounded corners, draw, thick, fill=codegreen!30, minimum width=2cm, font=\small] (current) at (0,2.5) {Current};
-                    \node[rectangle, rounded corners, draw, thick, fill=spugold!30, minimum width=2cm, font=\small] (paid) at (-2,1) {Paid};
-                    \node[rectangle, rounded corners, draw, thick, fill=codeorange!30, minimum width=2cm, font=\small] (late) at (2,1) {Late};
-                    \node[rectangle, rounded corners, draw, thick, fill=spumaroon!30, minimum width=2cm, font=\small] (default) at (2,-0.5) {Default};
-                    
-                    % Arrows
-                    \draw[->, thick] (pending) -- (current);
-                    \draw[->, thick] (current) -- (paid);
-                    \draw[->, thick] (current) -- (late);
-                    \draw[->, thick] (late) -- (default);
-                \end{tikzpicture}
-            \end{center}
+        \begin{column}{0.48\textwidth}
+            \textbf{Task Management:}
+            \begin{itemize}
+                \item Create / Read / Update / Delete
+                \item Status: Pending, In Progress, Done
+                \item Priority: Low, Medium, High
+                \item Categories
+            \end{itemize}
         \end{column}
     \end{columns}
 \end{frame}
 
-% ============================================
-% SECTION 5: GROUP FORMATION
-% ============================================
-\section{Group Formation}
-
-\begin{frame}{Form Your Project Team - Today!}
+\begin{frame}{TaskFlow Features (continued)}
     \begin{columns}[T]
-        \begin{column}{0.5\textwidth}
-            \begin{block}{Team Requirements}
-                \begin{itemize}
-                    \item \textbf{Size:} 5-6 students
-                    \item \textbf{Leader:} 1 person
-                    \item \textbf{Roles:}
-                    \begin{itemize}
-                        \item Frontend Developer
-                        \item Backend Developer
-                        \item Database Admin
-                        \item DevOps Engineer
-                        \item QA / Tester
-                    \end{itemize}
-                \end{itemize}
-            \end{block}
+        \begin{column}{0.48\textwidth}
+            \textbf{Dashboard:}
+            \begin{itemize}
+                \item Task Statistics
+                \item Recent Tasks
+                \item Filter by Status
+                \item Search Tasks
+            \end{itemize}
         \end{column}
-        \begin{column}{0.45\textwidth}
-            \begin{alertblock}{Today's Task}
-                \begin{enumerate}
-                    \item Find your teammates
-                    \item Choose a team leader
-                    \item Create team name
-                    \item Create GitHub Repo
-                    \item Submit team info
-                \end{enumerate}
-            \end{alertblock}
+        \begin{column}{0.48\textwidth}
+            \textbf{DevOps:}
+            \begin{itemize}
+                \item Docker Containers
+                \item Docker Compose
+                \item Automated Testing
+                \item CI/CD Pipeline
+            \end{itemize}
         \end{column}
     \end{columns}
-    
-    \vspace{0.5cm}
-    
+\end{frame}
+
+\begin{frame}{Database Schema}
     \begin{center}
-        \fbox{\large\textbf{This team will work together for all 15 weeks!}}
+        \begin{tikzpicture}[
+            box/.style={draw, fill=##1, minimum width=3cm, minimum height=2cm, align=center, rounded corners}
+        ]
+            % Users table
+            \node[box=blue!20] (users) at (0,0) {
+                \textbf{Users}\\[0.2cm]
+                id\\username\\email\\password
+            };
+            
+            % Tasks table
+            \node[box=green!20] (tasks) at (6,0) {
+                \textbf{Tasks}\\[0.2cm]
+                id\\title\\status\\user\_id
+            };
+            
+            % Categories table
+            \node[box=orange!20] (cats) at (12,0) {
+                \textbf{Categories}\\[0.2cm]
+                id\\name\\color
+            };
+            
+            % Relationships
+            \draw[->, thick] (users.east) -- node[above] {1 : N} (tasks.west);
+            \draw[->, thick] (cats.west) -- node[above] {1 : N} (tasks.east);
+        \end{tikzpicture}
     \end{center}
 \end{frame}
 
-% ============================================
-% SECTION 6: SUMMARY
-% ============================================
-\section{Summary \& What's Next}
+%========================================
+\section{Technology Stack}
+%========================================
 
-\begin{frame}{Week 1 Summary}
+\begin{frame}{Technology Stack Overview}
+    \begin{center}
+        \begin{tikzpicture}[
+            layer/.style={draw, fill=##1, minimum width=10cm, minimum height=1.2cm, align=center}
+        ]
+            \node[layer=blue!20] at (0,4) {\textbf{Frontend:} HTML, CSS, JavaScript, Bootstrap 5};
+            \node[layer=green!20] at (0,2.5) {\textbf{Backend:} Python, FastAPI, Jinja2};
+            \node[layer=orange!20] at (0,1) {\textbf{Database:} Microsoft SQL Server};
+            \node[layer=red!20] at (0,-0.5) {\textbf{DevOps:} Docker, Jenkins, Git};
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Frontend Technologies}
     \begin{columns}[T]
-        \begin{column}{0.48\textwidth}
-            \begin{block}{What We Learned}
-                \begin{itemize}
-                    \item[$\checkmark$] Course structure (2 phases)
-                    \item[$\checkmark$] Assessment (no exams!)
-                    \item[$\checkmark$] Technology stack
-                    \item[$\checkmark$] DevOps \& CI/CD basics
-                    \item[$\checkmark$] Case study preview
-                \end{itemize}
-            \end{block}
+        \begin{column}{0.3\textwidth}
+            \textbf{HTML5}
+            \begin{itemize}
+                \item Structure
+                \item Semantic tags
+                \item Forms
+            \end{itemize}
         \end{column}
-        \begin{column}{0.48\textwidth}
-            \begin{alertblock}{Action Items}
-                \begin{itemize}
-                    \item[$\square$] Install tools
-                    \item[$\square$] Create GitHub account
-                    \item[$\square$] \textbf{Form project team}
-                    \item[$\square$] Create team GitHub repo
-                    \item[$\square$] Submit team info
-                \end{itemize}
-            \end{alertblock}
+        \begin{column}{0.3\textwidth}
+            \textbf{CSS3}
+            \begin{itemize}
+                \item Styling
+                \item Flexbox
+                \item Responsive
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \textbf{Bootstrap 5}
+            \begin{itemize}
+                \item Components
+                \item Grid System
+                \item Utilities
+            \end{itemize}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{Next Week: Project Planning}
-    \begin{block}{Week 2: Agile \& Project Planning}
-        \begin{itemize}
-            \item Agile/Scrum Methodology
-            \item User Stories \& Acceptance Criteria
-            \item Notion for Project Management
-            \item Sprint Planning
-        \end{itemize}
-    \end{block}
-    
-    \vspace{0.5cm}
-    
-    \begin{exampleblock}{Preparation for Week 2}
-        \begin{itemize}
-            \item Complete tool installation
-            \item Create Notion account (free)
-            \item Think about loan system features
-            \item Review Python basics (Lab 01)
-        \end{itemize}
-    \end{exampleblock}
-    
-    \vspace{0.3cm}
-    
+\begin{frame}{Backend Technologies}
+    \begin{columns}[T]
+        \begin{column}{0.3\textwidth}
+            \textbf{Python 3.11+}
+            \begin{itemize}
+                \item Modern syntax
+                \item Type hints
+                \item Async support
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \textbf{FastAPI}
+            \begin{itemize}
+                \item REST API
+                \item Auto docs
+                \item Validation
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \textbf{SQLAlchemy}
+            \begin{itemize}
+                \item ORM
+                \item Migrations
+                \item Relationships
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{DevOps Technologies}
+    \begin{columns}[T]
+        \begin{column}{0.3\textwidth}
+            \textbf{Docker}
+            \begin{itemize}
+                \item Containers
+                \item Images
+                \item Compose
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \textbf{Jenkins}
+            \begin{itemize}
+                \item CI/CD
+                \item Pipelines
+                \item Automation
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \textbf{Git/GitHub}
+            \begin{itemize}
+                \item Version control
+                \item Branching
+                \item Pull requests
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+%========================================
+\section{Schedule}
+%========================================
+
+\begin{frame}{Phase 1 Schedule (Week 1-9)}
     \begin{center}
-        \textbf{Week 3: G1 Project Proposal (10\%)}
+        \small
+        \begin{tabular}{cll}
+            \toprule
+            \textbf{Week} & \textbf{Topic} & \textbf{Lab} \\
+            \midrule
+            1 & Course Introduction & - \\
+            2 & Git + Python + Setup & Lab 1 (8\%) \\
+            3 & FastAPI CRUD & Lab 2 (8\%) \\
+            4 & FastAPI + Database & Lab 3 (8\%) \\
+            5 & Frontend (HTML/CSS/JS) & Lab 4 (8\%) \\
+            6 & Jinja2 + Integration & Lab 5 (8\%) \\
+            7 & Docker + Compose & Lab 6 (8\%) \\
+            8 & Testing + Jenkins CI & Lab 7 (8\%) \\
+            9 & Jenkins CD & Lab 8 (8\%) \\
+            \bottomrule
+        \end{tabular}
     \end{center}
 \end{frame}
 
-% ============================================
-% FINAL SLIDE
-% ============================================
-\begin{frame}[plain]
+\begin{frame}{Phase 2 Schedule (Week 10-15)}
     \begin{center}
-        \vspace{2cm}
-        {\Huge\bfseries\color{spumaroon} Questions?}
+        \begin{tabular}{cll}
+            \toprule
+            \textbf{Week} & \textbf{Activity} & \textbf{Deliverable} \\
+            \midrule
+            10 & Team Formation & G1: Proposal (5\%) \\
+            11 & System Design & G2: Design (5\%) \\
+            12 & Sprint 1 & Checkpoint (8\%) \\
+            13 & Sprint 2 & - \\
+            14 & Sprint 3 & - \\
+            15 & Final Presentation & Final (18\%) \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+%========================================
+\section{Next Week}
+%========================================
+
+\begin{frame}{Software to Install}
+    \textbf{Please install before Week 2:}
+    
+    \vspace{0.5cm}
+    
+    \begin{enumerate}
+        \item \textbf{Python 3.11+} - python.org
+        \item \textbf{Git} - git-scm.com
+        \item \textbf{VS Code} - code.visualstudio.com
+        \item \textbf{Docker Desktop} - docker.com
+    \end{enumerate}
+    
+    \vspace{0.5cm}
+    
+    Also create a \textbf{GitHub account} at github.com
+\end{frame}
+
+\begin{frame}{VS Code Extensions}
+    \textbf{Recommended extensions:}
+    
+    \vspace{0.5cm}
+    
+    \begin{itemize}
+        \item Python (Microsoft)
+        \item Pylance
+        \item Docker
+        \item GitLens
+        \item Thunder Client (API testing)
+        \item Prettier (code formatting)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Week 2 Preview}
+    \textbf{Lab 1: Git + Python + Project Setup (8\%)}
+    
+    \vspace{0.5cm}
+    
+    What you will learn:
+    \begin{itemize}
+        \item Git workflow (clone, add, commit, push)
+        \item Python virtual environments
+        \item Project structure
+        \item FastAPI hello world
+    \end{itemize}
+    
+    \vspace{0.5cm}
+    
+    \textbf{Deadline: Sunday 23:59}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        \Huge Questions?
         
         \vspace{1cm}
         
-        {\Large Thank you!}
+        \Large Welcome to CSI403!
         
-        \vspace{1cm}
+        \vspace{0.5cm}
         
-        \faEnvelope\ amornpan@gmail.com\\[5pt]
-        \faGithub\ https://github.com/amornpan/CSI403-Full-Stack-Program-Development-.git
-        
-        \vspace{1cm}
-        
-        {\small See you next week!}
+        \normalsize See you next week!
     \end{center}
 \end{frame}
 

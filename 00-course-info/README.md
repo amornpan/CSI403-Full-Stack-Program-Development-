@@ -1,116 +1,185 @@
-# Course Information
+# CSI403 Course Information
 
-## 📚 รายละเอียดวิชา
+## 📋 รายละเอียดวิชา
 
-| รายการ | รายละเอียด |
-|--------|------------|
-| **รหัสวิชา** | CSI403 |
-| **ชื่อวิชา** | การพัฒนาโปรแกรมแบบ Full Stack (Software Full Stack Development) |
-| **หน่วยกิต** | 3 (2-3-5) |
-| **ภาคการศึกษา** | 2/2568 (มกราคม - เมษายน 2569) |
-| **ผู้สอน** | อ.เมธัส คำจาด |
-| **มหาวิทยาลัย** | มหาวิทยาลัยศรีปทุม วิทยาเขตชลบุรี |
+| รายการ | ข้อมูล |
+|--------|--------|
+| รหัสวิชา | CSI403 |
+| ชื่อวิชา (ไทย) | การพัฒนาซอฟต์แวร์แบบ Full Stack |
+| ชื่อวิชา (Eng) | Full Stack Development |
+| หน่วยกิต | 3 (2-3-5) |
+| ภาคการศึกษา | 1/2569 (Jan - Apr 2026) |
+
+---
 
 ## 🎯 วัตถุประสงค์รายวิชา
 
-เมื่อเรียนจบวิชานี้ นักศึกษาจะสามารถ:
+เมื่อสิ้นสุดการเรียนการสอน นักศึกษาสามารถ:
 
-1. ✅ พัฒนา REST API ด้วย FastAPI และ Python
-2. ✅ ออกแบบและจัดการฐานข้อมูลด้วย SQLAlchemy ORM
-3. ✅ สร้าง Frontend ด้วย HTML, CSS, JavaScript และ Bootstrap
-4. ✅ ใช้ Jinja2 Template Engine สำหรับ Server-Side Rendering
-5. ✅ ใช้ Docker ในการ Containerize แอปพลิเคชัน
-6. ✅ ตั้งค่า CI/CD Pipeline ด้วย Jenkins
-7. ✅ ทำงานเป็นทีมและบริหารโปรเจคด้วย Git
+1. **เข้าใจ** สถาปัตยกรรมการพัฒนา Web Application แบบ Full Stack
+2. **พัฒนา** RESTful API ด้วย FastAPI และเชื่อมต่อฐานข้อมูล
+3. **ออกแบบ** และพัฒนา Frontend ด้วย HTML, CSS, JavaScript และ Bootstrap
+4. **ใช้งาน** Template Engine (Jinja2) ในการสร้าง Dynamic Web Pages
+5. **ประยุกต์ใช้** Docker และ Docker Compose ในการ Deploy Application
+6. **สร้าง** CI/CD Pipeline ด้วย Jenkins
+7. **ทำงานเป็นทีม** โดยใช้ Git และ Agile/Scrum methodology
 
-## 📊 โครงสร้างคะแนน (100%)
+---
 
-### Phase 1: Learning (64%) - Week 2-9
+## 📊 การประเมินผล (100%)
+
+### Two-Phase Assessment Model
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   PHASE 1: LEARNING        │    PHASE 2: PROJECT           │
+│   Week 2-9                 │    Week 10-15                 │
+│                            │                               │
+│   ┌─────────────────┐      │    ┌─────────────────┐        │
+│   │   8 Labs        │      │    │  Group Project  │        │
+│   │   8% × 8 = 64%  │      │    │     36%         │        │
+│   └─────────────────┘      │    └─────────────────┘        │
+│                            │                               │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Phase 1: Learning (64%)
 
 | Lab | หัวข้อ | คะแนน | สัปดาห์ |
-|-----|--------|:-----:|:-------:|
-| Lab 1 | Git + Python + Setup | 8% | 2 |
-| Lab 2 | FastAPI CRUD | 8% | 3 |
-| Lab 3 | FastAPI + Database | 8% | 4 |
-| Lab 4 | Frontend (HTML/CSS/JS) | 8% | 5 |
-| Lab 5 | Jinja2 + Integration | 8% | 6 |
-| Lab 6 | Docker + Compose | 8% | 7 |
-| Lab 7 | Testing + Jenkins CI | 8% | 8 |
-| Lab 8 | Jenkins CD | 8% | 9 |
-| **รวม Phase 1** | | **64%** | |
+|:---:|--------|:-----:|:-------:|
+| 1 | Git + Python + Project Setup | 8% | 2 |
+| 2 | FastAPI CRUD | 8% | 3 |
+| 3 | FastAPI + Database (MSSQL + SQLAlchemy) | 8% | 4 |
+| 4 | Frontend Basics (HTML/CSS/JS/Bootstrap) | 8% | 5 |
+| 5 | Jinja2 Templates + Full Integration | 8% | 6 |
+| 6 | Docker + Docker Compose | 8% | 7 |
+| 7 | Testing (pytest) + Jenkins CI | 8% | 8 |
+| 8 | Jenkins CD + Deployment | 8% | 9 |
+| | **รวม Phase 1** | **64%** | |
 
-### Phase 2: Project (36%) - Week 10-15
+### Phase 2: Project (36%)
 
 | รายการ | คะแนน | สัปดาห์ |
 |--------|:-----:|:-------:|
 | G1: Project Proposal | 5% | 10 |
-| G2: System Design | 5% | 11 |
+| G2: System Design (ERD, API, Mockup) | 5% | 11 |
 | Checkpoint Demo | 8% | 12 |
 | Final Project | 12% | 15 |
 | Oral Defense | 4% | 15 |
 | Peer Evaluation | 2% | 15 |
 | **รวม Phase 2** | **36%** | |
 
-### รวมทั้งหมด: 100%
+---
 
-## 📅 ปฏิทินการเรียน
+## 📅 ตารางสอน (15 สัปดาห์)
 
-```
-Week 1:  ปฐมนิเทศ (ไม่เรียน)
-Week 2:  Git + Python + Setup           → Lab 1 (8%)
-Week 3:  FastAPI CRUD                   → Lab 2 (8%)
-Week 4:  FastAPI + Database             → Lab 3 (8%)
-Week 5:  Frontend (HTML/CSS/JS)         → Lab 4 (8%)
-Week 6:  Jinja2 + Integration           → Lab 5 (8%)
-Week 7:  Docker + Compose               → Lab 6 (8%)
-Week 8:  Testing + Jenkins CI           → Lab 7 (8%)
-Week 9:  Jenkins CD                     → Lab 8 (8%)
-Week 10: จัดทีม + G1 Proposal           → G1 (5%)
-Week 11: G2 System Design               → G2 (5%)
-Week 12: Checkpoint Demo                → Checkpoint (8%)
-Week 13: Development Sprint             → -
-Week 14: Development Sprint             → -
-Week 15: Final Presentation + Defense   → Final (12%) + Oral (4%) + Peer (2%)
-```
+### Phase 1: Learning Phase
 
-## 📝 เกณฑ์การตัดเกรด
+| สัปดาห์ | เนื้อหา | Lab | คะแนน |
+|:-------:|---------|-----|:-----:|
+| 1 | ปฐมนิเทศ | - | - |
+| 2 | Git + Python + Project Setup | Lab 1 | 8% |
+| 3 | FastAPI Fundamentals (CRUD) | Lab 2 | 8% |
+| 4 | FastAPI + Database (MSSQL + SQLAlchemy) | Lab 3 | 8% |
+| 5 | Frontend Basics (HTML/CSS/JS/Bootstrap) | Lab 4 | 8% |
+| 6 | Jinja2 Templates + Full Integration | Lab 5 | 8% |
+| 7 | Docker + Docker Compose | Lab 6 | 8% |
+| 8 | Testing (pytest) + Jenkins CI | Lab 7 | 8% |
+| 9 | Jenkins CD + Deployment | Lab 8 | 8% |
 
-| เกรด | คะแนน |
-|:----:|:-----:|
-| A | 80-100 |
-| B+ | 75-79 |
-| B | 70-74 |
-| C+ | 65-69 |
-| C | 60-64 |
-| D+ | 55-59 |
-| D | 50-54 |
-| F | 0-49 |
+### Phase 2: Project Phase
 
-## 📋 นโยบายรายวิชา
-
-### การส่งงาน
-- ส่งงานผ่าน **GitHub Repository**
-- **Late Submission:** หัก 10% ต่อวัน (สูงสุด 3 วัน)
-- หลังจาก 3 วัน = 0 คะแนน
-
-### การขาดเรียน
-- เช็คชื่อทุกสัปดาห์
-- ขาดเกิน 3 ครั้ง = หมดสิทธิ์สอบ (F)
-
-### จรรยาบรรณ
-- ห้าม Copy งานผู้อื่น (Plagiarism)
-- ถ้าพบ = 0 คะแนนทั้งชิ้นงาน
-
-## 📧 ติดต่อ
-
-- **ผู้สอน:** อ.เมธัส คำจาด
-- **Email:** methas@spuchonburi.ac.th
-- **Office Hours:** นัดหมายล่วงหน้า
+| สัปดาห์ | กิจกรรม | Deliverable | คะแนน |
+|:-------:|---------|-------------|:-----:|
+| 10 | จัดทีม 4-5 คน | G1: Project Proposal | 5% |
+| 11 | System Design | G2: ERD, API Spec, Mockup | 5% |
+| 12 | Development Sprint 1 | Checkpoint Demo (50%+ features) | 8% |
+| 13 | Development Sprint 2 | - | - |
+| 14 | Development Sprint 3 | - | - |
+| 15 | Final Presentation | Project + Defense + Peer | 18% |
 
 ---
 
-## 📁 Files in this folder
+## 🛠️ เทคโนโลยีที่ใช้
 
-- [ ] `CSI403_Syllabus.pdf` - มคอ.3
-- [x] `README.md` - ข้อมูลรายวิชา (ไฟล์นี้)
-- [ ] `Grading_Rubric.md` - เกณฑ์การให้คะแนนละเอียด
+### Technology Stack
+
+| Layer | Technologies |
+|-------|-------------|
+| **Frontend** | HTML5, CSS3, JavaScript ES6+, Bootstrap 5, Jinja2 |
+| **Backend** | Python 3.11+, FastAPI, SQLAlchemy 2.0, Pydantic |
+| **Database** | Microsoft SQL Server 2022 (Docker) |
+| **DevOps** | Docker, Docker Compose, Jenkins |
+| **Version Control** | Git, GitHub |
+| **Testing** | pytest, pytest-cov, httpx |
+| **IDE** | VS Code (recommended) |
+
+### Required Software
+
+1. Python 3.11+
+2. Git
+3. Docker Desktop
+4. VS Code
+5. GitHub Account
+
+---
+
+## 📝 กฎการส่งงาน
+
+### Submission Rules
+
+1. **ช่องทาง:** GitHub Repository
+2. **Deadline:** ก่อนเที่ยงคืน (23:59) วันอาทิตย์ของแต่ละสัปดาห์
+3. **Late Policy:**
+   - ส่งช้า 1 วัน: -10%
+   - ส่งช้า 2 วัน: -20%
+   - ส่งช้า 3 วัน: -30%
+   - ส่งช้าเกิน 3 วัน: 0 คะแนน
+
+### Git Workflow
+
+```
+1. สร้าง Branch ใหม่สำหรับแต่ละ Lab
+2. Commit บ่อยๆ พร้อม Message ที่ชัดเจน
+3. สร้าง Pull Request เมื่อทำเสร็จ
+4. Merge เข้า main branch
+```
+
+---
+
+## 🎓 Case Study: TaskFlow
+
+ตลอด Phase 1 นักศึกษาจะสร้างระบบ **TaskFlow - Task Management System**
+
+### ระบบประกอบด้วย
+
+- 👤 User Registration & Login
+- ✅ Task CRUD Operations
+- 📁 Category Management
+- 📊 Dashboard with Statistics
+- 🐳 Docker Deployment
+- 🚀 CI/CD Pipeline
+
+### Database Schema
+
+```
+┌─────────┐       ┌─────────┐       ┌────────────┐
+│  Users  │ 1───N │  Tasks  │ N───1 │ Categories │
+└─────────┘       └─────────┘       └────────────┘
+```
+
+---
+
+## 📞 ช่องทางติดต่อ
+
+- **GitHub Issues:** สำหรับคำถามเกี่ยวกับ Code
+- **Google Form:** สำหรับส่งงาน
+
+---
+
+**หมายเหตุ:** ไม่มีการสอบกลางภาคและปลายภาค - ประเมินจาก Lab และ Project เท่านั้น
+
+---
+
+**© 2026 CSI403 Full Stack Development**
